@@ -4580,6 +4580,20 @@
 лицезреющую	лицезреть	PT:Real:TRANS:IMPFV:DST:Fem:V
 лицезрея	лицезреть	DPT:Real:TRANS:IMPFV
 
+# Люцифер: как «абазер» — сущ. имя м.р.
+Люцифер	Люцифер	NN:Name:Masc:Sin:Nom
+Люцифера	Люцифер	NN:Name:Masc:Sin:R
+Люцифера	Люцифер	NN:Name:Masc:Sin:V
+Люциферам	Люцифер	NN:Name:Masc:PL:D
+Люциферами	Люцифер	NN:Name:Masc:PL:T
+Люциферах	Люцифер	NN:Name:Masc:PL:P
+Люцифере	Люцифер	NN:Name:Masc:Sin:P
+Люциферов	Люцифер	NN:Name:Masc:PL:R
+Люциферов	Люцифер	NN:Name:Masc:PL:V
+Люцифером	Люцифер	NN:Name:Masc:Sin:T
+Люциферу	Люцифер	NN:Name:Masc:Sin:D
+Люциферы	Люцифер	NN:Name:Masc:PL:Nom
+
 # Магнусон: как «абдуханон» — сущ. имя м.р.
 Магнусон	Магнусон	NN:Name:Masc:Sin:Nom
 Магнусона	Магнусон	NN:Name:Masc:Sin:R
