@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="1104" viewBox="0 0 880 1104">
+<title>Примеры: обычный LanguageTool и РуПруф</title>
+<style>
+.w{box-sizing:border-box;width:880px;background:#18181a;border-radius:12px;padding:14px 16px 18px;font:13px/18px system-ui,-apple-system,"Segoe UI",sans-serif;color:#c9c9cc}
+.hd,.row{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:start}
+.hd{color:#9a9aa2;font-size:13px;line-height:17px;font-weight:600}
+.hd i{font-style:normal;color:#e8e8ea}
+.cap{color:#8a8a92;font-size:12px;line-height:17px;margin:16px 0 6px;border-top:1px solid #2a2a2e;padding-top:10px}
+.f{position:relative;background:#232326;border:1px solid #3a3a3e;border-radius:6px;padding:8px 34px 8px 12px;font:16px/1.5 Georgia,"Times New Roman",serif;color:#eee}
+.b{position:absolute;right:8px;bottom:9px;width:16px;height:16px;border-radius:50%;font:700 10px/16px system-ui,sans-serif;text-align:center;color:#fff;background:#d4183d}
+.b.ok{background:#1a73e8}
+u{text-decoration:none;position:relative}u::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--u)}
+.sp{--u:#e5484d}.gr{--u:#f5a524}.st{--u:#8b7cf6}
+.a{border-radius:2px}.sp.a{background:#e5484d38}.gr.a{background:#f5a52438}.st.a{background:#8b7cf638}
+.p{margin:6px 0 0;background:#111214;border:1px solid #3a3a3e;border-radius:8px;padding:7px 10px 8px;color:#e4e4e6}
+.p b{display:block;font-size:11px;line-height:15px;margin-bottom:2px}
+.c{margin-top:6px;display:flex;gap:4px;flex-wrap:wrap}
+.c span{background:#1e8fff;color:#07172a;border-radius:4px;padding:2px 8px;font-weight:600;font-size:12px;line-height:17px}
+</style>
+<foreignObject width="880" height="1104"><div xmlns="http://www.w3.org/1999/xhtml" class="w">
+<div class="hd"><span>Обычный LanguageTool</span><i>РуПруф</i></div>
+
+<div class="cap">«ё» обязательна</div>
+<div class="row">
+ <div><div class="f">Я вас любил: любовь еще, быть может…<span class="b ok">✓</span></div></div>
+ <div><div class="f">Я вас любил: любовь <u class="sp a">еще</u>, быть может…<span class="b">1</span></div>
+  <div class="p"><b>Орфографическая</b><div class="c"><span>ещё</span><span>ищи</span><span>имя</span></div></div></div>
+</div>
+
+<div class="cap">«что бы … ни»</div>
+<div class="row">
+ <div><div class="f">Что бы она не делала, он молчал.<span class="b ok">✓</span></div></div>
+ <div><div class="f">Что бы она <u class="gr a">не</u> делала, он молчал.<span class="b">1</span></div>
+  <div class="p"><b>«ни» в уступительном придаточном</b>В уступительном придаточном пишется частица «ни».<div class="c"><span>ни</span></div></div></div>
+</div>
+
+<div class="cap">«по приезде»</div>
+<div class="row">
+ <div><div class="f">По приезду он сразу лёг спать.<span class="b ok">✓</span></div></div>
+ <div><div class="f"><u class="gr a">По приезду</u> он сразу лёг спать.<span class="b">1</span></div>
+  <div class="p"><b>Неверное написание</b>Неверное написание: «по приезде».<div class="c"><span>По приезде</span></div></div></div>
+</div>
+
+<div class="cap">Составные слова и словарь проекта</div>
+<div class="row">
+ <div><div class="f">Над замком развевался <u class="sp">бело-золотой</u> флаг. Старый <u class="sp a">гримуар</u> лежал на столе.<span class="b">2</span></div>
+  <div class="p"><b>Орфографическая</b><div class="c"><span>гриму ар</span></div></div></div>
+ <div><div class="f">Над замком развевался бело-золотой флаг. Старый гримуар лежал на столе.<span class="b ok">✓</span></div></div>
+</div>
+
+<div class="cap">Вложенные и непарные кавычки</div>
+<div class="row">
+ <div><div class="f">«Я читала повесть «Шинель» и плакала». Она сказала: «Береги честь смолоду.<span class="b ok">✓</span></div></div>
+ <div><div class="f">«Я читала повесть <u class="gr a">«Шинель»</u> и плакала». Она сказала: <u class="gr">«</u>Береги честь смолоду.<span class="b">2</span></div>
+  <div class="p"><b>Вложенные кавычки</b>Вложенные кавычки — „лапки“.<div class="c"><span>„Шинель“</span></div></div></div>
+</div>
+
+<div class="cap">Растяжка без дефисов</div>
+<div class="row">
+ <div><div class="f">— <u class="sp a">Нееет</u>, — выдохнул он.<span class="b">1</span></div>
+  <div class="p"><b>Орфографическая</b><div class="c"><span>Сияет</span><span>Завет</span><span>Никит</span></div></div></div>
+ <div><div class="f">— <u class="sp a">Нееет</u>, — выдохнул он.<span class="b">1</span></div>
+  <div class="p"><b>Орфографическая</b><div class="c"><span>Не-е-ет</span><span>Никит</span><span>Завет</span></div></div></div>
+</div>
+</div></foreignObject>
+</svg>

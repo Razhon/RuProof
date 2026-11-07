@@ -1,0 +1,24 @@
+name: Ошибка не найдена
+description: В тексте настоящая ошибка, а LanguageTool её не подчёркивает
+title: "Пропуск: "
+labels: ["пропуск"]
+body:
+  - type: textarea
+    id: text
+    attributes:
+      label: Текст с ошибкой
+    validations:
+      required: true
+  - type: textarea
+    id: fixed
+    attributes:
+      label: Как правильно
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Что не так
+      description: Необязательно, если это очевидно.
+    validations:
+      required: false

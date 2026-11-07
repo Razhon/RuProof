@@ -1,0 +1,67 @@
+name: ruproof
+services:
+  languagetool:
+    image: docker.io/erikvl87/languagetool:6.8
+    restart: unless-stopped
+    ports:
+      - "8082:8010"  # прямой доступ для отладки; клиенты ходят через прокси на 8081
+    environment:
+      # документу в 19k знаков хватает 1g; 3g — запас на плотный текст и параллельные запросы
+      Java_Xms: 1g
+      Java_Xmx: 3g
+      langtool_languageModel: /ngrams
+      # прерывать затянувшиеся проверки (каждое незнакомое слово — ~50 мс поиска вариантов)
+      langtool_maxCheckTimeMillis: 60000
+    volumes:
+      # n-граммы необязательны: каталог ru/ в ./ngrams или в NGRAMS_DIR из .env; без него LT работает без них
+      - ${NGRAMS_DIR:-./ngrams}:/ngrams
+      # русский орфографический словарь, собранный build/build.sh (ё обязательна)
+      - ./dict/ru_RU.dict:/LanguageTool/org/languagetool/resource/ru/hunspell/ru_RU.dict:ro
+      - ./dict/ru_RU.info:/LanguageTool/org/languagetool/resource/ru/hunspell/ru_RU.info:ro
+      # личные слова, читаются при старте (их пишет build/py/store.py: применяются перезапуском, без пересборки)
+      - ./dict/spelling_custom.txt:/LanguageTool/org/languagetool/resource/ru/hunspell/spelling_custom.txt:ro
+      - ./dict/ignore.txt:/LanguageTool/org/languagetool/resource/ru/hunspell/ignore.txt:ro
+      - ./dict/added.txt:/LanguageTool/org/languagetool/resource/ru/added.txt:ro
+      # grammar.xml из образа с локальными исправлениями ложных срабатываний (build/py/rules.py)
+      - ./dict/grammar.xml:/LanguageTool/org/languagetool/rules/ru/grammar.xml:ro
+      # разбиение на предложения из languagetool-core.jar с локальным исправлением (build/py/rules.py): "./" стоит первым
+      # в Class-Path jar-файла, поэтому этот файл важнее того, что внутри jar
+      - ./dict/segment.srx:/LanguageTool/org/languagetool/resource/segment.srx:ro
+      # список RU_SIMPLE_REPLACE без записей, которые не просторечие (build/py/rules.py, REPLACE_DROP)
+      - ./dict/replace.txt:/LanguageTool/org/languagetool/rules/ru/replace.txt:ro
+  words:
+    # разовый запуск при каждом `compose up`: слова speller (строки «слово+частота», отсортированные побайтно) для
+    # оборванных слов в прокси вроде «подум…»; ~12 с, повторяется только при изменении ru_RU.dict. extends оставляет одну строку `image:` (её читает rpdict)
+    extends: languagetool
+    restart: "no"
+    ports: !reset []
+    environment: !reset {}
+    volumes: !override
+      - ./dict:/dict:ro
+      - ./proxy/data:/out
+    entrypoint: ["sh", "-c"]
+    command:
+      - |
+        [ /out/words.raw -nt /dict/ru_RU.dict ] && exit 0
+        java -cp "/LanguageTool/libs/*" morfologik.tools.Launcher fsa_decompile -i /dict/ru_RU.dict -o /out/words.tmp >/dev/null &&
+          mv /out/words.tmp /out/words.raw && echo "words: распаковано" ||
+          echo "words: не удалось, прокси дописывает оборванные слова только короткими окончаниями"
+        rm -f /out/words.tmp
+  proxy:
+    # фильтрует замечания LanguageTool (proxy/README.md); сюда направляется расширение браузера
+    image: docker.io/library/python:3.15-slim
+    restart: unless-stopped
+    command: ["python", "-u", "/proxy/proxy.py"]
+    ports:
+      - "8081:8080"
+    environment:
+      LT_URL: http://languagetool:8010
+      PYTHONDONTWRITEBYTECODE: "1"
+    volumes:
+      - ./proxy:/proxy
+      - ./dict:/dict:ro  # spelling_custom.txt, ignore.txt: слова пользователя, для оборванных слов
+    depends_on:
+      languagetool:
+        condition: service_started
+      words:
+        condition: service_completed_successfully

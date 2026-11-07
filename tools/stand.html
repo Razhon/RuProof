@@ -1,0 +1,63 @@
+<!doctype html>
+<!--
+  Стенд для скриншотов в README: одно поле ввода, один шрифт, один размер, чтобы все кадры выходили одинаковыми.
+  Фразы — отрывки русской классики (общественное достояние) с намеренно внесёнными ошибками и приёмами.
+  Запуск (расширение LanguageTool на file:// работает только с разрешением «доступ к файлам»; проще по http):
+    podman run --rm -p 8090:8000 -v "${PWD}/tools:/s:ro" -w /s docker.io/library/python:3.15-slim python -m http.server
+  и открыть http://127.0.0.1:8090/stand.html. Сервер расширения: :8083 — чистый LT, :8081 — РуПруф.
+-->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Стенд РуПруф</title>
+<style>
+  body { background: #1c1c1e; color: #ddd; font: 16px system-ui, sans-serif; margin: 24px; }
+  select { background: #2c2c2e; color: #ddd; border: 1px solid #444; padding: 6px; margin-bottom: 12px; font: inherit; }
+  /* browser spellcheck is off in the markup, or its own underlines would spoil the shots */
+  /* рамка снимка: один размер у всех кадров, справа и снизу запас под виджет LT */
+  #shot { width: 760px; height: 260px; position: relative; }
+  textarea { display: block; width: 640px; height: 130px; box-sizing: border-box; resize: none;
+    background: #232326; color: #eee; border: 1px solid #444; border-radius: 6px; padding: 12px;
+    font: 20px/1.5 Georgia, serif; }
+</style>
+</head>
+<body>
+<select id="case"></select>
+<div id="shot"><textarea id="t" lang="ru" spellcheck="false" autocomplete="off"></textarea></div>
+<script>
+  // [подпись, текст]
+  const CASES = [
+    // пары «LT | РуПруф» (оба режима одинаково)
+    ["ё: LT молчит, у нас «ещё»",
+     "Я вас любил: любовь еще, быть может, в душе моей угасла не совсем."],
+    ["«что бы … не»: LT молчит, у нас «ни»",
+     "Что бы она не делала, он молчал."],
+    ["«по приезду»: LT молчит, у нас «по приезде»",
+     "По приезду он сразу лёг спать."],
+    ["Составное слово: LT подчёркивает, у нас чисто",
+     "Над замком развевался бело-золотой флаг."],
+    ["Слово проекта: LT подчёркивает, у нас чисто",
+     "Старый гримуар лежал на столе."],
+    ["Вложенные кавычки: LT молчит, у нас замечание",
+     "Она сказала: «Я читала повесть «Шинель» и плакала»."],
+    ["Непарная кавычка: LT молчит, у нас замечание",
+     "Она сказала: «Береги честь смолоду."],
+    ["Растяжка без дефисов: LT предлагает «Сияет», у нас «Не-е-ет»",
+     "— Нееет, — выдохнул он."],
+    // тройки «LT | neutral | prose»
+    ["LT | neutral (стиль) | prose (чисто): оу, чесслово, кхм",
+     "— Оу, чесслово, я не хотел. Кхм."],
+    ["LT | neutral (стиль) | prose (чисто): заикание и растяжка",
+     "— П-прямо сейчас? Не-е-ет!"],
+    ["LT | neutral (стиль) | prose (чисто): запинка (LT видит вольт-ампер)",
+     "— Ва… ва… ваше благородие."],
+    ["LT | neutral (стиль) | prose (чисто): разбитое слово в речи",
+     "— Это чел-овек такой, — сказал он."],
+  ];
+  const sel = document.getElementById("case"), t = document.getElementById("t");
+  CASES.forEach((c, i) => sel.add(new Option(c[0], i)));
+  sel.onchange = () => { t.value = CASES[sel.value][1]; t.focus(); };
+  sel.onchange();
+</script>
+</body>
+</html>

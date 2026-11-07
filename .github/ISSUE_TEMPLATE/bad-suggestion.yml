@@ -1,0 +1,23 @@
+name: Плохая подсказка
+description: Ошибка найдена верно, но предложенная замена неправильная
+title: "Подсказка: "
+labels: ["подсказка"]
+body:
+  - type: textarea
+    id: text
+    attributes:
+      label: Текст с ошибкой
+    validations:
+      required: true
+  - type: input
+    id: suggested
+    attributes:
+      label: Что предложил LanguageTool
+    validations:
+      required: true
+  - type: input
+    id: expected
+    attributes:
+      label: Что должно быть
+    validations:
+      required: true

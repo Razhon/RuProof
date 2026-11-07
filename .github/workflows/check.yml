@@ -1,0 +1,23 @@
+# Проверки без сервера: самопроверки модулей Python (в том же образе, где скрипты работают), ruff и pyright
+name: самопроверка
+on: [push, pull_request]
+jobs:
+  selfcheck:
+    runs-on: ubuntu-latest
+    container: docker.io/library/python:3.15-slim
+    steps:
+      - uses: actions/checkout@v4
+      - run: sh tools/selfcheck.sh   # список модулей — там же
+  # стиль и типы: те же закреплённые образы, что в tools/check.sh
+  ruff:
+    runs-on: ubuntu-latest
+    container: ghcr.io/astral-sh/ruff:0.17.0-alpine
+    steps:
+      - uses: actions/checkout@v4
+      - run: ruff check . && ruff format --check .
+  pyright:
+    runs-on: ubuntu-latest
+    container: docker.io/library/node:22.11.0-slim
+    steps:
+      - uses: actions/checkout@v4
+      - run: npx --yes pyright@1.1.414   # настройки — pyrightconfig.json

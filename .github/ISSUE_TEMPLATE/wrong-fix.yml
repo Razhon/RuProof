@@ -1,0 +1,26 @@
+name: Ложное срабатывание
+description: LanguageTool подчёркивает правильный текст (не из-за отсутствия слова в словаре)
+title: "Ложное срабатывание: "
+labels: ["правило"]
+body:
+  - type: textarea
+    id: text
+    attributes:
+      label: Текст
+      description: Предложение, в котором LanguageTool видит ошибку, а её нет.
+    validations:
+      required: true
+  - type: textarea
+    id: shown
+    attributes:
+      label: Что показал LanguageTool
+      description: Сообщение или название правила, подчёркнутое место и предложенная замена.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Почему текст верен
+      description: Необязательно, если это очевидно.
+    validations:
+      required: false

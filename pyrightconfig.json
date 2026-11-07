@@ -1,0 +1,5 @@
+{
+  "include": ["build/py", "proxy", "tools"],
+  "typeCheckingMode": "basic",
+  "pythonVersion": "3.14"
+}

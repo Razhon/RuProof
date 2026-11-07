@@ -1,0 +1,9 @@
+.env
+build/.work/
+__pycache__/
+tools/*.txt
+# собирается на каждой машине (rpdict), свой слой слов — у каждого свой
+/dict/
+/words/
+/ngrams/*
+!/ngrams/.gitkeep
