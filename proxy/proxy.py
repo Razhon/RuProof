@@ -899,7 +899,10 @@ def candidates(text, spans, pairs):
     """Слова для оракула: нормализованные формы отмеченных слов и склейки соседних."""
     cands = set()
     for m, w, a, b in spans:
-        cands.update(expressive(w))  # формы заикания: правило 2 снимает замечание или даёт подсказку
+        for c in expressive(w):  # формы заикания: правило 2 снимает замечание или даёт подсказку
+            cands.add(c)
+            if "-" in c:
+                cands.update(p for p in c.split("-") if p)  # Ха-ха-ха-а -> части Ха-ха-ха
         if "-" in w:
             cands.update(p for p in w.split("-") if p)
             cands.add(w.replace("-", ""))
@@ -961,7 +964,12 @@ def spell_decision(ck, m, w, a, b, seen):
     case_only = bool(reps) and reps[0] != w and reps[0].lower() == w.lower()
     if case_only or yo_error(w, reps) or ("-" in w and any(p.lower() in PARTICLES for p in parts[1:])):  # 1
         return "keep", "guard"
-    good = [c for c in expressive(w) if ok.get(c)]
+    # сжатая форма словарная целиком или, как составное правила 3, по частям: Ну-ну-ну-у -> Ну-ну-ну
+    good = [
+        c
+        for c in expressive(w)
+        if ok.get(c) or ("compound" in on and "-" in c and all(len(p) >= 2 and ok.get(p) for p in c.split("-")))
+    ]
     if good:  # 2: без ключа — подсказка стиля, словарная форма первым вариантом (Не-е-ет -> Нет)
         if "stretch" in on:
             return "drop", "stretch"
