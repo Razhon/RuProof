@@ -2308,19 +2308,32 @@
 дрочишь	дрочить	VB:Real:TRANS:IMPFV:Sin:P2
 дрочу	дрочить	VB:Real:TRANS:IMPFV:Sin:P1
 
-# ебака: поправлено, сущ. одуш. м.р. (ignore)
+# ебака: поправлено, сущ. одуш. общ. р. (м. и ж.) (ignore)
+ебак	ебака	NN:Anim:Fem:PL:R
+ебак	ебака	NN:Anim:Fem:PL:V
 ебак	ебака	NN:Anim:Masc:PL:R
 ебак	ебака	NN:Anim:Masc:PL:V
+ебака	ебака	NN:Anim:Fem:Sin:Nom
 ебака	ебака	NN:Anim:Masc:Sin:Nom
+ебакам	ебака	NN:Anim:Fem:PL:D
 ебакам	ебака	NN:Anim:Masc:PL:D
+ебаками	ебака	NN:Anim:Fem:PL:T
 ебаками	ебака	NN:Anim:Masc:PL:T
+ебаках	ебака	NN:Anim:Fem:PL:P
 ебаках	ебака	NN:Anim:Masc:PL:P
+ебаке	ебака	NN:Anim:Fem:Sin:D
+ебаке	ебака	NN:Anim:Fem:Sin:P
 ебаке	ебака	NN:Anim:Masc:Sin:D
 ебаке	ебака	NN:Anim:Masc:Sin:P
+ебаки	ебака	NN:Anim:Fem:PL:Nom
+ебаки	ебака	NN:Anim:Fem:Sin:R
 ебаки	ебака	NN:Anim:Masc:PL:Nom
 ебаки	ебака	NN:Anim:Masc:Sin:R
+ебакой	ебака	NN:Anim:Fem:Sin:T
 ебакой	ебака	NN:Anim:Masc:Sin:T
+ебакою	ебака	NN:Anim:Fem:Sin:T
 ебакою	ебака	NN:Anim:Masc:Sin:T
+ебаку	ебака	NN:Anim:Fem:Sin:V
 ебаку	ебака	NN:Anim:Masc:Sin:V
 
 # ебало: поправлено, сущ. неодуш. ср.р. (ignore)

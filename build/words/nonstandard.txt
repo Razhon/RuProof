@@ -15,3 +15,4 @@
 тц
 фух
 чесслово = честное слово https://ru.wiktionary.org/wiki/%D1%87%D0%B5%D1%81%D1%81%D0%BB%D0%BE%D0%B2%D0%BE
+ща = сейчас
