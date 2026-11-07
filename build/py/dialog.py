@@ -5,6 +5,7 @@
 """
 
 import builtins
+import re
 import sys
 from enum import Enum
 from pathlib import Path
@@ -201,7 +202,8 @@ def com_key(kind, lem, c, fl):
 
 def both(fl: list[Form]) -> list[Form]:
     """Общий род (тег NN:…:Com) при записи: те же формы с тегами м.р. и ж.р., как у LT; остальное как есть."""
-    return sorted({(f, t.replace(":Com:", g, 1)) for f, t in fl for g in (":Masc:", ":Fem:")})
+    # тег несклоняемого слова бывает и без падежа/числа: NN:Anim:Com кончается на Com
+    return sorted({(f, re.sub(r":Com(?=:|$)", g, t, count=1)) for f, t in fl for g in (":Masc", ":Fem")})
 
 
 def participles(ix, lem, pid, fl, need, seen) -> list[Option]:
@@ -778,6 +780,7 @@ if __name__ == "__main__":
         c, got = edit("NN:Anim:Fem", sir)
     assert c == "NN:Anim:Com" and len(got) == 4 and ("брумз", "NN:Anim:Masc:PL:R") in got, got
     assert forms.label(c, got) == "сущ. одуш. общ. р. (м. и ж.)"
+    assert both([("пони", "NN:Anim:Com")]) == [("пони", "NN:Anim:Fem"), ("пони", "NN:Anim:Masc")]  # без падежа и числа
     masc = [(f, t.replace(":Fem:", ":Masc:")) for f, t in sir]
     assert com_key("para", "брумза", "NN:Anim:Fem", sir) == com_key("para", "брумза", "NN:Anim:Masc", masc)
     assert com_key("para", "брумза", "NN:Anim:Fem", sir) != com_key("para", "брумза", "NN:Anim:Masc", masc[:1])
