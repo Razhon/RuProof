@@ -31,10 +31,10 @@ u{text-decoration:none;position:relative}u::after{content:"";position:absolute;l
 
 <div class="cap">Заикание и растяжка</div>
 <div class="row">
- <div><div class="f">— <u class="sp a">П-прямо</u> сейчас? <u class="sp">Не-е-ет</u>!<span class="b">2</span></div>
+ <div><div class="f">— <u class="sp">П-прямо</u> сейчас? <u class="sp a">Не-е-ет</u>!<span class="b">2</span></div>
   <div class="p"><b>Орфографическая</b><div class="c"><span>Пережить</span><span>Перебить</span><span>Дефицит</span></div></div></div>
- <div><div class="f">— <u class="sp a">П-прямо</u> сейчас? <u class="sp">Не-е-ет</u>!<span class="b">2</span></div>
-  <div class="p"><b>Орфографическая</b>Заикание или растяжка?<div class="c"><span>Пережить</span><span>Перебить</span></div></div></div>
+ <div><div class="f">— <u class="sp">П-прямо</u> сейчас? <u class="sp a">Не-е-ет</u>!<span class="b">2</span></div>
+  <div class="p"><b>Орфографическая</b>Заикание или растяжка?<div class="c"><span>Нет</span><span>Пережить</span><span>Перебить</span></div></div></div>
  <div><div class="f">— П-прямо сейчас? Не-е-ет!<span class="b ok">✓</span></div></div>
 </div>
 
