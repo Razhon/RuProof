@@ -5,6 +5,34 @@
 # Этот абзац — шапка файла: rpdict держит его наверху, отдельно от блоков.
 # Подробнее: build/README.md, «Какой файл выбрать».
 
+# Абилин: как «адалин» — сущ. неодуш. м.р.
+Абилин	Абилин	NN:Inanim:Masc:Sin:Nom
+Абилин	Абилин	NN:Inanim:Masc:Sin:V
+Абилина	Абилин	NN:Inanim:Masc:Sin:R
+Абилинам	Абилин	NN:Inanim:Masc:PL:D
+Абилинами	Абилин	NN:Inanim:Masc:PL:T
+Абилинах	Абилин	NN:Inanim:Masc:PL:P
+Абилине	Абилин	NN:Inanim:Masc:Sin:P
+Абилинов	Абилин	NN:Inanim:Masc:PL:R
+Абилином	Абилин	NN:Inanim:Masc:Sin:T
+Абилину	Абилин	NN:Inanim:Masc:Sin:D
+Абилины	Абилин	NN:Inanim:Masc:PL:Nom
+Абилины	Абилин	NN:Inanim:Masc:PL:V
+
+# агентность: как «амбивалентность» — сущ. неодуш. ж.р.
+агентностей	агентность	NN:Inanim:Fem:PL:R
+агентности	агентность	NN:Inanim:Fem:PL:Nom
+агентности	агентность	NN:Inanim:Fem:PL:V
+агентности	агентность	NN:Inanim:Fem:Sin:D
+агентности	агентность	NN:Inanim:Fem:Sin:P
+агентности	агентность	NN:Inanim:Fem:Sin:R
+агентность	агентность	NN:Inanim:Fem:Sin:Nom
+агентность	агентность	NN:Inanim:Fem:Sin:V
+агентностью	агентность	NN:Inanim:Fem:Sin:T
+агентностям	агентность	NN:Inanim:Fem:PL:D
+агентностями	агентность	NN:Inanim:Fem:PL:T
+агентностях	агентность	NN:Inanim:Fem:PL:P
+
 # балбесина: поправлено, сущ. одуш. ж.р.
 балбесин	балбесина	NN:Anim:Fem:PL:R
 балбесин	балбесина	NN:Anim:Fem:PL:V
@@ -442,6 +470,36 @@
 бошкою	бошка	NN:Inanim:Fem:Sin:T
 бошку	бошка	NN:Inanim:Fem:Sin:V
 
+# бумерский: как «юнкерский» — прил.
+бумерская	бумерский	ADJ:Posit:Fem:Nom
+бумерски	бумерский	ADJ:Short:PL
+бумерские	бумерский	ADJ:Posit:PL:Nom
+бумерские	бумерский	ADJ:Posit:PL:V
+бумерский	бумерский	ADJ:Posit:Masc:Nom
+бумерский	бумерский	ADJ:Posit:Masc:V
+бумерским	бумерский	ADJ:Posit:Masc:T
+бумерским	бумерский	ADJ:Posit:Neut:T
+бумерским	бумерский	ADJ:Posit:PL:D
+бумерскими	бумерский	ADJ:Posit:PL:T
+бумерских	бумерский	ADJ:Posit:PL:P
+бумерских	бумерский	ADJ:Posit:PL:R
+бумерских	бумерский	ADJ:Posit:PL:V
+бумерского	бумерский	ADJ:Posit:Masc:R
+бумерского	бумерский	ADJ:Posit:Masc:V
+бумерского	бумерский	ADJ:Posit:Neut:R
+бумерское	бумерский	ADJ:Posit:Neut:Nom
+бумерское	бумерский	ADJ:Posit:Neut:V
+бумерской	бумерский	ADJ:Posit:Fem:D
+бумерской	бумерский	ADJ:Posit:Fem:P
+бумерской	бумерский	ADJ:Posit:Fem:R
+бумерской	бумерский	ADJ:Posit:Fem:T
+бумерском	бумерский	ADJ:Posit:Masc:P
+бумерском	бумерский	ADJ:Posit:Neut:P
+бумерскому	бумерский	ADJ:Posit:Masc:D
+бумерскому	бумерский	ADJ:Posit:Neut:D
+бумерскою	бумерский	ADJ:Posit:Fem:T
+бумерскую	бумерский	ADJ:Posit:Fem:V
+
 # бутоновидный: как «акуловидный» — прил.
 бутоновиден	бутоновидный	ADJ:Short:Masc
 бутоновидна	бутоновидный	ADJ:Short:Fem
@@ -750,6 +808,148 @@
 визажисток	визажистка	NN:Anim:Fem:PL:R
 визажисток	визажистка	NN:Anim:Fem:PL:V
 
+# визуализировать: как «актуализировать» — глаг. двувид. перех.
+визуализировав	визуализировать	DPT:Past:TRANS:2PFV
+визуализировавшая	визуализировать	PT:Past:TRANS:2PFV:DST:Fem:Nom
+визуализировавшего	визуализировать	PT:Past:TRANS:2PFV:DST:Masc:R
+визуализировавшего	визуализировать	PT:Past:TRANS:2PFV:DST:Masc:V
+визуализировавшего	визуализировать	PT:Past:TRANS:2PFV:DST:Neut:R
+визуализировавшее	визуализировать	PT:Past:TRANS:2PFV:DST:Neut:Nom
+визуализировавшее	визуализировать	PT:Past:TRANS:2PFV:DST:Neut:V
+визуализировавшей	визуализировать	PT:Past:TRANS:2PFV:DST:Fem:D
+визуализировавшей	визуализировать	PT:Past:TRANS:2PFV:DST:Fem:P
+визуализировавшей	визуализировать	PT:Past:TRANS:2PFV:DST:Fem:R
+визуализировавшей	визуализировать	PT:Past:TRANS:2PFV:DST:Fem:T
+визуализировавшем	визуализировать	PT:Past:TRANS:2PFV:DST:Masc:P
+визуализировавшем	визуализировать	PT:Past:TRANS:2PFV:DST:Neut:P
+визуализировавшему	визуализировать	PT:Past:TRANS:2PFV:DST:Masc:D
+визуализировавшему	визуализировать	PT:Past:TRANS:2PFV:DST:Neut:D
+визуализировавшею	визуализировать	PT:Past:TRANS:2PFV:DST:Fem:T
+визуализировавши	визуализировать	DPT:Past:TRANS:2PFV
+визуализировавшие	визуализировать	PT:Past:TRANS:2PFV:DST:PL:Nom
+визуализировавшие	визуализировать	PT:Past:TRANS:2PFV:DST:PL:V
+визуализировавший	визуализировать	PT:Past:TRANS:2PFV:DST:Masc:Nom
+визуализировавший	визуализировать	PT:Past:TRANS:2PFV:DST:Masc:V
+визуализировавшим	визуализировать	PT:Past:TRANS:2PFV:DST:Masc:T
+визуализировавшим	визуализировать	PT:Past:TRANS:2PFV:DST:Neut:T
+визуализировавшим	визуализировать	PT:Past:TRANS:2PFV:DST:PL:D
+визуализировавшими	визуализировать	PT:Past:TRANS:2PFV:DST:PL:T
+визуализировавших	визуализировать	PT:Past:TRANS:2PFV:DST:PL:P
+визуализировавших	визуализировать	PT:Past:TRANS:2PFV:DST:PL:R
+визуализировавших	визуализировать	PT:Past:TRANS:2PFV:DST:PL:V
+визуализировавшую	визуализировать	PT:Past:TRANS:2PFV:DST:Fem:V
+визуализировал	визуализировать	VB:Past:TRANS:2PFV:Masc
+визуализировала	визуализировать	VB:Past:TRANS:2PFV:Fem
+визуализировали	визуализировать	VB:Past:TRANS:2PFV:PL
+визуализировало	визуализировать	VB:Past:TRANS:2PFV:Neut
+визуализирован	визуализировать	PT_Short:Past:TRANS:2PFV:STR:Masc
+визуализирована	визуализировать	PT_Short:Past:TRANS:2PFV:STR:Fem
+визуализированная	визуализировать	PT:Past:TRANS:2PFV:STR:Fem:Nom
+визуализированного	визуализировать	PT:Past:TRANS:2PFV:STR:Masc:R
+визуализированного	визуализировать	PT:Past:TRANS:2PFV:STR:Masc:V
+визуализированного	визуализировать	PT:Past:TRANS:2PFV:STR:Neut:R
+визуализированное	визуализировать	PT:Past:TRANS:2PFV:STR:Neut:Nom
+визуализированное	визуализировать	PT:Past:TRANS:2PFV:STR:Neut:V
+визуализированной	визуализировать	PT:Past:TRANS:2PFV:STR:Fem:D
+визуализированной	визуализировать	PT:Past:TRANS:2PFV:STR:Fem:P
+визуализированной	визуализировать	PT:Past:TRANS:2PFV:STR:Fem:R
+визуализированной	визуализировать	PT:Past:TRANS:2PFV:STR:Fem:T
+визуализированном	визуализировать	PT:Past:TRANS:2PFV:STR:Masc:P
+визуализированном	визуализировать	PT:Past:TRANS:2PFV:STR:Neut:P
+визуализированному	визуализировать	PT:Past:TRANS:2PFV:STR:Masc:D
+визуализированному	визуализировать	PT:Past:TRANS:2PFV:STR:Neut:D
+визуализированною	визуализировать	PT:Past:TRANS:2PFV:STR:Fem:T
+визуализированную	визуализировать	PT:Past:TRANS:2PFV:STR:Fem:V
+визуализированные	визуализировать	PT:Past:TRANS:2PFV:STR:PL:Nom
+визуализированные	визуализировать	PT:Past:TRANS:2PFV:STR:PL:V
+визуализированный	визуализировать	PT:Past:TRANS:2PFV:STR:Masc:Nom
+визуализированный	визуализировать	PT:Past:TRANS:2PFV:STR:Masc:V
+визуализированным	визуализировать	PT:Past:TRANS:2PFV:STR:Masc:T
+визуализированным	визуализировать	PT:Past:TRANS:2PFV:STR:Neut:T
+визуализированным	визуализировать	PT:Past:TRANS:2PFV:STR:PL:D
+визуализированными	визуализировать	PT:Past:TRANS:2PFV:STR:PL:T
+визуализированных	визуализировать	PT:Past:TRANS:2PFV:STR:PL:P
+визуализированных	визуализировать	PT:Past:TRANS:2PFV:STR:PL:R
+визуализированных	визуализировать	PT:Past:TRANS:2PFV:STR:PL:V
+визуализировано	визуализировать	PT_Short:Past:TRANS:2PFV:STR:Neut
+визуализированы	визуализировать	PT_Short:Past:TRANS:2PFV:STR:PL
+визуализировать	визуализировать	VB:INF:TRANS:2PFV
+визуализируем	визуализировать	PT_Short:Real:TRANS:2PFV:STR:Masc
+визуализируем	визуализировать	VB:Fut:TRANS:2PFV:PL:P1
+визуализируем	визуализировать	VB:IMP:TRANS:2PFV:PL:P1
+визуализируем	визуализировать	VB:Real:TRANS:2PFV:PL:P1
+визуализируема	визуализировать	PT_Short:Real:TRANS:2PFV:STR:Fem
+визуализируемая	визуализировать	PT:Real:TRANS:2PFV:STR:Fem:Nom
+визуализируемо	визуализировать	PT_Short:Real:TRANS:2PFV:STR:Neut
+визуализируемого	визуализировать	PT:Real:TRANS:2PFV:STR:Masc:R
+визуализируемого	визуализировать	PT:Real:TRANS:2PFV:STR:Masc:V
+визуализируемого	визуализировать	PT:Real:TRANS:2PFV:STR:Neut:R
+визуализируемое	визуализировать	PT:Real:TRANS:2PFV:STR:Neut:Nom
+визуализируемое	визуализировать	PT:Real:TRANS:2PFV:STR:Neut:V
+визуализируемой	визуализировать	PT:Real:TRANS:2PFV:STR:Fem:D
+визуализируемой	визуализировать	PT:Real:TRANS:2PFV:STR:Fem:P
+визуализируемой	визуализировать	PT:Real:TRANS:2PFV:STR:Fem:R
+визуализируемой	визуализировать	PT:Real:TRANS:2PFV:STR:Fem:T
+визуализируемом	визуализировать	PT:Real:TRANS:2PFV:STR:Masc:P
+визуализируемом	визуализировать	PT:Real:TRANS:2PFV:STR:Neut:P
+визуализируемому	визуализировать	PT:Real:TRANS:2PFV:STR:Masc:D
+визуализируемому	визуализировать	PT:Real:TRANS:2PFV:STR:Neut:D
+визуализируемою	визуализировать	PT:Real:TRANS:2PFV:STR:Fem:T
+визуализируемте	визуализировать	VB:IMP:TRANS:2PFV:PL:P1
+визуализируемую	визуализировать	PT:Real:TRANS:2PFV:STR:Fem:V
+визуализируемы	визуализировать	PT_Short:Real:TRANS:2PFV:STR:PL
+визуализируемые	визуализировать	PT:Real:TRANS:2PFV:STR:PL:Nom
+визуализируемые	визуализировать	PT:Real:TRANS:2PFV:STR:PL:V
+визуализируемый	визуализировать	PT:Real:TRANS:2PFV:STR:Masc:Nom
+визуализируемый	визуализировать	PT:Real:TRANS:2PFV:STR:Masc:V
+визуализируемым	визуализировать	PT:Real:TRANS:2PFV:STR:Masc:T
+визуализируемым	визуализировать	PT:Real:TRANS:2PFV:STR:Neut:T
+визуализируемым	визуализировать	PT:Real:TRANS:2PFV:STR:PL:D
+визуализируемыми	визуализировать	PT:Real:TRANS:2PFV:STR:PL:T
+визуализируемых	визуализировать	PT:Real:TRANS:2PFV:STR:PL:P
+визуализируемых	визуализировать	PT:Real:TRANS:2PFV:STR:PL:R
+визуализируемых	визуализировать	PT:Real:TRANS:2PFV:STR:PL:V
+визуализирует	визуализировать	VB:Fut:TRANS:2PFV:Sin:P3
+визуализирует	визуализировать	VB:Real:TRANS:2PFV:Sin:P3
+визуализируете	визуализировать	VB:Fut:TRANS:2PFV:PL:P2
+визуализируете	визуализировать	VB:Real:TRANS:2PFV:PL:P2
+визуализируешь	визуализировать	VB:Fut:TRANS:2PFV:Sin:P2
+визуализируешь	визуализировать	VB:Real:TRANS:2PFV:Sin:P2
+визуализируй	визуализировать	VB:IMP:TRANS:2PFV:Sin:P2
+визуализируйте	визуализировать	VB:IMP:TRANS:2PFV:PL:P2
+визуализирую	визуализировать	VB:Fut:TRANS:2PFV:Sin:P1
+визуализирую	визуализировать	VB:Real:TRANS:2PFV:Sin:P1
+визуализируют	визуализировать	VB:Fut:TRANS:2PFV:PL:P3
+визуализируют	визуализировать	VB:Real:TRANS:2PFV:PL:P3
+визуализирующая	визуализировать	PT:Real:TRANS:2PFV:DST:Fem:Nom
+визуализирующего	визуализировать	PT:Real:TRANS:2PFV:DST:Masc:R
+визуализирующего	визуализировать	PT:Real:TRANS:2PFV:DST:Masc:V
+визуализирующего	визуализировать	PT:Real:TRANS:2PFV:DST:Neut:R
+визуализирующее	визуализировать	PT:Real:TRANS:2PFV:DST:Neut:Nom
+визуализирующее	визуализировать	PT:Real:TRANS:2PFV:DST:Neut:V
+визуализирующей	визуализировать	PT:Real:TRANS:2PFV:DST:Fem:D
+визуализирующей	визуализировать	PT:Real:TRANS:2PFV:DST:Fem:P
+визуализирующей	визуализировать	PT:Real:TRANS:2PFV:DST:Fem:R
+визуализирующей	визуализировать	PT:Real:TRANS:2PFV:DST:Fem:T
+визуализирующем	визуализировать	PT:Real:TRANS:2PFV:DST:Masc:P
+визуализирующем	визуализировать	PT:Real:TRANS:2PFV:DST:Neut:P
+визуализирующему	визуализировать	PT:Real:TRANS:2PFV:DST:Masc:D
+визуализирующему	визуализировать	PT:Real:TRANS:2PFV:DST:Neut:D
+визуализирующею	визуализировать	PT:Real:TRANS:2PFV:DST:Fem:T
+визуализирующие	визуализировать	PT:Real:TRANS:2PFV:DST:PL:Nom
+визуализирующие	визуализировать	PT:Real:TRANS:2PFV:DST:PL:V
+визуализирующий	визуализировать	PT:Real:TRANS:2PFV:DST:Masc:Nom
+визуализирующий	визуализировать	PT:Real:TRANS:2PFV:DST:Masc:V
+визуализирующим	визуализировать	PT:Real:TRANS:2PFV:DST:Masc:T
+визуализирующим	визуализировать	PT:Real:TRANS:2PFV:DST:Neut:T
+визуализирующим	визуализировать	PT:Real:TRANS:2PFV:DST:PL:D
+визуализирующими	визуализировать	PT:Real:TRANS:2PFV:DST:PL:T
+визуализирующих	визуализировать	PT:Real:TRANS:2PFV:DST:PL:P
+визуализирующих	визуализировать	PT:Real:TRANS:2PFV:DST:PL:R
+визуализирующих	визуализировать	PT:Real:TRANS:2PFV:DST:PL:V
+визуализирующую	визуализировать	PT:Real:TRANS:2PFV:DST:Fem:V
+визуализируя	визуализировать	DPT:Real:TRANS:2PFV
+
 # винегретный: как «анкетный» — прил.
 винегретен	винегретный	ADJ:Short:Masc
 винегретна	винегретный	ADJ:Short:Fem
@@ -854,6 +1054,45 @@
 вишнёво-красных	вишнёво-красный	ADJ:Posit:PL:R
 вишнёво-красных	вишнёво-красный	ADJ:Posit:PL:V
 
+# включённость: как «бесценность» — сущ. неодуш. ж.р.
+включённостей	включённость	NN:Inanim:Fem:PL:R
+включённости	включённость	NN:Inanim:Fem:PL:Nom
+включённости	включённость	NN:Inanim:Fem:PL:V
+включённости	включённость	NN:Inanim:Fem:Sin:D
+включённости	включённость	NN:Inanim:Fem:Sin:P
+включённости	включённость	NN:Inanim:Fem:Sin:R
+включённость	включённость	NN:Inanim:Fem:Sin:Nom
+включённость	включённость	NN:Inanim:Fem:Sin:V
+включённостью	включённость	NN:Inanim:Fem:Sin:T
+включённостям	включённость	NN:Inanim:Fem:PL:D
+включённостями	включённость	NN:Inanim:Fem:PL:T
+включённостях	включённость	NN:Inanim:Fem:PL:P
+
+# влипание: как «алкание» — сущ. неодуш. ср.р.
+влипание	влипание	NN:Inanim:Neut:Sin:Nom
+влипание	влипание	NN:Inanim:Neut:Sin:V
+влипанием	влипание	NN:Inanim:Neut:Sin:T
+влипании	влипание	NN:Inanim:Neut:Sin:P
+влипаний	влипание	NN:Inanim:Neut:PL:R
+влипанию	влипание	NN:Inanim:Neut:Sin:D
+влипания	влипание	NN:Inanim:Neut:PL:Nom
+влипания	влипание	NN:Inanim:Neut:PL:V
+влипания	влипание	NN:Inanim:Neut:Sin:R
+влипаниям	влипание	NN:Inanim:Neut:PL:D
+влипаниями	влипание	NN:Inanim:Neut:PL:T
+влипаниях	влипание	NN:Inanim:Neut:PL:P
+влипанье	влипание	NN:Inanim:Neut:Sin:Nom
+влипанье	влипание	NN:Inanim:Neut:Sin:P
+влипанье	влипание	NN:Inanim:Neut:Sin:V
+влипаньем	влипание	NN:Inanim:Neut:Sin:T
+влипанью	влипание	NN:Inanim:Neut:Sin:D
+влипанья	влипание	NN:Inanim:Neut:PL:Nom
+влипанья	влипание	NN:Inanim:Neut:PL:V
+влипанья	влипание	NN:Inanim:Neut:Sin:R
+влипаньям	влипание	NN:Inanim:Neut:PL:D
+влипаньями	влипание	NN:Inanim:Neut:PL:T
+влипаньях	влипание	NN:Inanim:Neut:PL:P
+
 # внаглую: наречие
 внаглую	внаглую	ADV
 
@@ -885,6 +1124,20 @@
 внутримировых	внутримировой	ADJ:Posit:PL:P
 внутримировых	внутримировой	ADJ:Posit:PL:R
 внутримировых	внутримировой	ADJ:Posit:PL:V
+
+# вовлечённость: как «бесценность» — сущ. неодуш. ж.р.
+вовлечённостей	вовлечённость	NN:Inanim:Fem:PL:R
+вовлечённости	вовлечённость	NN:Inanim:Fem:PL:Nom
+вовлечённости	вовлечённость	NN:Inanim:Fem:PL:V
+вовлечённости	вовлечённость	NN:Inanim:Fem:Sin:D
+вовлечённости	вовлечённость	NN:Inanim:Fem:Sin:P
+вовлечённости	вовлечённость	NN:Inanim:Fem:Sin:R
+вовлечённость	вовлечённость	NN:Inanim:Fem:Sin:Nom
+вовлечённость	вовлечённость	NN:Inanim:Fem:Sin:V
+вовлечённостью	вовлечённость	NN:Inanim:Fem:Sin:T
+вовлечённостям	вовлечённость	NN:Inanim:Fem:PL:D
+вовлечённостями	вовлечённость	NN:Inanim:Fem:PL:T
+вовлечённостях	вовлечённость	NN:Inanim:Fem:PL:P
 
 # вороняка: как «рубака» — сущ. одуш. м.р.
 вороняк	вороняка	NN:Anim:Masc:PL:R
@@ -946,6 +1199,20 @@
 впиздячу	впиздячить	VB:Fut:INTR:PFV:Sin:P1
 впиздячь	впиздячить	VB:IMP:INTR:PFV:Sin:P2
 впиздячьте	впиздячить	VB:IMP:INTR:PFV:PL:P2
+
+# впитыватель: как «газопромыватель» — сущ. неодуш. м.р.
+впитывателе	впитыватель	NN:Inanim:Masc:Sin:P
+впитывателей	впитыватель	NN:Inanim:Masc:PL:R
+впитывателем	впитыватель	NN:Inanim:Masc:Sin:T
+впитыватели	впитыватель	NN:Inanim:Masc:PL:Nom
+впитыватели	впитыватель	NN:Inanim:Masc:PL:V
+впитыватель	впитыватель	NN:Inanim:Masc:Sin:Nom
+впитыватель	впитыватель	NN:Inanim:Masc:Sin:V
+впитывателю	впитыватель	NN:Inanim:Masc:Sin:D
+впитывателя	впитыватель	NN:Inanim:Masc:Sin:R
+впитывателям	впитыватель	NN:Inanim:Masc:PL:D
+впитывателями	впитыватель	NN:Inanim:Masc:PL:T
+впитывателях	впитыватель	NN:Inanim:Masc:PL:P
 
 # вхуярить: поправлено, глаг. сов. перех. (ignore)
 вхуярена	вхуярить	PT_Short:Past:TRANS:PFV:STR:Fem
@@ -1670,6 +1937,21 @@
 голоёбицы	голоёбица	NN:Inanim:Fem:PL:V
 голоёбицы	голоёбица	NN:Inanim:Fem:Sin:R
 
+# гопота: как «гнида» — сущ. неодуш. ж.р.
+гопот	гопота	NN:Inanim:Fem:PL:R
+гопота	гопота	NN:Inanim:Fem:Sin:Nom
+гопотам	гопота	NN:Inanim:Fem:PL:D
+гопотами	гопота	NN:Inanim:Fem:PL:T
+гопотах	гопота	NN:Inanim:Fem:PL:P
+гопоте	гопота	NN:Inanim:Fem:Sin:D
+гопоте	гопота	NN:Inanim:Fem:Sin:P
+гопотой	гопота	NN:Inanim:Fem:Sin:T
+гопотою	гопота	NN:Inanim:Fem:Sin:T
+гопоту	гопота	NN:Inanim:Fem:Sin:V
+гопоты	гопота	NN:Inanim:Fem:PL:Nom
+гопоты	гопота	NN:Inanim:Fem:PL:V
+гопоты	гопота	NN:Inanim:Fem:Sin:R
+
 # город-государство: поправлено, сущ. неодуш. ср.р.
 город-государство	город-государство	NN:Inanim:Neut:Sin:Nom
 город-государство	город-государство	NN:Inanim:Neut:Sin:V
@@ -1801,6 +2083,21 @@
 двусторонне-симметричных	двусторонне-симметричный	ADJ:Posit:PL:P
 двусторонне-симметричных	двусторонне-симметричный	ADJ:Posit:PL:R
 двусторонне-симметричных	двусторонне-симметричный	ADJ:Posit:PL:V
+
+# деиндивидуализация: как «актуализация» — сущ. неодуш. ж.р.
+деиндивидуализацией	деиндивидуализация	NN:Inanim:Fem:Sin:T
+деиндивидуализациею	деиндивидуализация	NN:Inanim:Fem:Sin:T
+деиндивидуализации	деиндивидуализация	NN:Inanim:Fem:PL:Nom
+деиндивидуализации	деиндивидуализация	NN:Inanim:Fem:PL:V
+деиндивидуализации	деиндивидуализация	NN:Inanim:Fem:Sin:D
+деиндивидуализации	деиндивидуализация	NN:Inanim:Fem:Sin:P
+деиндивидуализации	деиндивидуализация	NN:Inanim:Fem:Sin:R
+деиндивидуализаций	деиндивидуализация	NN:Inanim:Fem:PL:R
+деиндивидуализацию	деиндивидуализация	NN:Inanim:Fem:Sin:V
+деиндивидуализация	деиндивидуализация	NN:Inanim:Fem:Sin:Nom
+деиндивидуализациям	деиндивидуализация	NN:Inanim:Fem:PL:D
+деиндивидуализациями	деиндивидуализация	NN:Inanim:Fem:PL:T
+деиндивидуализациях	деиндивидуализация	NN:Inanim:Fem:PL:P
 
 # декаф: как «аграф» — сущ. неодуш. м.р.
 декаф	декаф	NN:Inanim:Masc:Sin:Nom
@@ -1979,6 +2276,20 @@
 доебётесь	доебаться	VB:Fut:INTR:PFV:PL:P2
 доебётся	доебаться	VB:Fut:INTR:PFV:Sin:P3
 доебёшься	доебаться	VB:Fut:INTR:PFV:Sin:P2
+
+# долбоебизм: как «афоризм» — сущ. неодуш. м.р. (ignore)
+долбоебизм	долбоебизм	NN:Inanim:Masc:Sin:Nom
+долбоебизм	долбоебизм	NN:Inanim:Masc:Sin:V
+долбоебизма	долбоебизм	NN:Inanim:Masc:Sin:R
+долбоебизмам	долбоебизм	NN:Inanim:Masc:PL:D
+долбоебизмами	долбоебизм	NN:Inanim:Masc:PL:T
+долбоебизмах	долбоебизм	NN:Inanim:Masc:PL:P
+долбоебизме	долбоебизм	NN:Inanim:Masc:Sin:P
+долбоебизмов	долбоебизм	NN:Inanim:Masc:PL:R
+долбоебизмом	долбоебизм	NN:Inanim:Masc:Sin:T
+долбоебизму	долбоебизм	NN:Inanim:Masc:Sin:D
+долбоебизмы	долбоебизм	NN:Inanim:Masc:PL:Nom
+долбоебизмы	долбоебизм	NN:Inanim:Masc:PL:V
 
 # долбоёб: поправлено, сущ. одуш. м.р. (ignore)
 долбоёб	долбоёб	NN:Anim:Masc:Sin:Nom
@@ -2307,6 +2618,34 @@
 дрочить	дрочить	VB:INF:TRANS:IMPFV
 дрочишь	дрочить	VB:Real:TRANS:IMPFV:Sin:P2
 дрочу	дрочить	VB:Real:TRANS:IMPFV:Sin:P1
+
+# душнила: как «верзила» — сущ. одуш. общ. р. (м. и ж.)
+душнил	душнила	NN:Anim:Fem:PL:R
+душнил	душнила	NN:Anim:Fem:PL:V
+душнил	душнила	NN:Anim:Masc:PL:R
+душнил	душнила	NN:Anim:Masc:PL:V
+душнила	душнила	NN:Anim:Fem:Sin:Nom
+душнила	душнила	NN:Anim:Masc:Sin:Nom
+душнилам	душнила	NN:Anim:Fem:PL:D
+душнилам	душнила	NN:Anim:Masc:PL:D
+душнилами	душнила	NN:Anim:Fem:PL:T
+душнилами	душнила	NN:Anim:Masc:PL:T
+душнилах	душнила	NN:Anim:Fem:PL:P
+душнилах	душнила	NN:Anim:Masc:PL:P
+душниле	душнила	NN:Anim:Fem:Sin:D
+душниле	душнила	NN:Anim:Fem:Sin:P
+душниле	душнила	NN:Anim:Masc:Sin:D
+душниле	душнила	NN:Anim:Masc:Sin:P
+душнилой	душнила	NN:Anim:Fem:Sin:T
+душнилой	душнила	NN:Anim:Masc:Sin:T
+душнилою	душнила	NN:Anim:Fem:Sin:T
+душнилою	душнила	NN:Anim:Masc:Sin:T
+душнилу	душнила	NN:Anim:Fem:Sin:V
+душнилу	душнила	NN:Anim:Masc:Sin:V
+душнилы	душнила	NN:Anim:Fem:PL:Nom
+душнилы	душнила	NN:Anim:Fem:Sin:R
+душнилы	душнила	NN:Anim:Masc:PL:Nom
+душнилы	душнила	NN:Anim:Masc:Sin:R
 
 # ебака: поправлено, сущ. одуш. общ. р. (м. и ж.) (ignore)
 ебак	ебака	NN:Anim:Fem:PL:R
@@ -4073,6 +4412,21 @@
 изъебнётся	изъебнуться	VB:Fut:INTR:PFV:Sin:P3
 изъебнёшься	изъебнуться	VB:Fut:INTR:PFV:Sin:P2
 
+# инфоцыган: как «цыган» — сущ. одуш. м.р.
+инфоцыган	инфоцыган	NN:Anim:Masc:PL:R
+инфоцыган	инфоцыган	NN:Anim:Masc:PL:V
+инфоцыган	инфоцыган	NN:Anim:Masc:Sin:Nom
+инфоцыгана	инфоцыган	NN:Anim:Masc:Sin:R
+инфоцыгана	инфоцыган	NN:Anim:Masc:Sin:V
+инфоцыганам	инфоцыган	NN:Anim:Masc:PL:D
+инфоцыганами	инфоцыган	NN:Anim:Masc:PL:T
+инфоцыганах	инфоцыган	NN:Anim:Masc:PL:P
+инфоцыгане	инфоцыган	NN:Anim:Masc:PL:Nom
+инфоцыгане	инфоцыган	NN:Anim:Masc:Sin:P
+инфоцыганом	инфоцыган	NN:Anim:Masc:Sin:T
+инфоцыгану	инфоцыган	NN:Anim:Masc:Sin:D
+инфоцыганы	инфоцыган	NN:Anim:Masc:PL:Nom
+
 # исекай: поправлено, сущ. неодуш. м.р.
 исекае	исекай	NN:Inanim:Masc:Sin:P
 исекаев	исекай	NN:Inanim:Masc:PL:R
@@ -4194,6 +4548,52 @@
 # кликать: форма известного слова «кликать»: кликая — деепричастие, настоящее время
 кликая	кликать	DPT:Real:TRANS:IMPFV
 
+# клиповый: поправлено, прил.
+клиповая	клиповый	ADJ:Posit:Fem:Nom
+клиповее	клиповый	ADJ:Comp
+клиповей	клиповый	ADJ:Comp
+клипово	клиповый	ADJ:Short:Neut
+клипового	клиповый	ADJ:Posit:Masc:R
+клипового	клиповый	ADJ:Posit:Masc:V
+клипового	клиповый	ADJ:Posit:Neut:R
+клиповое	клиповый	ADJ:Posit:Neut:Nom
+клиповое	клиповый	ADJ:Posit:Neut:V
+клиповой	клиповый	ADJ:Posit:Fem:D
+клиповой	клиповый	ADJ:Posit:Fem:P
+клиповой	клиповый	ADJ:Posit:Fem:R
+клиповой	клиповый	ADJ:Posit:Fem:T
+клиповом	клиповый	ADJ:Posit:Masc:P
+клиповом	клиповый	ADJ:Posit:Neut:P
+клиповому	клиповый	ADJ:Posit:Masc:D
+клиповому	клиповый	ADJ:Posit:Neut:D
+клиповою	клиповый	ADJ:Posit:Fem:T
+клиповую	клиповый	ADJ:Posit:Fem:V
+клиповые	клиповый	ADJ:Posit:PL:Nom
+клиповые	клиповый	ADJ:Posit:PL:V
+клиповый	клиповый	ADJ:Posit:Masc:Nom
+клиповый	клиповый	ADJ:Posit:Masc:V
+клиповым	клиповый	ADJ:Posit:Masc:T
+клиповым	клиповый	ADJ:Posit:Neut:T
+клиповым	клиповый	ADJ:Posit:PL:D
+клиповыми	клиповый	ADJ:Posit:PL:T
+клиповых	клиповый	ADJ:Posit:PL:P
+клиповых	клиповый	ADJ:Posit:PL:R
+клиповых	клиповый	ADJ:Posit:PL:V
+
+# клиффхэнгер: как «югер» — сущ. неодуш. м.р.
+клиффхэнгер	клиффхэнгер	NN:Inanim:Masc:Sin:Nom
+клиффхэнгер	клиффхэнгер	NN:Inanim:Masc:Sin:V
+клиффхэнгера	клиффхэнгер	NN:Inanim:Masc:Sin:R
+клиффхэнгерам	клиффхэнгер	NN:Inanim:Masc:PL:D
+клиффхэнгерами	клиффхэнгер	NN:Inanim:Masc:PL:T
+клиффхэнгерах	клиффхэнгер	NN:Inanim:Masc:PL:P
+клиффхэнгере	клиффхэнгер	NN:Inanim:Masc:Sin:P
+клиффхэнгеров	клиффхэнгер	NN:Inanim:Masc:PL:R
+клиффхэнгером	клиффхэнгер	NN:Inanim:Masc:Sin:T
+клиффхэнгеру	клиффхэнгер	NN:Inanim:Masc:Sin:D
+клиффхэнгеры	клиффхэнгер	NN:Inanim:Masc:PL:Nom
+клиффхэнгеры	клиффхэнгер	NN:Inanim:Masc:PL:V
+
 # козлоёб: как «долбоёб» — сущ. одуш. м.р. (ignore)
 козлоёб	козлоёб	NN:Anim:Masc:Sin:Nom
 козлоёба	козлоёб	NN:Anim:Masc:Sin:R
@@ -4250,6 +4650,34 @@
 колдунство	колдунство	NN:Inanim:Neut:Sin:V
 колдунством	колдунство	NN:Inanim:Neut:Sin:T
 колдунству	колдунство	NN:Inanim:Neut:Sin:D
+
+# комбо: несклоняемое, сущ. неодуш. ср.р.
+комбо	комбо	NN:Inanim:Neut:PL:D
+комбо	комбо	NN:Inanim:Neut:PL:Nom
+комбо	комбо	NN:Inanim:Neut:PL:P
+комбо	комбо	NN:Inanim:Neut:PL:R
+комбо	комбо	NN:Inanim:Neut:PL:T
+комбо	комбо	NN:Inanim:Neut:PL:V
+комбо	комбо	NN:Inanim:Neut:Sin:D
+комбо	комбо	NN:Inanim:Neut:Sin:Nom
+комбо	комбо	NN:Inanim:Neut:Sin:P
+комбо	комбо	NN:Inanim:Neut:Sin:R
+комбо	комбо	NN:Inanim:Neut:Sin:T
+комбо	комбо	NN:Inanim:Neut:Sin:V
+
+# кондратий: как «гений» — сущ. неодуш. м.р.
+кондратиев	кондратий	NN:Inanim:Masc:PL:R
+кондратием	кондратий	NN:Inanim:Masc:Sin:T
+кондратии	кондратий	NN:Inanim:Masc:PL:Nom
+кондратии	кондратий	NN:Inanim:Masc:PL:V
+кондратии	кондратий	NN:Inanim:Masc:Sin:P
+кондратий	кондратий	NN:Inanim:Masc:Sin:Nom
+кондратий	кондратий	NN:Inanim:Masc:Sin:V
+кондратию	кондратий	NN:Inanim:Masc:Sin:D
+кондратия	кондратий	NN:Inanim:Masc:Sin:R
+кондратиям	кондратий	NN:Inanim:Masc:PL:D
+кондратиями	кондратий	NN:Inanim:Masc:PL:T
+кондратиях	кондратий	NN:Inanim:Masc:PL:P
 
 # коняшка: поправлено, сущ. одуш. ж.р.
 коняшек	коняшка	NN:Anim:Fem:PL:R
@@ -4623,6 +5051,14 @@
 Маккенны	Маккенна	NN:Name:Masc:PL:Nom
 Маккенны	Маккенна	NN:Name:Masc:Sin:R
 
+# Макфи: несклоняемое, сущ. имя м.р.
+Макфи	Макфи	NN:Name:Masc:Sin:D
+Макфи	Макфи	NN:Name:Masc:Sin:Nom
+Макфи	Макфи	NN:Name:Masc:Sin:P
+Макфи	Макфи	NN:Name:Masc:Sin:R
+Макфи	Макфи	NN:Name:Masc:Sin:T
+Макфи	Макфи	NN:Name:Masc:Sin:V
+
 # Мальтен: как «адриен» — сущ. имя м.р.
 Мальтен	Мальтен	NN:Name:Masc:Sin:Nom
 Мальтена	Мальтен	NN:Name:Masc:Sin:R
@@ -4651,6 +5087,20 @@
 манды	манда	NN:Inanim:Fem:PL:Nom
 манды	манда	NN:Inanim:Fem:PL:V
 манды	манда	NN:Inanim:Fem:Sin:R
+
+# медиаполе: как «поле» — сущ. неодуш. ср.р.
+медиаполе	медиаполе	NN:Inanim:Neut:Sin:Nom
+медиаполе	медиаполе	NN:Inanim:Neut:Sin:P
+медиаполе	медиаполе	NN:Inanim:Neut:Sin:V
+медиаполей	медиаполе	NN:Inanim:Neut:PL:R
+медиаполем	медиаполе	NN:Inanim:Neut:Sin:T
+медиаполю	медиаполе	NN:Inanim:Neut:Sin:D
+медиаполя	медиаполе	NN:Inanim:Neut:PL:Nom
+медиаполя	медиаполе	NN:Inanim:Neut:PL:V
+медиаполя	медиаполе	NN:Inanim:Neut:Sin:R
+медиаполям	медиаполе	NN:Inanim:Neut:PL:D
+медиаполями	медиаполе	NN:Inanim:Neut:PL:T
+медиаполях	медиаполе	NN:Inanim:Neut:PL:P
 
 # межпространственный: как «агрохозяйственный» — прил.
 межпространственная	межпространственный	ADJ:Posit:Fem:Nom
@@ -4710,6 +5160,36 @@
 Мефи	Мефи	NN:Anim:Fem:Sin:R
 Мефи	Мефи	NN:Anim:Fem:Sin:T
 Мефи	Мефи	NN:Anim:Fem:Sin:V
+
+# микродоза: как «доза» — сущ. неодуш. ж.р.
+микродоз	микродоза	NN:Inanim:Fem:PL:R
+микродоза	микродоза	NN:Inanim:Fem:Sin:Nom
+микродозам	микродоза	NN:Inanim:Fem:PL:D
+микродозами	микродоза	NN:Inanim:Fem:PL:T
+микродозах	микродоза	NN:Inanim:Fem:PL:P
+микродозе	микродоза	NN:Inanim:Fem:Sin:D
+микродозе	микродоза	NN:Inanim:Fem:Sin:P
+микродозой	микродоза	NN:Inanim:Fem:Sin:T
+микродозою	микродоза	NN:Inanim:Fem:Sin:T
+микродозу	микродоза	NN:Inanim:Fem:Sin:V
+микродозы	микродоза	NN:Inanim:Fem:PL:Nom
+микродозы	микродоза	NN:Inanim:Fem:PL:V
+микродозы	микродоза	NN:Inanim:Fem:Sin:R
+
+# микроконкуренция: как «конкуренция» — сущ. неодуш. ж.р.
+микроконкуренцией	микроконкуренция	NN:Inanim:Fem:Sin:T
+микроконкуренциею	микроконкуренция	NN:Inanim:Fem:Sin:T
+микроконкуренции	микроконкуренция	NN:Inanim:Fem:PL:Nom
+микроконкуренции	микроконкуренция	NN:Inanim:Fem:PL:V
+микроконкуренции	микроконкуренция	NN:Inanim:Fem:Sin:D
+микроконкуренции	микроконкуренция	NN:Inanim:Fem:Sin:P
+микроконкуренции	микроконкуренция	NN:Inanim:Fem:Sin:R
+микроконкуренций	микроконкуренция	NN:Inanim:Fem:PL:R
+микроконкуренцию	микроконкуренция	NN:Inanim:Fem:Sin:V
+микроконкуренция	микроконкуренция	NN:Inanim:Fem:Sin:Nom
+микроконкуренциям	микроконкуренция	NN:Inanim:Fem:PL:D
+микроконкуренциями	микроконкуренция	NN:Inanim:Fem:PL:T
+микроконкуренциях	микроконкуренция	NN:Inanim:Fem:PL:P
 
 # микрочел: поправлено, сущ. одуш. м.р.
 микрочел	микрочел	NN:Anim:Masc:Sin:Nom
@@ -5880,6 +6360,20 @@
 нежно-персиковых	нежно-персиковый	ADJ:Posit:PL:R
 нежно-персиковых	нежно-персиковый	ADJ:Posit:PL:V
 
+# нейросеть: как «агросеть» — сущ. неодуш. ж.р.
+нейросетей	нейросеть	NN:Inanim:Fem:PL:R
+нейросети	нейросеть	NN:Inanim:Fem:PL:Nom
+нейросети	нейросеть	NN:Inanim:Fem:PL:V
+нейросети	нейросеть	NN:Inanim:Fem:Sin:D
+нейросети	нейросеть	NN:Inanim:Fem:Sin:P
+нейросети	нейросеть	NN:Inanim:Fem:Sin:R
+нейросеть	нейросеть	NN:Inanim:Fem:Sin:Nom
+нейросеть	нейросеть	NN:Inanim:Fem:Sin:V
+нейросетью	нейросеть	NN:Inanim:Fem:Sin:T
+нейросетям	нейросеть	NN:Inanim:Fem:PL:D
+нейросетями	нейросеть	NN:Inanim:Fem:PL:T
+нейросетях	нейросеть	NN:Inanim:Fem:PL:P
+
 # нейтрализовывать: как «централизовывать» — глаг. несов. перех.
 нейтрализовывав	нейтрализовывать	DPT:Past:TRANS:IMPFV
 нейтрализовывавшая	нейтрализовывать	PT:Past:TRANS:IMPFV:DST:Fem:Nom
@@ -6514,6 +7008,21 @@
 остопиздишь	остопиздеть	VB:Fut:INTR:PFV:Sin:P2
 остопиздят	остопиздеть	VB:Fut:INTR:PFV:PL:P3
 остопизжу	остопиздеть	VB:Fut:INTR:PFV:Sin:P1
+
+# ответка: как «авиетка» — сущ. неодуш. ж.р.
+ответка	ответка	NN:Inanim:Fem:Sin:Nom
+ответкам	ответка	NN:Inanim:Fem:PL:D
+ответками	ответка	NN:Inanim:Fem:PL:T
+ответках	ответка	NN:Inanim:Fem:PL:P
+ответке	ответка	NN:Inanim:Fem:Sin:D
+ответке	ответка	NN:Inanim:Fem:Sin:P
+ответки	ответка	NN:Inanim:Fem:PL:Nom
+ответки	ответка	NN:Inanim:Fem:PL:V
+ответки	ответка	NN:Inanim:Fem:Sin:R
+ответкой	ответка	NN:Inanim:Fem:Sin:T
+ответкою	ответка	NN:Inanim:Fem:Sin:T
+ответку	ответка	NN:Inanim:Fem:Sin:V
+ответок	ответка	NN:Inanim:Fem:PL:R
 
 # отъебать: как «заебать» — глаг. сов. перех. (ignore)
 отъебав	отъебать	DPT:Past:TRANS:PFV
@@ -7344,6 +7853,124 @@
 перепихнётся	перепихнуться	VB:Fut:INTR:PFV:Sin:P3
 перепихнёшься	перепихнуться	VB:Fut:INTR:PFV:Sin:P2
 
+# пересборка: как «автосборка» — сущ. неодуш. ж.р.
+пересборка	пересборка	NN:Inanim:Fem:Sin:Nom
+пересборкам	пересборка	NN:Inanim:Fem:PL:D
+пересборками	пересборка	NN:Inanim:Fem:PL:T
+пересборках	пересборка	NN:Inanim:Fem:PL:P
+пересборке	пересборка	NN:Inanim:Fem:Sin:D
+пересборке	пересборка	NN:Inanim:Fem:Sin:P
+пересборки	пересборка	NN:Inanim:Fem:PL:Nom
+пересборки	пересборка	NN:Inanim:Fem:PL:V
+пересборки	пересборка	NN:Inanim:Fem:Sin:R
+пересборкой	пересборка	NN:Inanim:Fem:Sin:T
+пересборкою	пересборка	NN:Inanim:Fem:Sin:T
+пересборку	пересборка	NN:Inanim:Fem:Sin:V
+пересборок	пересборка	NN:Inanim:Fem:PL:R
+
+# пересобирать: как «добирать» — глаг. несов. перех.
+пересобирав	пересобирать	DPT:Past:TRANS:IMPFV
+пересобиравшая	пересобирать	PT:Past:TRANS:IMPFV:DST:Fem:Nom
+пересобиравшего	пересобирать	PT:Past:TRANS:IMPFV:DST:Masc:R
+пересобиравшего	пересобирать	PT:Past:TRANS:IMPFV:DST:Masc:V
+пересобиравшего	пересобирать	PT:Past:TRANS:IMPFV:DST:Neut:R
+пересобиравшее	пересобирать	PT:Past:TRANS:IMPFV:DST:Neut:Nom
+пересобиравшее	пересобирать	PT:Past:TRANS:IMPFV:DST:Neut:V
+пересобиравшей	пересобирать	PT:Past:TRANS:IMPFV:DST:Fem:D
+пересобиравшей	пересобирать	PT:Past:TRANS:IMPFV:DST:Fem:P
+пересобиравшей	пересобирать	PT:Past:TRANS:IMPFV:DST:Fem:R
+пересобиравшей	пересобирать	PT:Past:TRANS:IMPFV:DST:Fem:T
+пересобиравшем	пересобирать	PT:Past:TRANS:IMPFV:DST:Masc:P
+пересобиравшем	пересобирать	PT:Past:TRANS:IMPFV:DST:Neut:P
+пересобиравшему	пересобирать	PT:Past:TRANS:IMPFV:DST:Masc:D
+пересобиравшему	пересобирать	PT:Past:TRANS:IMPFV:DST:Neut:D
+пересобиравшею	пересобирать	PT:Past:TRANS:IMPFV:DST:Fem:T
+пересобиравши	пересобирать	DPT:Past:TRANS:IMPFV
+пересобиравшие	пересобирать	PT:Past:TRANS:IMPFV:DST:PL:Nom
+пересобиравшие	пересобирать	PT:Past:TRANS:IMPFV:DST:PL:V
+пересобиравший	пересобирать	PT:Past:TRANS:IMPFV:DST:Masc:Nom
+пересобиравший	пересобирать	PT:Past:TRANS:IMPFV:DST:Masc:V
+пересобиравшим	пересобирать	PT:Past:TRANS:IMPFV:DST:Masc:T
+пересобиравшим	пересобирать	PT:Past:TRANS:IMPFV:DST:Neut:T
+пересобиравшим	пересобирать	PT:Past:TRANS:IMPFV:DST:PL:D
+пересобиравшими	пересобирать	PT:Past:TRANS:IMPFV:DST:PL:T
+пересобиравших	пересобирать	PT:Past:TRANS:IMPFV:DST:PL:P
+пересобиравших	пересобирать	PT:Past:TRANS:IMPFV:DST:PL:R
+пересобиравших	пересобирать	PT:Past:TRANS:IMPFV:DST:PL:V
+пересобиравшую	пересобирать	PT:Past:TRANS:IMPFV:DST:Fem:V
+пересобираем	пересобирать	PT_Short:Real:TRANS:IMPFV:STR:Masc
+пересобираем	пересобирать	VB:Real:TRANS:IMPFV:PL:P1
+пересобираема	пересобирать	PT_Short:Real:TRANS:IMPFV:STR:Fem
+пересобираемая	пересобирать	PT:Real:TRANS:IMPFV:STR:Fem:Nom
+пересобираемо	пересобирать	PT_Short:Real:TRANS:IMPFV:STR:Neut
+пересобираемого	пересобирать	PT:Real:TRANS:IMPFV:STR:Masc:R
+пересобираемого	пересобирать	PT:Real:TRANS:IMPFV:STR:Masc:V
+пересобираемого	пересобирать	PT:Real:TRANS:IMPFV:STR:Neut:R
+пересобираемое	пересобирать	PT:Real:TRANS:IMPFV:STR:Neut:Nom
+пересобираемое	пересобирать	PT:Real:TRANS:IMPFV:STR:Neut:V
+пересобираемой	пересобирать	PT:Real:TRANS:IMPFV:STR:Fem:D
+пересобираемой	пересобирать	PT:Real:TRANS:IMPFV:STR:Fem:P
+пересобираемой	пересобирать	PT:Real:TRANS:IMPFV:STR:Fem:R
+пересобираемой	пересобирать	PT:Real:TRANS:IMPFV:STR:Fem:T
+пересобираемом	пересобирать	PT:Real:TRANS:IMPFV:STR:Masc:P
+пересобираемом	пересобирать	PT:Real:TRANS:IMPFV:STR:Neut:P
+пересобираемому	пересобирать	PT:Real:TRANS:IMPFV:STR:Masc:D
+пересобираемому	пересобирать	PT:Real:TRANS:IMPFV:STR:Neut:D
+пересобираемою	пересобирать	PT:Real:TRANS:IMPFV:STR:Fem:T
+пересобираемую	пересобирать	PT:Real:TRANS:IMPFV:STR:Fem:V
+пересобираемы	пересобирать	PT_Short:Real:TRANS:IMPFV:STR:PL
+пересобираемые	пересобирать	PT:Real:TRANS:IMPFV:STR:PL:Nom
+пересобираемые	пересобирать	PT:Real:TRANS:IMPFV:STR:PL:V
+пересобираемый	пересобирать	PT:Real:TRANS:IMPFV:STR:Masc:Nom
+пересобираемый	пересобирать	PT:Real:TRANS:IMPFV:STR:Masc:V
+пересобираемым	пересобирать	PT:Real:TRANS:IMPFV:STR:Masc:T
+пересобираемым	пересобирать	PT:Real:TRANS:IMPFV:STR:Neut:T
+пересобираемым	пересобирать	PT:Real:TRANS:IMPFV:STR:PL:D
+пересобираемыми	пересобирать	PT:Real:TRANS:IMPFV:STR:PL:T
+пересобираемых	пересобирать	PT:Real:TRANS:IMPFV:STR:PL:P
+пересобираемых	пересобирать	PT:Real:TRANS:IMPFV:STR:PL:R
+пересобираемых	пересобирать	PT:Real:TRANS:IMPFV:STR:PL:V
+пересобирает	пересобирать	VB:Real:TRANS:IMPFV:Sin:P3
+пересобираете	пересобирать	VB:Real:TRANS:IMPFV:PL:P2
+пересобираешь	пересобирать	VB:Real:TRANS:IMPFV:Sin:P2
+пересобирай	пересобирать	VB:IMP:TRANS:IMPFV:Sin:P2
+пересобирайте	пересобирать	VB:IMP:TRANS:IMPFV:PL:P2
+пересобирал	пересобирать	VB:Past:TRANS:IMPFV:Masc
+пересобирала	пересобирать	VB:Past:TRANS:IMPFV:Fem
+пересобирали	пересобирать	VB:Past:TRANS:IMPFV:PL
+пересобирало	пересобирать	VB:Past:TRANS:IMPFV:Neut
+пересобирать	пересобирать	VB:INF:TRANS:IMPFV
+пересобираю	пересобирать	VB:Real:TRANS:IMPFV:Sin:P1
+пересобирают	пересобирать	VB:Real:TRANS:IMPFV:PL:P3
+пересобирающая	пересобирать	PT:Real:TRANS:IMPFV:DST:Fem:Nom
+пересобирающего	пересобирать	PT:Real:TRANS:IMPFV:DST:Masc:R
+пересобирающего	пересобирать	PT:Real:TRANS:IMPFV:DST:Masc:V
+пересобирающего	пересобирать	PT:Real:TRANS:IMPFV:DST:Neut:R
+пересобирающее	пересобирать	PT:Real:TRANS:IMPFV:DST:Neut:Nom
+пересобирающее	пересобирать	PT:Real:TRANS:IMPFV:DST:Neut:V
+пересобирающей	пересобирать	PT:Real:TRANS:IMPFV:DST:Fem:D
+пересобирающей	пересобирать	PT:Real:TRANS:IMPFV:DST:Fem:P
+пересобирающей	пересобирать	PT:Real:TRANS:IMPFV:DST:Fem:R
+пересобирающей	пересобирать	PT:Real:TRANS:IMPFV:DST:Fem:T
+пересобирающем	пересобирать	PT:Real:TRANS:IMPFV:DST:Masc:P
+пересобирающем	пересобирать	PT:Real:TRANS:IMPFV:DST:Neut:P
+пересобирающему	пересобирать	PT:Real:TRANS:IMPFV:DST:Masc:D
+пересобирающему	пересобирать	PT:Real:TRANS:IMPFV:DST:Neut:D
+пересобирающею	пересобирать	PT:Real:TRANS:IMPFV:DST:Fem:T
+пересобирающие	пересобирать	PT:Real:TRANS:IMPFV:DST:PL:Nom
+пересобирающие	пересобирать	PT:Real:TRANS:IMPFV:DST:PL:V
+пересобирающий	пересобирать	PT:Real:TRANS:IMPFV:DST:Masc:Nom
+пересобирающий	пересобирать	PT:Real:TRANS:IMPFV:DST:Masc:V
+пересобирающим	пересобирать	PT:Real:TRANS:IMPFV:DST:Masc:T
+пересобирающим	пересобирать	PT:Real:TRANS:IMPFV:DST:Neut:T
+пересобирающим	пересобирать	PT:Real:TRANS:IMPFV:DST:PL:D
+пересобирающими	пересобирать	PT:Real:TRANS:IMPFV:DST:PL:T
+пересобирающих	пересобирать	PT:Real:TRANS:IMPFV:DST:PL:P
+пересобирающих	пересобирать	PT:Real:TRANS:IMPFV:DST:PL:R
+пересобирающих	пересобирать	PT:Real:TRANS:IMPFV:DST:PL:V
+пересобирающую	пересобирать	PT:Real:TRANS:IMPFV:DST:Fem:V
+пересобирая	пересобирать	DPT:Real:TRANS:IMPFV
+
 # пидорас: как «анабас» — сущ. одуш. м.р. (ignore)
 пидорас	пидорас	NN:Anim:Masc:Sin:Nom
 пидораса	пидорас	NN:Anim:Masc:Sin:R
@@ -7357,6 +7984,36 @@
 пидорасом	пидорас	NN:Anim:Masc:Sin:T
 пидорасу	пидорас	NN:Anim:Masc:Sin:D
 пидорасы	пидорас	NN:Anim:Masc:PL:Nom
+
+# пидорский: как «югорский» — прил. (ignore)
+пидорская	пидорский	ADJ:Posit:Fem:Nom
+пидорски	пидорский	ADJ:Short:PL
+пидорские	пидорский	ADJ:Posit:PL:Nom
+пидорские	пидорский	ADJ:Posit:PL:V
+пидорский	пидорский	ADJ:Posit:Masc:Nom
+пидорский	пидорский	ADJ:Posit:Masc:V
+пидорским	пидорский	ADJ:Posit:Masc:T
+пидорским	пидорский	ADJ:Posit:Neut:T
+пидорским	пидорский	ADJ:Posit:PL:D
+пидорскими	пидорский	ADJ:Posit:PL:T
+пидорских	пидорский	ADJ:Posit:PL:P
+пидорских	пидорский	ADJ:Posit:PL:R
+пидорских	пидорский	ADJ:Posit:PL:V
+пидорского	пидорский	ADJ:Posit:Masc:R
+пидорского	пидорский	ADJ:Posit:Masc:V
+пидорского	пидорский	ADJ:Posit:Neut:R
+пидорское	пидорский	ADJ:Posit:Neut:Nom
+пидорское	пидорский	ADJ:Posit:Neut:V
+пидорской	пидорский	ADJ:Posit:Fem:D
+пидорской	пидорский	ADJ:Posit:Fem:P
+пидорской	пидорский	ADJ:Posit:Fem:R
+пидорской	пидорский	ADJ:Posit:Fem:T
+пидорском	пидорский	ADJ:Posit:Masc:P
+пидорском	пидорский	ADJ:Posit:Neut:P
+пидорскому	пидорский	ADJ:Posit:Masc:D
+пидорскому	пидорский	ADJ:Posit:Neut:D
+пидорскою	пидорский	ADJ:Posit:Fem:T
+пидорскую	пидорский	ADJ:Posit:Fem:V
 
 # пиздабол: как «айдол» — сущ. одуш. м.р. (ignore)
 пиздабол	пиздабол	NN:Anim:Masc:Sin:Nom
@@ -8625,6 +9282,75 @@
 # потрясти: форма известного слова «потрясти»: потрясши DPT:Past:TRANS:PFV
 потрясши	потрясти	DPT:Past:TRANS:PFV
 
+# поттериана: как «австралиана» — сущ. неодуш. ж.р.
+поттериана	поттериана	NN:Inanim:Fem:Sin:Nom
+поттериане	поттериана	NN:Inanim:Fem:Sin:D
+поттериане	поттериана	NN:Inanim:Fem:Sin:P
+поттерианой	поттериана	NN:Inanim:Fem:Sin:T
+поттерианою	поттериана	NN:Inanim:Fem:Sin:T
+поттериану	поттериана	NN:Inanim:Fem:Sin:V
+поттерианы	поттериана	NN:Inanim:Fem:Sin:R
+
+# поттерианский: как «юлианский» — прил.
+поттерианская	поттерианский	ADJ:Posit:Fem:Nom
+поттериански	поттерианский	ADJ:Short:PL
+поттерианские	поттерианский	ADJ:Posit:PL:Nom
+поттерианские	поттерианский	ADJ:Posit:PL:V
+поттерианский	поттерианский	ADJ:Posit:Masc:Nom
+поттерианский	поттерианский	ADJ:Posit:Masc:V
+поттерианским	поттерианский	ADJ:Posit:Masc:T
+поттерианским	поттерианский	ADJ:Posit:Neut:T
+поттерианским	поттерианский	ADJ:Posit:PL:D
+поттерианскими	поттерианский	ADJ:Posit:PL:T
+поттерианских	поттерианский	ADJ:Posit:PL:P
+поттерианских	поттерианский	ADJ:Posit:PL:R
+поттерианских	поттерианский	ADJ:Posit:PL:V
+поттерианского	поттерианский	ADJ:Posit:Masc:R
+поттерианского	поттерианский	ADJ:Posit:Masc:V
+поттерианского	поттерианский	ADJ:Posit:Neut:R
+поттерианское	поттерианский	ADJ:Posit:Neut:Nom
+поттерианское	поттерианский	ADJ:Posit:Neut:V
+поттерианской	поттерианский	ADJ:Posit:Fem:D
+поттерианской	поттерианский	ADJ:Posit:Fem:P
+поттерианской	поттерианский	ADJ:Posit:Fem:R
+поттерианской	поттерианский	ADJ:Posit:Fem:T
+поттерианском	поттерианский	ADJ:Posit:Masc:P
+поттерианском	поттерианский	ADJ:Posit:Neut:P
+поттерианскому	поттерианский	ADJ:Posit:Masc:D
+поттерианскому	поттерианский	ADJ:Posit:Neut:D
+поттерианскою	поттерианский	ADJ:Posit:Fem:T
+поттерианскую	поттерианский	ADJ:Posit:Fem:V
+
+# поттеровский: как «адлеровский» — прил.
+поттеровская	поттеровский	ADJ:Posit:Fem:Nom
+поттеровски	поттеровский	ADJ:Short:PL
+поттеровские	поттеровский	ADJ:Posit:PL:Nom
+поттеровские	поттеровский	ADJ:Posit:PL:V
+поттеровский	поттеровский	ADJ:Posit:Masc:Nom
+поттеровский	поттеровский	ADJ:Posit:Masc:V
+поттеровским	поттеровский	ADJ:Posit:Masc:T
+поттеровским	поттеровский	ADJ:Posit:Neut:T
+поттеровским	поттеровский	ADJ:Posit:PL:D
+поттеровскими	поттеровский	ADJ:Posit:PL:T
+поттеровских	поттеровский	ADJ:Posit:PL:P
+поттеровских	поттеровский	ADJ:Posit:PL:R
+поттеровских	поттеровский	ADJ:Posit:PL:V
+поттеровского	поттеровский	ADJ:Posit:Masc:R
+поттеровского	поттеровский	ADJ:Posit:Masc:V
+поттеровского	поттеровский	ADJ:Posit:Neut:R
+поттеровское	поттеровский	ADJ:Posit:Neut:Nom
+поттеровское	поттеровский	ADJ:Posit:Neut:V
+поттеровской	поттеровский	ADJ:Posit:Fem:D
+поттеровской	поттеровский	ADJ:Posit:Fem:P
+поттеровской	поттеровский	ADJ:Posit:Fem:R
+поттеровской	поттеровский	ADJ:Posit:Fem:T
+поттеровском	поттеровский	ADJ:Posit:Masc:P
+поттеровском	поттеровский	ADJ:Posit:Neut:P
+поттеровскому	поттеровский	ADJ:Posit:Masc:D
+поттеровскому	поттеровский	ADJ:Posit:Neut:D
+поттеровскою	поттеровский	ADJ:Posit:Fem:T
+поттеровскую	поттеровский	ADJ:Posit:Fem:V
+
 # поугарать: поправлено, глаг. сов. перех.
 поугарав	поугарать	DPT:Past:TRANS:PFV
 поугаравшая	поугарать	PT:Past:TRANS:PFV:DST:Fem:Nom
@@ -9008,6 +9734,20 @@
 предстерегающую	предстерегать	PT:Real:TRANS:IMPFV:DST:Fem:V
 предстерегая	предстерегать	DPT:Real:TRANS:IMPFV
 
+# препод: как «амфипод» — сущ. одуш. м.р.
+препод	препод	NN:Anim:Masc:Sin:Nom
+препода	препод	NN:Anim:Masc:Sin:R
+препода	препод	NN:Anim:Masc:Sin:V
+преподам	препод	NN:Anim:Masc:PL:D
+преподами	препод	NN:Anim:Masc:PL:T
+преподах	препод	NN:Anim:Masc:PL:P
+преподе	препод	NN:Anim:Masc:Sin:P
+преподов	препод	NN:Anim:Masc:PL:R
+преподов	препод	NN:Anim:Masc:PL:V
+преподом	препод	NN:Anim:Masc:Sin:T
+преподу	препод	NN:Anim:Masc:Sin:D
+преподы	препод	NN:Anim:Masc:PL:Nom
+
 # приглушиться: поправлено, глаг. сов. неперех.
 приглушась	приглушиться	DPT:Past:INTR:PFV
 приглушатся	приглушиться	VB:Fut:INTR:PFV:PL:P3
@@ -9081,6 +9821,109 @@
 приколисток	приколистка	NN:Anim:Fem:PL:R
 приколисток	приколистка	NN:Anim:Fem:PL:V
 
+# приобнимать: как «донимать» — глаг. несов. перех.
+приобнимав	приобнимать	DPT:Past:TRANS:IMPFV
+приобнимавшая	приобнимать	PT:Past:TRANS:IMPFV:DST:Fem:Nom
+приобнимавшего	приобнимать	PT:Past:TRANS:IMPFV:DST:Masc:R
+приобнимавшего	приобнимать	PT:Past:TRANS:IMPFV:DST:Masc:V
+приобнимавшего	приобнимать	PT:Past:TRANS:IMPFV:DST:Neut:R
+приобнимавшее	приобнимать	PT:Past:TRANS:IMPFV:DST:Neut:Nom
+приобнимавшее	приобнимать	PT:Past:TRANS:IMPFV:DST:Neut:V
+приобнимавшей	приобнимать	PT:Past:TRANS:IMPFV:DST:Fem:D
+приобнимавшей	приобнимать	PT:Past:TRANS:IMPFV:DST:Fem:P
+приобнимавшей	приобнимать	PT:Past:TRANS:IMPFV:DST:Fem:R
+приобнимавшей	приобнимать	PT:Past:TRANS:IMPFV:DST:Fem:T
+приобнимавшем	приобнимать	PT:Past:TRANS:IMPFV:DST:Masc:P
+приобнимавшем	приобнимать	PT:Past:TRANS:IMPFV:DST:Neut:P
+приобнимавшему	приобнимать	PT:Past:TRANS:IMPFV:DST:Masc:D
+приобнимавшему	приобнимать	PT:Past:TRANS:IMPFV:DST:Neut:D
+приобнимавшею	приобнимать	PT:Past:TRANS:IMPFV:DST:Fem:T
+приобнимавши	приобнимать	DPT:Past:TRANS:IMPFV
+приобнимавшие	приобнимать	PT:Past:TRANS:IMPFV:DST:PL:Nom
+приобнимавшие	приобнимать	PT:Past:TRANS:IMPFV:DST:PL:V
+приобнимавший	приобнимать	PT:Past:TRANS:IMPFV:DST:Masc:Nom
+приобнимавший	приобнимать	PT:Past:TRANS:IMPFV:DST:Masc:V
+приобнимавшим	приобнимать	PT:Past:TRANS:IMPFV:DST:Masc:T
+приобнимавшим	приобнимать	PT:Past:TRANS:IMPFV:DST:Neut:T
+приобнимавшим	приобнимать	PT:Past:TRANS:IMPFV:DST:PL:D
+приобнимавшими	приобнимать	PT:Past:TRANS:IMPFV:DST:PL:T
+приобнимавших	приобнимать	PT:Past:TRANS:IMPFV:DST:PL:P
+приобнимавших	приобнимать	PT:Past:TRANS:IMPFV:DST:PL:R
+приобнимавших	приобнимать	PT:Past:TRANS:IMPFV:DST:PL:V
+приобнимавшую	приобнимать	PT:Past:TRANS:IMPFV:DST:Fem:V
+приобнимаем	приобнимать	PT_Short:Real:TRANS:IMPFV:STR:Masc
+приобнимаем	приобнимать	VB:Real:TRANS:IMPFV:PL:P1
+приобнимаема	приобнимать	PT_Short:Real:TRANS:IMPFV:STR:Fem
+приобнимаемая	приобнимать	PT:Real:TRANS:IMPFV:STR:Fem:Nom
+приобнимаемо	приобнимать	PT_Short:Real:TRANS:IMPFV:STR:Neut
+приобнимаемого	приобнимать	PT:Real:TRANS:IMPFV:STR:Masc:R
+приобнимаемого	приобнимать	PT:Real:TRANS:IMPFV:STR:Masc:V
+приобнимаемого	приобнимать	PT:Real:TRANS:IMPFV:STR:Neut:R
+приобнимаемое	приобнимать	PT:Real:TRANS:IMPFV:STR:Neut:Nom
+приобнимаемое	приобнимать	PT:Real:TRANS:IMPFV:STR:Neut:V
+приобнимаемой	приобнимать	PT:Real:TRANS:IMPFV:STR:Fem:D
+приобнимаемой	приобнимать	PT:Real:TRANS:IMPFV:STR:Fem:P
+приобнимаемой	приобнимать	PT:Real:TRANS:IMPFV:STR:Fem:R
+приобнимаемой	приобнимать	PT:Real:TRANS:IMPFV:STR:Fem:T
+приобнимаемом	приобнимать	PT:Real:TRANS:IMPFV:STR:Masc:P
+приобнимаемом	приобнимать	PT:Real:TRANS:IMPFV:STR:Neut:P
+приобнимаемому	приобнимать	PT:Real:TRANS:IMPFV:STR:Masc:D
+приобнимаемому	приобнимать	PT:Real:TRANS:IMPFV:STR:Neut:D
+приобнимаемою	приобнимать	PT:Real:TRANS:IMPFV:STR:Fem:T
+приобнимаемую	приобнимать	PT:Real:TRANS:IMPFV:STR:Fem:V
+приобнимаемы	приобнимать	PT_Short:Real:TRANS:IMPFV:STR:PL
+приобнимаемые	приобнимать	PT:Real:TRANS:IMPFV:STR:PL:Nom
+приобнимаемые	приобнимать	PT:Real:TRANS:IMPFV:STR:PL:V
+приобнимаемый	приобнимать	PT:Real:TRANS:IMPFV:STR:Masc:Nom
+приобнимаемый	приобнимать	PT:Real:TRANS:IMPFV:STR:Masc:V
+приобнимаемым	приобнимать	PT:Real:TRANS:IMPFV:STR:Masc:T
+приобнимаемым	приобнимать	PT:Real:TRANS:IMPFV:STR:Neut:T
+приобнимаемым	приобнимать	PT:Real:TRANS:IMPFV:STR:PL:D
+приобнимаемыми	приобнимать	PT:Real:TRANS:IMPFV:STR:PL:T
+приобнимаемых	приобнимать	PT:Real:TRANS:IMPFV:STR:PL:P
+приобнимаемых	приобнимать	PT:Real:TRANS:IMPFV:STR:PL:R
+приобнимаемых	приобнимать	PT:Real:TRANS:IMPFV:STR:PL:V
+приобнимает	приобнимать	VB:Real:TRANS:IMPFV:Sin:P3
+приобнимаете	приобнимать	VB:Real:TRANS:IMPFV:PL:P2
+приобнимаешь	приобнимать	VB:Real:TRANS:IMPFV:Sin:P2
+приобнимай	приобнимать	VB:IMP:TRANS:IMPFV:Sin:P2
+приобнимайте	приобнимать	VB:IMP:TRANS:IMPFV:PL:P2
+приобнимал	приобнимать	VB:Past:TRANS:IMPFV:Masc
+приобнимала	приобнимать	VB:Past:TRANS:IMPFV:Fem
+приобнимали	приобнимать	VB:Past:TRANS:IMPFV:PL
+приобнимало	приобнимать	VB:Past:TRANS:IMPFV:Neut
+приобнимать	приобнимать	VB:INF:TRANS:IMPFV
+приобнимаю	приобнимать	VB:Real:TRANS:IMPFV:Sin:P1
+приобнимают	приобнимать	VB:Real:TRANS:IMPFV:PL:P3
+приобнимающая	приобнимать	PT:Real:TRANS:IMPFV:DST:Fem:Nom
+приобнимающего	приобнимать	PT:Real:TRANS:IMPFV:DST:Masc:R
+приобнимающего	приобнимать	PT:Real:TRANS:IMPFV:DST:Masc:V
+приобнимающего	приобнимать	PT:Real:TRANS:IMPFV:DST:Neut:R
+приобнимающее	приобнимать	PT:Real:TRANS:IMPFV:DST:Neut:Nom
+приобнимающее	приобнимать	PT:Real:TRANS:IMPFV:DST:Neut:V
+приобнимающей	приобнимать	PT:Real:TRANS:IMPFV:DST:Fem:D
+приобнимающей	приобнимать	PT:Real:TRANS:IMPFV:DST:Fem:P
+приобнимающей	приобнимать	PT:Real:TRANS:IMPFV:DST:Fem:R
+приобнимающей	приобнимать	PT:Real:TRANS:IMPFV:DST:Fem:T
+приобнимающем	приобнимать	PT:Real:TRANS:IMPFV:DST:Masc:P
+приобнимающем	приобнимать	PT:Real:TRANS:IMPFV:DST:Neut:P
+приобнимающему	приобнимать	PT:Real:TRANS:IMPFV:DST:Masc:D
+приобнимающему	приобнимать	PT:Real:TRANS:IMPFV:DST:Neut:D
+приобнимающею	приобнимать	PT:Real:TRANS:IMPFV:DST:Fem:T
+приобнимающие	приобнимать	PT:Real:TRANS:IMPFV:DST:PL:Nom
+приобнимающие	приобнимать	PT:Real:TRANS:IMPFV:DST:PL:V
+приобнимающий	приобнимать	PT:Real:TRANS:IMPFV:DST:Masc:Nom
+приобнимающий	приобнимать	PT:Real:TRANS:IMPFV:DST:Masc:V
+приобнимающим	приобнимать	PT:Real:TRANS:IMPFV:DST:Masc:T
+приобнимающим	приобнимать	PT:Real:TRANS:IMPFV:DST:Neut:T
+приобнимающим	приобнимать	PT:Real:TRANS:IMPFV:DST:PL:D
+приобнимающими	приобнимать	PT:Real:TRANS:IMPFV:DST:PL:T
+приобнимающих	приобнимать	PT:Real:TRANS:IMPFV:DST:PL:P
+приобнимающих	приобнимать	PT:Real:TRANS:IMPFV:DST:PL:R
+приобнимающих	приобнимать	PT:Real:TRANS:IMPFV:DST:PL:V
+приобнимающую	приобнимать	PT:Real:TRANS:IMPFV:DST:Fem:V
+приобнимая	приобнимать	DPT:Real:TRANS:IMPFV
+
 # прицокнуть: восстановлено, глаг. сов. неперех.
 прицокнем	прицокнуть	VB:Fut:INTR:PFV:PL:P1
 прицокнем	прицокнуть	VB:IMP:INTR:PFV:PL:P1
@@ -9140,6 +9983,20 @@
 проблядям	проблядь	NN:Anim:Fem:PL:D
 проблядями	проблядь	NN:Anim:Fem:PL:T
 проблядях	проблядь	NN:Anim:Fem:PL:P
+
+# проверяемость: как «юность» — сущ. неодуш. ж.р.
+проверяемостей	проверяемость	NN:Inanim:Fem:PL:R
+проверяемости	проверяемость	NN:Inanim:Fem:PL:Nom
+проверяемости	проверяемость	NN:Inanim:Fem:PL:V
+проверяемости	проверяемость	NN:Inanim:Fem:Sin:D
+проверяемости	проверяемость	NN:Inanim:Fem:Sin:P
+проверяемости	проверяемость	NN:Inanim:Fem:Sin:R
+проверяемость	проверяемость	NN:Inanim:Fem:Sin:Nom
+проверяемость	проверяемость	NN:Inanim:Fem:Sin:V
+проверяемостью	проверяемость	NN:Inanim:Fem:Sin:T
+проверяемостям	проверяемость	NN:Inanim:Fem:PL:D
+проверяемостями	проверяемость	NN:Inanim:Fem:PL:T
+проверяемостях	проверяемость	NN:Inanim:Fem:PL:P
 
 # проигнорить: восстановлено, глаг. сов. перех.
 проигнорен	проигнорить	PT_Short:Past:TRANS:PFV:STR:Masc
@@ -9368,6 +10225,81 @@
 проныло	проныть	VB:Past:INTR:PFV:Neut
 проныть	проныть	VB:INF:INTR:PFV
 
+# прослушка: как «галушка» — сущ. неодуш. ж.р.
+прослушек	прослушка	NN:Inanim:Fem:PL:R
+прослушка	прослушка	NN:Inanim:Fem:Sin:Nom
+прослушкам	прослушка	NN:Inanim:Fem:PL:D
+прослушками	прослушка	NN:Inanim:Fem:PL:T
+прослушках	прослушка	NN:Inanim:Fem:PL:P
+прослушке	прослушка	NN:Inanim:Fem:Sin:D
+прослушке	прослушка	NN:Inanim:Fem:Sin:P
+прослушки	прослушка	NN:Inanim:Fem:PL:Nom
+прослушки	прослушка	NN:Inanim:Fem:PL:V
+прослушки	прослушка	NN:Inanim:Fem:Sin:R
+прослушкой	прослушка	NN:Inanim:Fem:Sin:T
+прослушкою	прослушка	NN:Inanim:Fem:Sin:T
+прослушку	прослушка	NN:Inanim:Fem:Sin:V
+
+# просрать: как «посрать» — глаг. (вид и переходность не указаны) (ignore)
+просрав	просрать	DPT:Past:
+просравшая	просрать	PT:Past::DST:Fem:Nom
+просравшего	просрать	PT:Past::DST:Masc:R
+просравшего	просрать	PT:Past::DST:Masc:V
+просравшего	просрать	PT:Past::DST:Neut:R
+просравшее	просрать	PT:Past::DST:Neut:Nom
+просравшее	просрать	PT:Past::DST:Neut:V
+просравшей	просрать	PT:Past::DST:Fem:D
+просравшей	просрать	PT:Past::DST:Fem:P
+просравшей	просрать	PT:Past::DST:Fem:R
+просравшей	просрать	PT:Past::DST:Fem:T
+просравшем	просрать	PT:Past::DST:Masc:P
+просравшем	просрать	PT:Past::DST:Neut:P
+просравшему	просрать	PT:Past::DST:Masc:D
+просравшему	просрать	PT:Past::DST:Neut:D
+просравшею	просрать	PT:Past::DST:Fem:T
+просравши	просрать	DPT:Past:
+просравшие	просрать	PT:Past::DST:PL:Nom
+просравшие	просрать	PT:Past::DST:PL:V
+просравший	просрать	PT:Past::DST:Masc:Nom
+просравший	просрать	PT:Past::DST:Masc:V
+просравшим	просрать	PT:Past::DST:Masc:T
+просравшим	просрать	PT:Past::DST:Neut:T
+просравшим	просрать	PT:Past::DST:PL:D
+просравшими	просрать	PT:Past::DST:PL:T
+просравших	просрать	PT:Past::DST:PL:P
+просравших	просрать	PT:Past::DST:PL:R
+просравших	просрать	PT:Past::DST:PL:V
+просравшую	просрать	PT:Past::DST:Fem:V
+просрал	просрать	VB:Past::Masc
+просрала	просрать	VB:Past::Fem
+просрали	просрать	VB:Past::PL
+просрало	просрать	VB:Past::Neut
+просрать	просрать	VB:INF:
+просри	просрать	VB:IMP::Sin:P2
+просрите	просрать	VB:IMP::PL:P2
+просру	просрать	VB:Fut::Sin:P1
+просрут	просрать	VB:Fut::PL:P3
+просрём	просрать	VB:Fut::PL:P1
+просрём	просрать	VB:IMP::PL:P1
+просрёмте	просрать	VB:IMP::PL:P1
+просрёт	просрать	VB:Fut::Sin:P3
+просрёте	просрать	VB:Fut::PL:P2
+просрёшь	просрать	VB:Fut::Sin:P2
+
+# псевдолояльность: как «лояльность» — сущ. неодуш. ж.р.
+псевдолояльностей	псевдолояльность	NN:Inanim:Fem:PL:R
+псевдолояльности	псевдолояльность	NN:Inanim:Fem:PL:Nom
+псевдолояльности	псевдолояльность	NN:Inanim:Fem:PL:V
+псевдолояльности	псевдолояльность	NN:Inanim:Fem:Sin:D
+псевдолояльности	псевдолояльность	NN:Inanim:Fem:Sin:P
+псевдолояльности	псевдолояльность	NN:Inanim:Fem:Sin:R
+псевдолояльность	псевдолояльность	NN:Inanim:Fem:Sin:Nom
+псевдолояльность	псевдолояльность	NN:Inanim:Fem:Sin:V
+псевдолояльностью	псевдолояльность	NN:Inanim:Fem:Sin:T
+псевдолояльностям	псевдолояльность	NN:Inanim:Fem:PL:D
+псевдолояльностями	псевдолояльность	NN:Inanim:Fem:PL:T
+псевдолояльностях	псевдолояльность	NN:Inanim:Fem:PL:P
+
 # психонавт: как «аргонавт» — сущ. одуш. м.р.
 психонавт	психонавт	NN:Anim:Masc:Sin:Nom
 психонавта	психонавт	NN:Anim:Masc:Sin:R
@@ -9430,6 +10362,21 @@
 пёзды	пёзды	NN:Inanim:Fem:Sin:R
 пёзды	пёзды	NN:Inanim:Fem:Sin:T
 пёзды	пёзды	NN:Inanim:Fem:Sin:V
+
+# радикализация: как «алкализация» — сущ. неодуш. ж.р.
+радикализацией	радикализация	NN:Inanim:Fem:Sin:T
+радикализациею	радикализация	NN:Inanim:Fem:Sin:T
+радикализации	радикализация	NN:Inanim:Fem:PL:Nom
+радикализации	радикализация	NN:Inanim:Fem:PL:V
+радикализации	радикализация	NN:Inanim:Fem:Sin:D
+радикализации	радикализация	NN:Inanim:Fem:Sin:P
+радикализации	радикализация	NN:Inanim:Fem:Sin:R
+радикализаций	радикализация	NN:Inanim:Fem:PL:R
+радикализацию	радикализация	NN:Inanim:Fem:Sin:V
+радикализация	радикализация	NN:Inanim:Fem:Sin:Nom
+радикализациям	радикализация	NN:Inanim:Fem:PL:D
+радикализациями	радикализация	NN:Inanim:Fem:PL:T
+радикализациях	радикализация	NN:Inanim:Fem:PL:P
 
 # разбиватель: как «дознаватель» — сущ. одуш. м.р.
 разбивателе	разбиватель	NN:Anim:Masc:Sin:P
@@ -9855,6 +10802,108 @@
 розово-фиолетовых	розово-фиолетовый	ADJ:Posit:PL:R
 розово-фиолетовых	розово-фиолетовый	ADJ:Posit:PL:V
 
+# самоназначить: как «назначить» — глаг. сов. перех.
+самоназначат	самоназначить	VB:Fut:TRANS:PFV:PL:P3
+самоназначен	самоназначить	PT_Short:Past:TRANS:PFV:STR:Masc
+самоназначена	самоназначить	PT_Short:Past:TRANS:PFV:STR:Fem
+самоназначенная	самоназначить	PT:Past:TRANS:PFV:STR:Fem:Nom
+самоназначенного	самоназначить	PT:Past:TRANS:PFV:STR:Masc:R
+самоназначенного	самоназначить	PT:Past:TRANS:PFV:STR:Masc:V
+самоназначенного	самоназначить	PT:Past:TRANS:PFV:STR:Neut:R
+самоназначенное	самоназначить	PT:Past:TRANS:PFV:STR:Neut:Nom
+самоназначенное	самоназначить	PT:Past:TRANS:PFV:STR:Neut:V
+самоназначенной	самоназначить	PT:Past:TRANS:PFV:STR:Fem:D
+самоназначенной	самоназначить	PT:Past:TRANS:PFV:STR:Fem:P
+самоназначенной	самоназначить	PT:Past:TRANS:PFV:STR:Fem:R
+самоназначенной	самоназначить	PT:Past:TRANS:PFV:STR:Fem:T
+самоназначенном	самоназначить	PT:Past:TRANS:PFV:STR:Masc:P
+самоназначенном	самоназначить	PT:Past:TRANS:PFV:STR:Neut:P
+самоназначенному	самоназначить	PT:Past:TRANS:PFV:STR:Masc:D
+самоназначенному	самоназначить	PT:Past:TRANS:PFV:STR:Neut:D
+самоназначенною	самоназначить	PT:Past:TRANS:PFV:STR:Fem:T
+самоназначенную	самоназначить	PT:Past:TRANS:PFV:STR:Fem:V
+самоназначенные	самоназначить	PT:Past:TRANS:PFV:STR:PL:Nom
+самоназначенные	самоназначить	PT:Past:TRANS:PFV:STR:PL:V
+самоназначенный	самоназначить	PT:Past:TRANS:PFV:STR:Masc:Nom
+самоназначенный	самоназначить	PT:Past:TRANS:PFV:STR:Masc:V
+самоназначенным	самоназначить	PT:Past:TRANS:PFV:STR:Masc:T
+самоназначенным	самоназначить	PT:Past:TRANS:PFV:STR:Neut:T
+самоназначенным	самоназначить	PT:Past:TRANS:PFV:STR:PL:D
+самоназначенными	самоназначить	PT:Past:TRANS:PFV:STR:PL:T
+самоназначенных	самоназначить	PT:Past:TRANS:PFV:STR:PL:P
+самоназначенных	самоназначить	PT:Past:TRANS:PFV:STR:PL:R
+самоназначенных	самоназначить	PT:Past:TRANS:PFV:STR:PL:V
+самоназначено	самоназначить	PT_Short:Past:TRANS:PFV:STR:Neut
+самоназначены	самоназначить	PT_Short:Past:TRANS:PFV:STR:PL
+самоназначив	самоназначить	DPT:Past:TRANS:PFV
+самоназначившая	самоназначить	PT:Past:TRANS:PFV:DST:Fem:Nom
+самоназначившего	самоназначить	PT:Past:TRANS:PFV:DST:Masc:R
+самоназначившего	самоназначить	PT:Past:TRANS:PFV:DST:Masc:V
+самоназначившего	самоназначить	PT:Past:TRANS:PFV:DST:Neut:R
+самоназначившее	самоназначить	PT:Past:TRANS:PFV:DST:Neut:Nom
+самоназначившее	самоназначить	PT:Past:TRANS:PFV:DST:Neut:V
+самоназначившей	самоназначить	PT:Past:TRANS:PFV:DST:Fem:D
+самоназначившей	самоназначить	PT:Past:TRANS:PFV:DST:Fem:P
+самоназначившей	самоназначить	PT:Past:TRANS:PFV:DST:Fem:R
+самоназначившей	самоназначить	PT:Past:TRANS:PFV:DST:Fem:T
+самоназначившем	самоназначить	PT:Past:TRANS:PFV:DST:Masc:P
+самоназначившем	самоназначить	PT:Past:TRANS:PFV:DST:Neut:P
+самоназначившему	самоназначить	PT:Past:TRANS:PFV:DST:Masc:D
+самоназначившему	самоназначить	PT:Past:TRANS:PFV:DST:Neut:D
+самоназначившею	самоназначить	PT:Past:TRANS:PFV:DST:Fem:T
+самоназначивши	самоназначить	DPT:Past:TRANS:PFV
+самоназначившие	самоназначить	PT:Past:TRANS:PFV:DST:PL:Nom
+самоназначившие	самоназначить	PT:Past:TRANS:PFV:DST:PL:V
+самоназначивший	самоназначить	PT:Past:TRANS:PFV:DST:Masc:Nom
+самоназначивший	самоназначить	PT:Past:TRANS:PFV:DST:Masc:V
+самоназначившим	самоназначить	PT:Past:TRANS:PFV:DST:Masc:T
+самоназначившим	самоназначить	PT:Past:TRANS:PFV:DST:Neut:T
+самоназначившим	самоназначить	PT:Past:TRANS:PFV:DST:PL:D
+самоназначившими	самоназначить	PT:Past:TRANS:PFV:DST:PL:T
+самоназначивших	самоназначить	PT:Past:TRANS:PFV:DST:PL:P
+самоназначивших	самоназначить	PT:Past:TRANS:PFV:DST:PL:R
+самоназначивших	самоназначить	PT:Past:TRANS:PFV:DST:PL:V
+самоназначившую	самоназначить	PT:Past:TRANS:PFV:DST:Fem:V
+самоназначил	самоназначить	VB:Past:TRANS:PFV:Masc
+самоназначила	самоназначить	VB:Past:TRANS:PFV:Fem
+самоназначили	самоназначить	VB:Past:TRANS:PFV:PL
+самоназначило	самоназначить	VB:Past:TRANS:PFV:Neut
+самоназначим	самоназначить	VB:Fut:TRANS:PFV:PL:P1
+самоназначим	самоназначить	VB:IMP:TRANS:PFV:PL:P1
+самоназначимте	самоназначить	VB:IMP:TRANS:PFV:PL:P1
+самоназначит	самоназначить	VB:Fut:TRANS:PFV:Sin:P3
+самоназначите	самоназначить	VB:Fut:TRANS:PFV:PL:P2
+самоназначить	самоназначить	VB:INF:TRANS:PFV
+самоназначишь	самоназначить	VB:Fut:TRANS:PFV:Sin:P2
+самоназначу	самоназначить	VB:Fut:TRANS:PFV:Sin:P1
+самоназначь	самоназначить	VB:IMP:TRANS:PFV:Sin:P2
+самоназначьте	самоназначить	VB:IMP:TRANS:PFV:PL:P2
+
+# самоформирование: как «деформирование» — сущ. неодуш. ср.р.
+самоформирование	самоформирование	NN:Inanim:Neut:Sin:Nom
+самоформирование	самоформирование	NN:Inanim:Neut:Sin:V
+самоформированием	самоформирование	NN:Inanim:Neut:Sin:T
+самоформировании	самоформирование	NN:Inanim:Neut:Sin:P
+самоформирований	самоформирование	NN:Inanim:Neut:PL:R
+самоформированию	самоформирование	NN:Inanim:Neut:Sin:D
+самоформирования	самоформирование	NN:Inanim:Neut:PL:Nom
+самоформирования	самоформирование	NN:Inanim:Neut:PL:V
+самоформирования	самоформирование	NN:Inanim:Neut:Sin:R
+самоформированиям	самоформирование	NN:Inanim:Neut:PL:D
+самоформированиями	самоформирование	NN:Inanim:Neut:PL:T
+самоформированиях	самоформирование	NN:Inanim:Neut:PL:P
+самоформированье	самоформирование	NN:Inanim:Neut:Sin:Nom
+самоформированье	самоформирование	NN:Inanim:Neut:Sin:P
+самоформированье	самоформирование	NN:Inanim:Neut:Sin:V
+самоформированьем	самоформирование	NN:Inanim:Neut:Sin:T
+самоформированью	самоформирование	NN:Inanim:Neut:Sin:D
+самоформированья	самоформирование	NN:Inanim:Neut:PL:Nom
+самоформированья	самоформирование	NN:Inanim:Neut:PL:V
+самоформированья	самоформирование	NN:Inanim:Neut:Sin:R
+самоформированьям	самоформирование	NN:Inanim:Neut:PL:D
+самоформированьями	самоформирование	NN:Inanim:Neut:PL:T
+самоформированьях	самоформирование	NN:Inanim:Neut:PL:P
+
 # сверхнасыщенный: как «антенный» — прил.
 сверхнасыщенная	сверхнасыщенный	ADJ:Posit:Fem:Nom
 сверхнасыщенного	сверхнасыщенный	ADJ:Posit:Masc:R
@@ -10134,6 +11183,20 @@
 сёстрах-цветочницах	сестра-цветочница	NN:Anim:Fem:PL:P
 сёстры-цветочницы	сестра-цветочница	NN:Anim:Fem:PL:Nom
 
+# симулякр: как «юр» — сущ. неодуш. м.р.
+симулякр	симулякр	NN:Inanim:Masc:Sin:Nom
+симулякр	симулякр	NN:Inanim:Masc:Sin:V
+симулякра	симулякр	NN:Inanim:Masc:Sin:R
+симулякрам	симулякр	NN:Inanim:Masc:PL:D
+симулякрами	симулякр	NN:Inanim:Masc:PL:T
+симулякрах	симулякр	NN:Inanim:Masc:PL:P
+симулякре	симулякр	NN:Inanim:Masc:Sin:P
+симулякров	симулякр	NN:Inanim:Masc:PL:R
+симулякром	симулякр	NN:Inanim:Masc:Sin:T
+симулякру	симулякр	NN:Inanim:Masc:Sin:D
+симулякры	симулякр	NN:Inanim:Masc:PL:Nom
+симулякры	симулякр	NN:Inanim:Masc:PL:V
+
 # скандал-другой: как «скандал» — сущ. неодуш. м.р.
 скандал-другой	скандал-другой	NN:Inanim:Masc:Sin:Nom
 скандал-другой	скандал-другой	NN:Inanim:Masc:Sin:V
@@ -10162,6 +11225,200 @@
 скиллу	скилл	NN:Inanim:Masc:Sin:D
 скиллы	скилл	NN:Inanim:Masc:PL:Nom
 скиллы	скилл	NN:Inanim:Masc:PL:V
+
+# скипать: как «донимать» — глаг. несов. перех.
+скипав	скипать	DPT:Past:TRANS:IMPFV
+скипавшая	скипать	PT:Past:TRANS:IMPFV:DST:Fem:Nom
+скипавшего	скипать	PT:Past:TRANS:IMPFV:DST:Masc:R
+скипавшего	скипать	PT:Past:TRANS:IMPFV:DST:Masc:V
+скипавшего	скипать	PT:Past:TRANS:IMPFV:DST:Neut:R
+скипавшее	скипать	PT:Past:TRANS:IMPFV:DST:Neut:Nom
+скипавшее	скипать	PT:Past:TRANS:IMPFV:DST:Neut:V
+скипавшей	скипать	PT:Past:TRANS:IMPFV:DST:Fem:D
+скипавшей	скипать	PT:Past:TRANS:IMPFV:DST:Fem:P
+скипавшей	скипать	PT:Past:TRANS:IMPFV:DST:Fem:R
+скипавшей	скипать	PT:Past:TRANS:IMPFV:DST:Fem:T
+скипавшем	скипать	PT:Past:TRANS:IMPFV:DST:Masc:P
+скипавшем	скипать	PT:Past:TRANS:IMPFV:DST:Neut:P
+скипавшему	скипать	PT:Past:TRANS:IMPFV:DST:Masc:D
+скипавшему	скипать	PT:Past:TRANS:IMPFV:DST:Neut:D
+скипавшею	скипать	PT:Past:TRANS:IMPFV:DST:Fem:T
+скипавши	скипать	DPT:Past:TRANS:IMPFV
+скипавшие	скипать	PT:Past:TRANS:IMPFV:DST:PL:Nom
+скипавшие	скипать	PT:Past:TRANS:IMPFV:DST:PL:V
+скипавший	скипать	PT:Past:TRANS:IMPFV:DST:Masc:Nom
+скипавший	скипать	PT:Past:TRANS:IMPFV:DST:Masc:V
+скипавшим	скипать	PT:Past:TRANS:IMPFV:DST:Masc:T
+скипавшим	скипать	PT:Past:TRANS:IMPFV:DST:Neut:T
+скипавшим	скипать	PT:Past:TRANS:IMPFV:DST:PL:D
+скипавшими	скипать	PT:Past:TRANS:IMPFV:DST:PL:T
+скипавших	скипать	PT:Past:TRANS:IMPFV:DST:PL:P
+скипавших	скипать	PT:Past:TRANS:IMPFV:DST:PL:R
+скипавших	скипать	PT:Past:TRANS:IMPFV:DST:PL:V
+скипавшую	скипать	PT:Past:TRANS:IMPFV:DST:Fem:V
+скипаем	скипать	PT_Short:Real:TRANS:IMPFV:STR:Masc
+скипаем	скипать	VB:Real:TRANS:IMPFV:PL:P1
+скипаема	скипать	PT_Short:Real:TRANS:IMPFV:STR:Fem
+скипаемая	скипать	PT:Real:TRANS:IMPFV:STR:Fem:Nom
+скипаемо	скипать	PT_Short:Real:TRANS:IMPFV:STR:Neut
+скипаемого	скипать	PT:Real:TRANS:IMPFV:STR:Masc:R
+скипаемого	скипать	PT:Real:TRANS:IMPFV:STR:Masc:V
+скипаемого	скипать	PT:Real:TRANS:IMPFV:STR:Neut:R
+скипаемое	скипать	PT:Real:TRANS:IMPFV:STR:Neut:Nom
+скипаемое	скипать	PT:Real:TRANS:IMPFV:STR:Neut:V
+скипаемой	скипать	PT:Real:TRANS:IMPFV:STR:Fem:D
+скипаемой	скипать	PT:Real:TRANS:IMPFV:STR:Fem:P
+скипаемой	скипать	PT:Real:TRANS:IMPFV:STR:Fem:R
+скипаемой	скипать	PT:Real:TRANS:IMPFV:STR:Fem:T
+скипаемом	скипать	PT:Real:TRANS:IMPFV:STR:Masc:P
+скипаемом	скипать	PT:Real:TRANS:IMPFV:STR:Neut:P
+скипаемому	скипать	PT:Real:TRANS:IMPFV:STR:Masc:D
+скипаемому	скипать	PT:Real:TRANS:IMPFV:STR:Neut:D
+скипаемою	скипать	PT:Real:TRANS:IMPFV:STR:Fem:T
+скипаемую	скипать	PT:Real:TRANS:IMPFV:STR:Fem:V
+скипаемы	скипать	PT_Short:Real:TRANS:IMPFV:STR:PL
+скипаемые	скипать	PT:Real:TRANS:IMPFV:STR:PL:Nom
+скипаемые	скипать	PT:Real:TRANS:IMPFV:STR:PL:V
+скипаемый	скипать	PT:Real:TRANS:IMPFV:STR:Masc:Nom
+скипаемый	скипать	PT:Real:TRANS:IMPFV:STR:Masc:V
+скипаемым	скипать	PT:Real:TRANS:IMPFV:STR:Masc:T
+скипаемым	скипать	PT:Real:TRANS:IMPFV:STR:Neut:T
+скипаемым	скипать	PT:Real:TRANS:IMPFV:STR:PL:D
+скипаемыми	скипать	PT:Real:TRANS:IMPFV:STR:PL:T
+скипаемых	скипать	PT:Real:TRANS:IMPFV:STR:PL:P
+скипаемых	скипать	PT:Real:TRANS:IMPFV:STR:PL:R
+скипаемых	скипать	PT:Real:TRANS:IMPFV:STR:PL:V
+скипает	скипать	VB:Real:TRANS:IMPFV:Sin:P3
+скипаете	скипать	VB:Real:TRANS:IMPFV:PL:P2
+скипаешь	скипать	VB:Real:TRANS:IMPFV:Sin:P2
+скипай	скипать	VB:IMP:TRANS:IMPFV:Sin:P2
+скипайте	скипать	VB:IMP:TRANS:IMPFV:PL:P2
+скипал	скипать	VB:Past:TRANS:IMPFV:Masc
+скипала	скипать	VB:Past:TRANS:IMPFV:Fem
+скипали	скипать	VB:Past:TRANS:IMPFV:PL
+скипало	скипать	VB:Past:TRANS:IMPFV:Neut
+скипать	скипать	VB:INF:TRANS:IMPFV
+скипаю	скипать	VB:Real:TRANS:IMPFV:Sin:P1
+скипают	скипать	VB:Real:TRANS:IMPFV:PL:P3
+скипающая	скипать	PT:Real:TRANS:IMPFV:DST:Fem:Nom
+скипающего	скипать	PT:Real:TRANS:IMPFV:DST:Masc:R
+скипающего	скипать	PT:Real:TRANS:IMPFV:DST:Masc:V
+скипающего	скипать	PT:Real:TRANS:IMPFV:DST:Neut:R
+скипающее	скипать	PT:Real:TRANS:IMPFV:DST:Neut:Nom
+скипающее	скипать	PT:Real:TRANS:IMPFV:DST:Neut:V
+скипающей	скипать	PT:Real:TRANS:IMPFV:DST:Fem:D
+скипающей	скипать	PT:Real:TRANS:IMPFV:DST:Fem:P
+скипающей	скипать	PT:Real:TRANS:IMPFV:DST:Fem:R
+скипающей	скипать	PT:Real:TRANS:IMPFV:DST:Fem:T
+скипающем	скипать	PT:Real:TRANS:IMPFV:DST:Masc:P
+скипающем	скипать	PT:Real:TRANS:IMPFV:DST:Neut:P
+скипающему	скипать	PT:Real:TRANS:IMPFV:DST:Masc:D
+скипающему	скипать	PT:Real:TRANS:IMPFV:DST:Neut:D
+скипающею	скипать	PT:Real:TRANS:IMPFV:DST:Fem:T
+скипающие	скипать	PT:Real:TRANS:IMPFV:DST:PL:Nom
+скипающие	скипать	PT:Real:TRANS:IMPFV:DST:PL:V
+скипающий	скипать	PT:Real:TRANS:IMPFV:DST:Masc:Nom
+скипающий	скипать	PT:Real:TRANS:IMPFV:DST:Masc:V
+скипающим	скипать	PT:Real:TRANS:IMPFV:DST:Masc:T
+скипающим	скипать	PT:Real:TRANS:IMPFV:DST:Neut:T
+скипающим	скипать	PT:Real:TRANS:IMPFV:DST:PL:D
+скипающими	скипать	PT:Real:TRANS:IMPFV:DST:PL:T
+скипающих	скипать	PT:Real:TRANS:IMPFV:DST:PL:P
+скипающих	скипать	PT:Real:TRANS:IMPFV:DST:PL:R
+скипающих	скипать	PT:Real:TRANS:IMPFV:DST:PL:V
+скипающую	скипать	PT:Real:TRANS:IMPFV:DST:Fem:V
+скипая	скипать	DPT:Real:TRANS:IMPFV
+
+# скипнуть: как «выщипнуть» — глаг. сов. перех.
+скипнем	скипнуть	VB:Fut:TRANS:PFV:PL:P1
+скипнем	скипнуть	VB:IMP:TRANS:PFV:PL:P1
+скипнемте	скипнуть	VB:IMP:TRANS:PFV:PL:P1
+скипнет	скипнуть	VB:Fut:TRANS:PFV:Sin:P3
+скипнете	скипнуть	VB:Fut:TRANS:PFV:PL:P2
+скипнешь	скипнуть	VB:Fut:TRANS:PFV:Sin:P2
+скипни	скипнуть	VB:IMP:TRANS:PFV:Sin:P2
+скипните	скипнуть	VB:IMP:TRANS:PFV:PL:P2
+скипну	скипнуть	VB:Fut:TRANS:PFV:Sin:P1
+скипнув	скипнуть	DPT:Past:TRANS:PFV
+скипнувшая	скипнуть	PT:Past:TRANS:PFV:DST:Fem:Nom
+скипнувшего	скипнуть	PT:Past:TRANS:PFV:DST:Masc:R
+скипнувшего	скипнуть	PT:Past:TRANS:PFV:DST:Masc:V
+скипнувшего	скипнуть	PT:Past:TRANS:PFV:DST:Neut:R
+скипнувшее	скипнуть	PT:Past:TRANS:PFV:DST:Neut:Nom
+скипнувшее	скипнуть	PT:Past:TRANS:PFV:DST:Neut:V
+скипнувшей	скипнуть	PT:Past:TRANS:PFV:DST:Fem:D
+скипнувшей	скипнуть	PT:Past:TRANS:PFV:DST:Fem:P
+скипнувшей	скипнуть	PT:Past:TRANS:PFV:DST:Fem:R
+скипнувшей	скипнуть	PT:Past:TRANS:PFV:DST:Fem:T
+скипнувшем	скипнуть	PT:Past:TRANS:PFV:DST:Masc:P
+скипнувшем	скипнуть	PT:Past:TRANS:PFV:DST:Neut:P
+скипнувшему	скипнуть	PT:Past:TRANS:PFV:DST:Masc:D
+скипнувшему	скипнуть	PT:Past:TRANS:PFV:DST:Neut:D
+скипнувшею	скипнуть	PT:Past:TRANS:PFV:DST:Fem:T
+скипнувши	скипнуть	DPT:Past:TRANS:PFV
+скипнувшие	скипнуть	PT:Past:TRANS:PFV:DST:PL:Nom
+скипнувшие	скипнуть	PT:Past:TRANS:PFV:DST:PL:V
+скипнувший	скипнуть	PT:Past:TRANS:PFV:DST:Masc:Nom
+скипнувший	скипнуть	PT:Past:TRANS:PFV:DST:Masc:V
+скипнувшим	скипнуть	PT:Past:TRANS:PFV:DST:Masc:T
+скипнувшим	скипнуть	PT:Past:TRANS:PFV:DST:Neut:T
+скипнувшим	скипнуть	PT:Past:TRANS:PFV:DST:PL:D
+скипнувшими	скипнуть	PT:Past:TRANS:PFV:DST:PL:T
+скипнувших	скипнуть	PT:Past:TRANS:PFV:DST:PL:P
+скипнувших	скипнуть	PT:Past:TRANS:PFV:DST:PL:R
+скипнувших	скипнуть	PT:Past:TRANS:PFV:DST:PL:V
+скипнувшую	скипнуть	PT:Past:TRANS:PFV:DST:Fem:V
+скипнул	скипнуть	VB:Past:TRANS:PFV:Masc
+скипнула	скипнуть	VB:Past:TRANS:PFV:Fem
+скипнули	скипнуть	VB:Past:TRANS:PFV:PL
+скипнуло	скипнуть	VB:Past:TRANS:PFV:Neut
+скипнут	скипнуть	PT_Short:Past:TRANS:PFV:STR:Masc
+скипнут	скипнуть	VB:Fut:TRANS:PFV:PL:P3
+скипнута	скипнуть	PT_Short:Past:TRANS:PFV:STR:Fem
+скипнутая	скипнуть	PT:Past:TRANS:PFV:STR:Fem:Nom
+скипнуто	скипнуть	PT_Short:Past:TRANS:PFV:STR:Neut
+скипнутого	скипнуть	PT:Past:TRANS:PFV:STR:Masc:R
+скипнутого	скипнуть	PT:Past:TRANS:PFV:STR:Masc:V
+скипнутого	скипнуть	PT:Past:TRANS:PFV:STR:Neut:R
+скипнутое	скипнуть	PT:Past:TRANS:PFV:STR:Neut:Nom
+скипнутое	скипнуть	PT:Past:TRANS:PFV:STR:Neut:V
+скипнутой	скипнуть	PT:Past:TRANS:PFV:STR:Fem:D
+скипнутой	скипнуть	PT:Past:TRANS:PFV:STR:Fem:P
+скипнутой	скипнуть	PT:Past:TRANS:PFV:STR:Fem:R
+скипнутой	скипнуть	PT:Past:TRANS:PFV:STR:Fem:T
+скипнутом	скипнуть	PT:Past:TRANS:PFV:STR:Masc:P
+скипнутом	скипнуть	PT:Past:TRANS:PFV:STR:Neut:P
+скипнутому	скипнуть	PT:Past:TRANS:PFV:STR:Masc:D
+скипнутому	скипнуть	PT:Past:TRANS:PFV:STR:Neut:D
+скипнутою	скипнуть	PT:Past:TRANS:PFV:STR:Fem:T
+скипнутую	скипнуть	PT:Past:TRANS:PFV:STR:Fem:V
+скипнуты	скипнуть	PT_Short:Past:TRANS:PFV:STR:PL
+скипнутые	скипнуть	PT:Past:TRANS:PFV:STR:PL:Nom
+скипнутые	скипнуть	PT:Past:TRANS:PFV:STR:PL:V
+скипнутый	скипнуть	PT:Past:TRANS:PFV:STR:Masc:Nom
+скипнутый	скипнуть	PT:Past:TRANS:PFV:STR:Masc:V
+скипнутым	скипнуть	PT:Past:TRANS:PFV:STR:Masc:T
+скипнутым	скипнуть	PT:Past:TRANS:PFV:STR:Neut:T
+скипнутым	скипнуть	PT:Past:TRANS:PFV:STR:PL:D
+скипнутыми	скипнуть	PT:Past:TRANS:PFV:STR:PL:T
+скипнутых	скипнуть	PT:Past:TRANS:PFV:STR:PL:P
+скипнутых	скипнуть	PT:Past:TRANS:PFV:STR:PL:R
+скипнутых	скипнуть	PT:Past:TRANS:PFV:STR:PL:V
+скипнуть	скипнуть	VB:INF:TRANS:PFV
+
+# скролл: как «агал» — сущ. неодуш. м.р.
+скролл	скролл	NN:Inanim:Masc:Sin:Nom
+скролл	скролл	NN:Inanim:Masc:Sin:V
+скролла	скролл	NN:Inanim:Masc:Sin:R
+скроллам	скролл	NN:Inanim:Masc:PL:D
+скроллами	скролл	NN:Inanim:Masc:PL:T
+скроллах	скролл	NN:Inanim:Masc:PL:P
+скролле	скролл	NN:Inanim:Masc:Sin:P
+скроллов	скролл	NN:Inanim:Masc:PL:R
+скроллом	скролл	NN:Inanim:Masc:Sin:T
+скроллу	скролл	NN:Inanim:Masc:Sin:D
+скроллы	скролл	NN:Inanim:Masc:PL:Nom
+скроллы	скролл	NN:Inanim:Masc:PL:V
 
 # Слендермен: восстановлено, сущ. имя м.р.
 Слендермен	Слендермен	NN:Name:Masc:Sin:Nom
@@ -10492,6 +11749,35 @@
 стату	стат	NN:Inanim:Masc:Sin:D
 статы	стат	NN:Inanim:Masc:PL:Nom
 статы	стат	NN:Inanim:Masc:PL:V
+
+# стебущий: поправлено, прич.
+стебущая	стебать	PT:Real:TRANS:IMPFV:DST:Fem:Nom
+стебущего	стебать	PT:Real:TRANS:IMPFV:DST:Masc:R
+стебущего	стебать	PT:Real:TRANS:IMPFV:DST:Masc:V
+стебущего	стебать	PT:Real:TRANS:IMPFV:DST:Neut:R
+стебущее	стебать	PT:Real:TRANS:IMPFV:DST:Neut:Nom
+стебущее	стебать	PT:Real:TRANS:IMPFV:DST:Neut:V
+стебущей	стебать	PT:Real:TRANS:IMPFV:DST:Fem:D
+стебущей	стебать	PT:Real:TRANS:IMPFV:DST:Fem:P
+стебущей	стебать	PT:Real:TRANS:IMPFV:DST:Fem:R
+стебущей	стебать	PT:Real:TRANS:IMPFV:DST:Fem:T
+стебущем	стебать	PT:Real:TRANS:IMPFV:DST:Masc:P
+стебущем	стебать	PT:Real:TRANS:IMPFV:DST:Neut:P
+стебущему	стебать	PT:Real:TRANS:IMPFV:DST:Masc:D
+стебущему	стебать	PT:Real:TRANS:IMPFV:DST:Neut:D
+стебущею	стебать	PT:Real:TRANS:IMPFV:DST:Fem:T
+стебущие	стебать	PT:Real:TRANS:IMPFV:DST:PL:Nom
+стебущие	стебать	PT:Real:TRANS:IMPFV:DST:PL:V
+стебущий	стебать	PT:Real:TRANS:IMPFV:DST:Masc:Nom
+стебущий	стебать	PT:Real:TRANS:IMPFV:DST:Masc:V
+стебущим	стебать	PT:Real:TRANS:IMPFV:DST:Masc:T
+стебущим	стебать	PT:Real:TRANS:IMPFV:DST:Neut:T
+стебущим	стебать	PT:Real:TRANS:IMPFV:DST:PL:D
+стебущими	стебать	PT:Real:TRANS:IMPFV:DST:PL:T
+стебущих	стебать	PT:Real:TRANS:IMPFV:DST:PL:P
+стебущих	стебать	PT:Real:TRANS:IMPFV:DST:PL:R
+стебущих	стебать	PT:Real:TRANS:IMPFV:DST:PL:V
+стебущую	стебать	PT:Real:TRANS:IMPFV:DST:Fem:V
 
 # стопарик: как «антисегнетоэлектрик» — сущ. неодуш. м.р.
 стопарик	стопарик	NN:Inanim:Masc:Sin:Nom
@@ -10855,6 +12141,14 @@
 Тодде	Тодд	NN:Name:Masc:Sin:P
 Тоддом	Тодд	NN:Name:Masc:Sin:T
 Тодду	Тодд	NN:Name:Masc:Sin:D
+
+# треник: поправлено, сущ. неодуш. м.р.
+треникам	треник	NN:Inanim:Masc:PL:D
+трениками	треник	NN:Inanim:Masc:PL:T
+трениках	треник	NN:Inanim:Masc:PL:P
+треники	треник	NN:Inanim:Masc:PL:Nom
+треники	треник	NN:Inanim:Masc:PL:V
+треников	треник	NN:Inanim:Masc:PL:R
 
 # три-четыре: как «три» + «четыре» — числ.
 тремя-четырьмя	три-четыре	NumC:T
@@ -11732,6 +13026,21 @@
 упизжены	упиздить	PT_Short:Past:TRANS:PFV:STR:PL
 упизжу	упиздить	VB:Fut:TRANS:PFV:Sin:P1
 
+# усрачка: как «драчка» — сущ. неодуш. ж.р. (ignore)
+усрачек	усрачка	NN:Inanim:Fem:PL:R
+усрачка	усрачка	NN:Inanim:Fem:Sin:Nom
+усрачкам	усрачка	NN:Inanim:Fem:PL:D
+усрачками	усрачка	NN:Inanim:Fem:PL:T
+усрачках	усрачка	NN:Inanim:Fem:PL:P
+усрачке	усрачка	NN:Inanim:Fem:Sin:D
+усрачке	усрачка	NN:Inanim:Fem:Sin:P
+усрачки	усрачка	NN:Inanim:Fem:PL:Nom
+усрачки	усрачка	NN:Inanim:Fem:PL:V
+усрачки	усрачка	NN:Inanim:Fem:Sin:R
+усрачкой	усрачка	NN:Inanim:Fem:Sin:T
+усрачкою	усрачка	NN:Inanim:Fem:Sin:T
+усрачку	усрачка	NN:Inanim:Fem:Sin:V
+
 # ухойдокать: как «истыкать» — глаг. сов. перех.
 ухойдокав	ухойдокать	DPT:Past:TRANS:PFV
 ухойдокавшая	ухойдокать	PT:Past:TRANS:PFV:DST:Fem:Nom
@@ -11872,6 +13181,34 @@
 фандомы	фандом	NN:Inanim:Masc:PL:Nom
 фандомы	фандом	NN:Inanim:Masc:PL:V
 
+# фанфик: как «антик» — сущ. неодуш. м.р.
+фанфик	фанфик	NN:Inanim:Masc:Sin:Nom
+фанфик	фанфик	NN:Inanim:Masc:Sin:V
+фанфика	фанфик	NN:Inanim:Masc:Sin:R
+фанфикам	фанфик	NN:Inanim:Masc:PL:D
+фанфиками	фанфик	NN:Inanim:Masc:PL:T
+фанфиках	фанфик	NN:Inanim:Masc:PL:P
+фанфике	фанфик	NN:Inanim:Masc:Sin:P
+фанфики	фанфик	NN:Inanim:Masc:PL:Nom
+фанфики	фанфик	NN:Inanim:Masc:PL:V
+фанфиков	фанфик	NN:Inanim:Masc:PL:R
+фанфиком	фанфик	NN:Inanim:Masc:Sin:T
+фанфику	фанфик	NN:Inanim:Masc:Sin:D
+
+# фанфикшен: как «автоген» — сущ. неодуш. м.р.
+фанфикшен	фанфикшен	NN:Inanim:Masc:Sin:Nom
+фанфикшен	фанфикшен	NN:Inanim:Masc:Sin:V
+фанфикшена	фанфикшен	NN:Inanim:Masc:Sin:R
+фанфикшенам	фанфикшен	NN:Inanim:Masc:PL:D
+фанфикшенами	фанфикшен	NN:Inanim:Masc:PL:T
+фанфикшенах	фанфикшен	NN:Inanim:Masc:PL:P
+фанфикшене	фанфикшен	NN:Inanim:Masc:Sin:P
+фанфикшенов	фанфикшен	NN:Inanim:Masc:PL:R
+фанфикшеном	фанфикшен	NN:Inanim:Masc:Sin:T
+фанфикшену	фанфикшен	NN:Inanim:Masc:Sin:D
+фанфикшены	фанфикшен	NN:Inanim:Masc:PL:Nom
+фанфикшены	фанфикшен	NN:Inanim:Masc:PL:V
+
 # филонить: дополнено, глаг. несов. неперех.
 филонив	филонить	DPT:Past:INTR:IMPFV
 филонившая	филонить	PT:Past:INTR:IMPFV:DST:Fem:Nom
@@ -11978,6 +13315,21 @@
 фиолетово-сиреневых	фиолетово-сиреневый	ADJ:Posit:PL:P
 фиолетово-сиреневых	фиолетово-сиреневый	ADJ:Posit:PL:R
 фиолетово-сиреневых	фиолетово-сиреневый	ADJ:Posit:PL:V
+
+# фокализация: как «алкализация» — сущ. неодуш. ж.р.
+фокализацией	фокализация	NN:Inanim:Fem:Sin:T
+фокализациею	фокализация	NN:Inanim:Fem:Sin:T
+фокализации	фокализация	NN:Inanim:Fem:PL:Nom
+фокализации	фокализация	NN:Inanim:Fem:PL:V
+фокализации	фокализация	NN:Inanim:Fem:Sin:D
+фокализации	фокализация	NN:Inanim:Fem:Sin:P
+фокализации	фокализация	NN:Inanim:Fem:Sin:R
+фокализаций	фокализация	NN:Inanim:Fem:PL:R
+фокализацию	фокализация	NN:Inanim:Fem:Sin:V
+фокализация	фокализация	NN:Inanim:Fem:Sin:Nom
+фокализациям	фокализация	NN:Inanim:Fem:PL:D
+фокализациями	фокализация	NN:Inanim:Fem:PL:T
+фокализациях	фокализация	NN:Inanim:Fem:PL:P
 
 # фотосессия: как «агрессия» — сущ. неодуш. ж.р.
 фотосессией	фотосессия	NN:Inanim:Fem:Sin:T
@@ -13408,6 +14760,20 @@
 шуткующих	шутковать	PT:Real:INTR:IMPFV:DST:PL:V
 шуткующую	шутковать	PT:Real:INTR:IMPFV:DST:Fem:V
 шуткуя	шутковать	DPT:Real:INTR:IMPFV
+
+# экшен: как «фанфикшен» — сущ. неодуш. м.р.
+экшен	экшен	NN:Inanim:Masc:Sin:Nom
+экшен	экшен	NN:Inanim:Masc:Sin:V
+экшена	экшен	NN:Inanim:Masc:Sin:R
+экшенам	экшен	NN:Inanim:Masc:PL:D
+экшенами	экшен	NN:Inanim:Masc:PL:T
+экшенах	экшен	NN:Inanim:Masc:PL:P
+экшене	экшен	NN:Inanim:Masc:Sin:P
+экшенов	экшен	NN:Inanim:Masc:PL:R
+экшеном	экшен	NN:Inanim:Masc:Sin:T
+экшену	экшен	NN:Inanim:Masc:Sin:D
+экшены	экшен	NN:Inanim:Masc:PL:Nom
+экшены	экшен	NN:Inanim:Masc:PL:V
 
 # электрика: поправлено, сущ. неодуш. ж.р.
 электрик	электрика	NN:Inanim:Fem:PL:R
