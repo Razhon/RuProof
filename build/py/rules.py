@@ -13,6 +13,7 @@
 """
 
 import difflib
+import importlib
 import json
 import os
 import re
@@ -978,6 +979,41 @@ ADD = [
 ]
 ADD = [Add(*a) for a in ADD]
 
+# правила, перепроверенные по разбору docs/rules/<id>.md: модуль на правило в fixes/, пара «док-код» в обе стороны
+FIXES, DOCS = B / "py" / "fixes", B.parent / "docs" / "rules"
+
+
+def load_fixes():
+    """PATCHES/ADD модулей fixes/ -> в общие списки; правило правится в одном месте, иначе порядок правок неясен."""
+    for f in sorted(FIXES.glob("*.py")):
+        m = importlib.import_module(f"fixes.{f.stem}")
+        new = [Patch(*p) for p in getattr(m, "PATCHES", [])], [Add(*a) for a in getattr(m, "ADD", [])]
+        if clash := {p.rid for p in new[0]} & {p.rid for p in PATCHES}:
+            sys.exit(f"FAIL fixes/{f.name}: правки {', '.join(sorted(clash))} есть и в rules.py, оставь одно место")
+        PATCHES.extend(new[0])
+        ADD.extend(new[1])
+
+
+def doc_pairs():
+    """Ошибки пары док-код: модуль fixes/X.py ссылается на docs/rules/*.md, а документ — обратно на модуль."""
+    bad = []
+    for f in sorted(FIXES.glob("*.py")):
+        m = re.search(r"док-код: (docs/rules/\S+\.md)", f.read_text(encoding="utf-8"))
+        doc = B.parent / m.group(1) if m else None
+        if not doc or not doc.is_file():
+            bad.append(f"fixes/{f.name}: нет строки «док-код: docs/rules/….md» или документа")
+        elif f"build/py/fixes/{f.name}" not in doc.read_text(encoding="utf-8"):
+            bad.append(f"{doc.relative_to(B.parent).as_posix()}: нет строки «док-код: build/py/fixes/{f.name}»")
+    # обратно: документ не ссылается на удалённый или переименованный модуль
+    for doc in sorted(DOCS.glob("*.md")):
+        for p in re.findall(r"build/py/fixes/[\w.-]+\.py", doc.read_text(encoding="utf-8")):
+            if not (B.parent / p).is_file():
+                bad.append(f"docs/rules/{doc.name}: {p} нет, правки убраны? поправь документ")
+    return bad
+
+
+load_fixes()
+
 
 # слова вне нормы (rpdict -u, store.NONSTD): замечание стиля, в prose его снимает прокси (ключ nonstandard).
 # Почему не тег :Talk, как у правила talk из образа: шаблон postag сравнивается с тегом целиком, и NN:.*:.*:Nom уже не
@@ -1505,6 +1541,7 @@ if __name__ == "__main__":
     )
     assert "записей «придти» 0, ожидалась 1" in (e := exits(apply_replace, r.replace("придти=", "x="))), e
     assert "записей «придти» 2" in (e := exits(apply_replace, r + "\nпридти=прийти")), e
+    assert not (e := doc_pairs()), "\n".join(e)
     if os.environ.get("SELFCHECK"):  # CI: только самопроверка
         sys.exit(0)
     cmd, args = sys.argv[1:2], sys.argv[2:]

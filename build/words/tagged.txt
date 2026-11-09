@@ -5145,6 +5145,14 @@
 мемы	мем	NN:Inanim:Masc:PL:Nom
 мемы	мем	NN:Inanim:Masc:PL:V
 
+# Месси: несклоняемое, сущ. имя м.р.
+Месси	Месси	NN:Name:Masc:Sin:D
+Месси	Месси	NN:Name:Masc:Sin:Nom
+Месси	Месси	NN:Name:Masc:Sin:P
+Месси	Месси	NN:Name:Masc:Sin:R
+Месси	Месси	NN:Name:Masc:Sin:T
+Месси	Месси	NN:Name:Masc:Sin:V
+
 # месяц-два: как «месяц» + «два» — сущ. неодуш. м.р.
 месяц-два	месяц-два	NN:Inanim:Masc:Sin:Nom
 месяц-два	месяц-два	NN:Inanim:Masc:Sin:V
@@ -10802,6 +10810,14 @@
 розово-фиолетовых	розово-фиолетовый	ADJ:Posit:PL:R
 розово-фиолетовых	розово-фиолетовый	ADJ:Posit:PL:V
 
+# Роналду: несклоняемое, сущ. имя м.р.
+Роналду	Роналду	NN:Name:Masc:Sin:D
+Роналду	Роналду	NN:Name:Masc:Sin:Nom
+Роналду	Роналду	NN:Name:Masc:Sin:P
+Роналду	Роналду	NN:Name:Masc:Sin:R
+Роналду	Роналду	NN:Name:Masc:Sin:T
+Роналду	Роналду	NN:Name:Masc:Sin:V
+
 # самоназначить: как «назначить» — глаг. сов. перех.
 самоназначат	самоназначить	VB:Fut:TRANS:PFV:PL:P3
 самоназначен	самоназначить	PT_Short:Past:TRANS:PFV:STR:Masc
@@ -12141,6 +12157,20 @@
 Тодде	Тодд	NN:Name:Masc:Sin:P
 Тоддом	Тодд	NN:Name:Masc:Sin:T
 Тодду	Тодд	NN:Name:Masc:Sin:D
+
+# тред: как «юнктад» — сущ. неодуш. м.р.
+тред	тред	NN:Inanim:Masc:Sin:Nom
+тред	тред	NN:Inanim:Masc:Sin:V
+треда	тред	NN:Inanim:Masc:Sin:R
+тредам	тред	NN:Inanim:Masc:PL:D
+тредами	тред	NN:Inanim:Masc:PL:T
+тредах	тред	NN:Inanim:Masc:PL:P
+треде	тред	NN:Inanim:Masc:Sin:P
+тредов	тред	NN:Inanim:Masc:PL:R
+тредом	тред	NN:Inanim:Masc:Sin:T
+треду	тред	NN:Inanim:Masc:Sin:D
+треды	тред	NN:Inanim:Masc:PL:Nom
+треды	тред	NN:Inanim:Masc:PL:V
 
 # треник: поправлено, сущ. неодуш. м.р.
 треникам	треник	NN:Inanim:Masc:PL:D
