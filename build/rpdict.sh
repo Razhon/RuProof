@@ -1,6 +1,6 @@
 #!/bin/sh
 # Личные слова для русского словаря (нужен только podman или docker).
-# запуск: build/rpdict.sh [-s] [-i|-p] [-u] [-n] [-c] [-a файл] [слово...] | [-s] -r|-t слово... | [-s] [-i] -m [-a файл] | -b | -h
+# запуск: build/rpdict.sh [-s] [-i|-p] [-u] [-n] [-q] [-c] [-a файл] [слово...] | [-s] -r|-t слово... | [-s] [-i] -m [-a файл] | -b | -h
 #   по умолчанию: spelling (спросит, как слово склоняется: tagged.txt или только spelling.txt), в свой слой words/
 #   -s: общий слой build/words/ (в git проекта) вместо своего words/    -t: перенести слова в слой из другого
 #   -i: принимается, но не предлагается (спросит, как склоняется: tagged.txt с меткой (ignore) или 0 = только ignore.txt)
@@ -9,15 +9,15 @@
 #      Слово с заглавной — только заглавная в середине предложения, без пересборки; 'Слово*' — все его формы; 'фраза' — только с заменой)
 #   -r: удалить слова из всех списков слоя    -m: разметить склоняемые слова, уже лежащие в spelling.txt (с -i: в ignore.txt)
 #   -b: полная пересборка после нового образа (дампы словарей, merge, dict, исправления грамматики и их проверка)
-#   -n: только записать файлы, без перезапуска    -c: убрать слова, которые уже есть в базовом словаре
+#   -n: только записать файлы, без перезапуска    -q: считать исправления грамматики проверенными (так зовёт update.sh)    -c: убрать слова, которые уже есть в базовом словаре
 #   -a файл: ответы на вопросы из файла (путь от корня репозитория), по строке на вопрос, пустая = Enter
 #   без слов: собрать dict/ и применить списки, исправленные вручную    -h: эта справка
 set -e
 help() { sed -n '3,13s/^# \{0,1\}//p' "$0"; }
 usage() { help >&2; exit 2; }
-f=spelling; restart=1; clean=0; cmd=add; full=0; ans=; le=; ue=
-while getopts sipuncrtmba:h o; do
-  case $o in a) ans=$OPTARG ;; s) le="-e WORDS_LAYER=shared" ;; i) f=ignore ;; p) f=prohibited ;; u) ue="-e WORDS_NONSTD=1" ;; n) restart=0 ;; c) clean=1 ;;
+f=spelling; restart=1; clean=0; cmd=add; full=0; quick=0; ans=; le=; ue=
+while getopts sipunqcrtmba:h o; do
+  case $o in a) ans=$OPTARG ;; s) le="-e WORDS_LAYER=shared" ;; i) f=ignore ;; p) f=prohibited ;; u) ue="-e WORDS_NONSTD=1" ;; n) restart=0 ;; q) quick=1 ;; c) clean=1 ;;
     r) cmd=remove ;; t) cmd=move ;; m) cmd=migrate ;; b) full=1 ;; h) help; exit 0 ;; *) usage ;; esac
 done
 P=$(cd "$(dirname "$0")/.." && pwd); cd "$P"
@@ -53,6 +53,7 @@ run "$PY" rules
 [ $restart = 1 ] || exit 0
 "$RT" compose up -d --force-recreate
 sum=$(cat dict/grammar.xml dict/segment.srx dict/replace.txt | sha256sum | cut -c1-64)
+[ $quick = 0 ] || { echo "$sum" > $W/grammar.checked; exit 0; }   # -q: исправления считаются проверенными автором, иначе проверка всплывёт при следующем добавлении слова
 if [ $full = 1 ] || [ "$sum" != "$(tr -d '\r' < $W/grammar.checked 2>/dev/null)" ]; then   # исправления ещё не проверены: убедиться, что они ничего не портят
   "$RT" run --rm --network "container:$("$RT" compose ps -q languagetool)" -v "$P:/p" -w /p -e PYTHONDONTWRITEBYTECODE=1 "$PY" python3 build/py/rules.py check http://localhost:8010
   echo "$sum" > $W/grammar.checked

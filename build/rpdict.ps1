@@ -1,5 +1,5 @@
 ﻿# Личные слова для русского словаря (нужен только podman или docker).
-# запуск: build\rpdict.ps1 [-s] [-i | -p] [-u] [-n] [-c] [-a файл] [слово...] | [-s] -r|-t слово... | [-s] [-i] -m [-a файл] | -b | -h
+# запуск: build\rpdict.ps1 [-s] [-i | -p] [-u] [-n] [-q] [-c] [-a файл] [слово...] | [-s] -r|-t слово... | [-s] [-i] -m [-a файл] | -b | -h
 #   по умолчанию: spelling (спросит, как слово склоняется: tagged.txt или только spelling.txt), в свой слой words/
 #   -s: общий слой build/words/ (в git проекта) вместо своего words/    -t: перенести слова в слой из другого
 #   -i: принимается, но не предлагается (спросит, как склоняется: tagged.txt с меткой (ignore) или 0 = только ignore.txt)
@@ -8,10 +8,10 @@
 #      Слово с заглавной — только заглавная в середине предложения, без пересборки; 'Слово*' — все его формы; 'фраза' — только с заменой)
 #   -r: удалить слова из всех списков слоя    -m: разметить склоняемые слова, уже лежащие в spelling.txt (с -i: в ignore.txt)
 #   -b: полная пересборка после нового образа (дампы словарей, merge, dict, исправления грамматики и их проверка)
-#   -n: только записать файлы, без перезапуска    -c: убрать слова, которые уже есть в базовом словаре
+#   -n: только записать файлы, без перезапуска    -q: считать исправления грамматики проверенными (так зовёт update.ps1)    -c: убрать слова, которые уже есть в базовом словаре
 #   -a файл: ответы на вопросы из файла (путь от корня репозитория), по строке на вопрос, пустая = Enter
 #   без слов: собрать dict/ и применить списки, исправленные вручную    -h: эта справка
-param([switch]$s, [switch]$i, [switch]$p, [switch]$u, [switch]$n, [switch]$c, [switch]$r, [switch]$t, [switch]$m, [switch]$b, [switch]$h, [string]$a,
+param([switch]$s, [switch]$i, [switch]$p, [switch]$u, [switch]$n, [switch]$q, [switch]$c, [switch]$r, [switch]$t, [switch]$m, [switch]$b, [switch]$h, [string]$a,
       [Parameter(Position = 0, ValueFromRemainingArguments)][string[]]$Words)   # Position: иначе первое слово уходит в -a
 if ($h -or ($Words -like '-*')) {   # справка; неизвестный флаг не должен попасть в словарь как слово
   Get-Content -Encoding UTF8 $PSCommandPath -TotalCount 12 | Select-Object -Skip 1 | ForEach-Object { $_ -replace '^# ?', '' }
@@ -57,6 +57,7 @@ Set-Location $root
 & $rt compose up -d --force-recreate
 if ($LASTEXITCODE) { exit $LASTEXITCODE }
 $sum = ((Get-FileHash $grammar).Hash + (Get-FileHash (Join-Path $root 'dict\segment.srx')).Hash + (Get-FileHash (Join-Path $root 'dict\replace.txt')).Hash).ToLower()   # изменился любой из них: проверить снова
+if ($q) { Set-Content $stamp $sum; exit 0 }   # -q: исправления считаются проверенными автором, иначе проверка всплывёт при следующем добавлении слова
 if ($b -or -not (Test-Path $stamp) -or $sum -ne (Get-Content $stamp)) {   # исправления ещё не проверены: убедиться, что они ничего не портят
   $id = & $rt compose ps -q languagetool
   & $rt run --rm --network "container:$id" -v "${root}:/p" -w /p -e PYTHONDONTWRITEBYTECODE=1 $py python3 build/py/rules.py check http://localhost:8010

@@ -31,4 +31,5 @@ if [ -d words/.git ]; then
   if [ $rc = 0 ]; then git -C words pull --rebase origin main; elif [ $rc != 2 ]; then exit $rc; fi
   ! git -C words rev-parse -q --verify HEAD >/dev/null || git -C words push -u origin HEAD:main   # без коммитов слать нечего
 fi
-exec build/rpdict.sh   # без слов: собирает dict/ на этой машине и заканчивает compose up
+q=; git diff --quiet HEAD -- build/py/rules.py && q=-q   # rules.py правили здесь: исправления не проверены, -q не давать
+exec build/rpdict.sh $q   # без слов: собирает dict/ на этой машине и заканчивает compose up; -q: без проверки правил (это дело автора, он зовёт rpdict сам)
