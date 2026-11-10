@@ -2,7 +2,7 @@
 """Локальные исправления ложных срабатываний в русском grammar.xml из образа и проверка, что они ничего не портят.
 
 запуск: rules.py apply                 WORKDIR/grammar.orig.xml (скопирован из образа) -> dict/grammar.xml,
-                                       так же segment.srx и replace.txt
+                                       так же segment.srx, replace.txt и disambiguation.xml
         rules.py check URL [id...]     примеры изменённых правил + случаи ниже, против запущенного сервера
                                        (с id: только эти правила из PATCHES/ADD, без segment.srx и added.txt)
         rules.py diff [id...]          что правки меняют в правилах образа (без сервера)
@@ -22,6 +22,7 @@ import time
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from typing import NamedTuple
 from xml.sax.saxutils import escape
@@ -32,6 +33,7 @@ B = Path(__file__).parent.parent  # build/: скрипты лежат в build/p
 SRC, OUT = B / ".work" / "grammar.orig.xml", B.parent / "dict" / "grammar.xml"
 SRX_SRC, SRX_OUT = B / ".work" / "segment.orig.srx", B.parent / "dict" / "segment.srx"
 REPLACE_SRC, REPLACE_OUT = B / ".work" / "replace.orig.txt", B.parent / "dict" / "replace.txt"
+DIS_SRC, DIS_OUT = B / ".work" / "disambiguation.orig.xml", B.parent / "dict" / "disambiguation.xml"
 
 
 class Patch(NamedTuple):
@@ -493,19 +495,6 @@ PATCHES = [
         1,
         ["Он не немец."],
         [("А порой и не немного.", None)],
-    ),
-    # глагол среднего рода (Никита сказало) разбирает SoglasovanieNN_Verb_Neut с двумя вариантами, сказал и сказала;
-    # здесь было бы второе замечание на том же месте с одним вариантом и неверным для безличных (Никита повезло → повёз)
-    (
-        "SoglasovanieNN_Verb",
-        r'(<exception postag_regexp="yes" postag="VB:Past:\.\*:\.\*:PL"></exception>)',
-        r'\1<exception postag_regexp="yes" postag="VB:Past:.*:Neut"></exception>',
-        2,
-        ["Никита сказало.", "Никита повезло.", "Мама сказало ему это."],
-        [
-            ("Кот грелась на солнышке.", "Кот грелся"),
-            ("Кошка грелся на солнышке.", "Кошка грелась"),
-        ],
     ),
 ]
 PATCHES = [Patch(*p) for p in PATCHES]
@@ -1192,6 +1181,24 @@ REPLACE_CASES = [
     ("RU_PROHIBITED", (True, ("Во внутрь залез Брумзик.", "Внутрь"))),
     ("RU_PROHIBITED", (True, ("Брумзик ушёл в конце-концов.", "в конце концов"))),
 ]
+# Java-правки LT (build/java/*.java, компилирует build.sh java): (файл, правило, случай), случай как в REPLACE_CASES;
+# у каждого файла build/java/ есть хотя бы один случай
+JAVA_CASES: list[tuple[str, str, tuple]] = [
+    # синтез без формы (в наши саду: первое чтение «саду» 2R) — замечание без замены, а не «{suggestion} саду»
+    ("AdvancedSynthesizerFilter.java", "Unify_PADJ_NN_number", (False, "Брумзик гулял в моём саду.")),
+    ("AdvancedSynthesizerFilter.java", "Unify_PADJ_NN_number", (True, ("Брумзик гулял в наши саду.", None))),
+]
+JAVA = B / "java"
+
+
+def java_gaps():
+    """Файлы build/java/ без случаев и случаи без файла."""
+    have, named = {p.name for p in JAVA.glob("*.java")}, {f for f, _, _ in JAVA_CASES}
+    return [f"{f}: нет случаев в JAVA_CASES" for f in sorted(have - named)] + [
+        f"JAVA_CASES: нет build/java/{f}" for f in sorted(named - have)
+    ]
+
+
 # примеры, на которых ошибаются уже исходные правила (проверено на образе без правок): не регрессия
 KNOWN_FAIL = {"Они сделали предложение и вызов бросили нам."}
 
@@ -1204,6 +1211,10 @@ GRAMMAR_NOTICE = (
 SRX_NOTICE = (
     "<!-- segment.srx из LanguageTool (languagetool-core), https://languagetool.org, GNU LGPL 2.1 или более поздняя. "
     f"Изменено в {YEAR} году, Razhon (build/py/rules.py): добавлено одно правило для многоточия перед словом. -->"
+)
+DIS_NOTICE = (
+    f"<!-- Изменено в {YEAR} году, Razhon (build/py/rules.py): добавлены блоки <unification> из grammar.xml. "
+    "Оригинал: LanguageTool, © Yakov Reztsov и другие, GNU LGPL 2.1 или более поздняя. -->"
 )
 REPLACE_NOTICE = (
     f"# Изменено в {YEAR} году, Razhon (build/py/rules.py): убраны записи, которые не просторечие (ошибки и обычные\n"
@@ -1287,11 +1298,13 @@ def apply(x):
 
 
 def wait(url):
-    for _ in range(60):  # сервер только что (пере)запущен: с ngrams ~30 с; не дольше ~4 мин, а не ждать вечно
+    for i in range(60):  # сервер только что (пере)запущен: с ngrams ~30 с; не дольше ~4 мин, а не ждать вечно
         try:
             urllib.request.urlopen(url + "/v2/languages", timeout=2)
             return
         except OSError:
+            if not i:
+                print("жду, пока LanguageTool запустится (до ~30 с)...", flush=True)
             time.sleep(2)
     sys.exit(f"FAIL LanguageTool не отвечает на {url}: podman compose logs languagetool")
 
@@ -1304,7 +1317,9 @@ def lt(url, texts, rules=(), only=False):
         q["enabledRules"] = ",".join(rules)
         if only:
             q["enabledOnly"] = "true"
-    ms = json.load(urllib.request.urlopen(url + "/v2/check", urllib.parse.urlencode(q).encode()))["matches"]
+    # timeout больше maxCheckTimeMillis LT (60 с): зависший запрос не должен вешать rpdict
+    data = urllib.parse.urlencode(q).encode()
+    ms = json.load(urllib.request.urlopen(url + "/v2/check", data, timeout=120))["matches"]
     out, pos = [], 0
     for t in texts:
         # смещения UTF-16 совпадают: символов вне BMP нет
@@ -1322,6 +1337,7 @@ def show(m, t):
 
 
 def check(url, ids=()):
+    print("проверяю исправления грамматики на запущенном LanguageTool...", flush=True)
     wait(url)
     root = ET.parse(OUT).getroot()
     bad = 0
@@ -1329,8 +1345,8 @@ def check(url, ids=()):
     def run(rid, cases, only, kind=None):
         """Случай — (want, текст) или, для обязательного, (True, (текст, первый вариант каждого замечания, …)): тогда замечаний
         правила ровно столько, с этими вариантами по порядку. only: только это правило, даже выключенное.
-        kind: issueType, который должен быть у каждого замечания."""
-        nonlocal bad
+        kind: issueType, который должен быть у каждого замечания. Возвращает строки FAIL (печатает их вызывающий)."""
+        fails = []
         texts = [t if isinstance(t, str) else t[0] for _, t in cases]
         for (want, t), found in zip(cases, lt(url, texts, [rid] if only else (), only)):
             t, sugs = (t, None) if isinstance(t, str) else (t[0], list(t[1:]))
@@ -1344,9 +1360,11 @@ def check(url, ids=()):
                 types = [m["rule"]["issueType"] for m in mine]
                 fail = next((f"issueType {t}, ожидался {kind}" for t in types if kind and t != kind), None)
             if fail and t not in KNOWN_FAIL:
-                bad += 1
-                print(f"FAIL {rid}: {fail}: {t}")
+                fails.append(f"FAIL {rid}: {fail}: {t}")
+        return fails
 
+    # задания по порядку вывода: строка печатается как есть, кортеж — аргументы run (его запросы идут параллельно)
+    jobs: list = []
     patches = [p for p in PATCHES if not ids or p.rid in ids]
     added = [a for a in ADD if not ids or a.rid in ids]
     # покрытие: у каждого изменённого правила есть случаи
@@ -1367,27 +1385,39 @@ def check(url, ids=()):
             )
             for e in el.iter("example")
         ]
-        run(rid, ex, True)  # собственные примеры правила: шаблон всё ещё работает
+        jobs.append((rid, ex, True))  # собственные примеры правила: шаблон всё ещё работает
         # случаи, с настройками сервера
-        run(
-            rid,
-            [(False, t) for t in ok] + [(True, t) for t in must],
-            False,
-            el.get("type"),
+        jobs.append(
+            (
+                rid,
+                [(False, t) for t in ok] + [(True, t) for t in must],
+                False,
+                el.get("type"),
+            )
         )
-        print(f"{rid}: примеров {len(ex)}, случаев {len(ok) + len(must)}")
+        jobs.append(f"{rid}: примеров {len(ex)}, случаев {len(ok) + len(must)}")
     if not ids:
-        run(
-            "SENTENCE_WHITESPACE",
-            [(False, t) for t in SRX_OK] + [(True, t) for t in SRX_MUST],
-            False,
+        jobs.append(
+            (
+                "SENTENCE_WHITESPACE",
+                [(False, t) for t in SRX_OK] + [(True, t) for t in SRX_MUST],
+                False,
+            )
         )
-        print(f"segment.srx: случаев {len(SRX_OK) + len(SRX_MUST)}")
-        run("PREP_K_and_Noun", [(True, t) for t in SYNTH_MUST], False)
-        print(f"added.txt: случаев {len(SYNTH_MUST)}")
-        for rid, case in REPLACE_CASES:
-            run(rid, [case], False)
-        print(f"replace.txt: случаев {len(REPLACE_CASES)}")
+        jobs.append(f"segment.srx: случаев {len(SRX_OK) + len(SRX_MUST)}")
+        jobs.append(("PREP_K_and_Noun", [(True, t) for t in SYNTH_MUST], False))
+        jobs.append(f"added.txt: случаев {len(SYNTH_MUST)}")
+        jobs += [(rid, [case], False) for rid, case in REPLACE_CASES]
+        jobs.append(f"replace.txt: случаев {len(REPLACE_CASES)}")
+        jobs += [f"FAIL {e}" for e in java_gaps()]
+        jobs += [(rid, [case], False) for _, rid, case in JAVA_CASES]
+        jobs.append(f"java: случаев {len(JAVA_CASES)}")
+    # запросы независимы, а LT проверяет их параллельно (пул из 10 потоков): в 8 потоков в ~5 раз быстрее, чем по одному
+    with ThreadPoolExecutor(8) as pool:
+        for lines in pool.map(lambda j: [j] if isinstance(j, str) else run(*j), jobs):
+            for s in lines:
+                bad += s.startswith("FAIL ")
+                print(s)
     sys.exit(1 if bad else 0)
 
 
@@ -1455,6 +1485,23 @@ def apply_srx(x):
     assert x.count(SRX_RU) == 1, "в segment.srx нет русских правил (образ изменился?)"
     # первым: срабатывает первое подходящее правило SRX
     return parsed(notice(x.replace(SRX_RU, SRX_RU + SRX_RULE), SRX_NOTICE), "segment.srx")
+
+
+def apply_dis(x, grammar):
+    """disambiguation.xml образа с блоками <unification> из grammar.xml образа.
+
+    antipattern правила выполняется как правило снятия омонимии и берёт unifier из disambiguation.xml; в русском там
+    нет <unification>, и antipattern с <unify> роняет LT (NPE в Unifier.isSatisfied): docs/rules/Unify-PADJ-Propuski.md.
+    """
+    blocks = "".join(re.findall(r"\n[ \t]*<unification\b.*?</unification>", grammar, re.DOTALL))
+    m = re.search(r"<rules\b[^>]*>", x)
+    if not blocks or not m:
+        sys.exit(
+            "FAIL disambiguation.xml: в grammar.xml нет <unification> или в disambiguation.xml нет <rules> (образ изменился?)"
+        )
+    if "<unification" in x:
+        sys.exit("FAIL disambiguation.xml: в образе уже есть <unification>, правка не нужна (образ изменился?)")
+    return parsed(notice(x[: m.end()] + blocks + x[m.end() :], DIS_NOTICE), "disambiguation.xml")
 
 
 def apply_replace(x):
@@ -1541,7 +1588,13 @@ if __name__ == "__main__":
     )
     assert "записей «придти» 0, ожидалась 1" in (e := exits(apply_replace, r.replace("придти=", "x="))), e
     assert "записей «придти» 2" in (e := exits(apply_replace, r + "\nпридти=прийти")), e
+    # disambiguation.xml: блоки <unification> из grammar.xml сразу после <rules …>, пометка после декларации
+    g = '<rules lang="ru">\n    <unification feature="case"><equivalence type="Nom"/></unification>\n<rule/></rules>'
+    d = apply_dis('<?xml version="1.0"?>\n<rules lang="ru">\n<rule/></rules>', g)
+    assert d.index(DIS_NOTICE) < d.index('<unification feature="case">') < d.index("<rule/>"), d
+    assert "уже есть <unification>" in (e := exits(apply_dis, d, g)), e
     assert not (e := doc_pairs()), "\n".join(e)
+    assert not (e := java_gaps()), "\n".join(e)
     if os.environ.get("SELFCHECK"):  # CI: только самопроверка
         sys.exit(0)
     cmd, args = sys.argv[1:2], sys.argv[2:]
@@ -1549,9 +1602,12 @@ if __name__ == "__main__":
         OUT.write_text(apply(SRC.read_text(encoding="utf-8")), encoding="utf-8")
         SRX_OUT.write_text(apply_srx(SRX_SRC.read_text(encoding="utf-8")), encoding="utf-8")
         REPLACE_OUT.write_text(apply_replace(REPLACE_SRC.read_text(encoding="utf-8")), encoding="utf-8")
+        DIS_OUT.write_text(
+            apply_dis(DIS_SRC.read_text(encoding="utf-8"), SRC.read_text(encoding="utf-8")), encoding="utf-8"
+        )
         print(
             f"grammar.xml: исправлений {len(PATCHES)}, новых правил {len(ADD)}; segment.srx: 1 исправление; "
-            f"replace.txt: убрано {len(REPLACE_DROP)}"
+            f"replace.txt: убрано {len(REPLACE_DROP)}; disambiguation.xml: блоки <unification>"
         )
     elif cmd == ["check"] and args:
         check(args[0], known(args[1:]))

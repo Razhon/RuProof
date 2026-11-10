@@ -685,6 +685,9 @@ def blank(c, title, mid):
     """Тег ячейки, которую образец оставил пустой (кратк. м.р. неубиваем, прич. действ. наст.), или None, если заполнить нельзя."""
     if c == "ADJ":
         return dict(ACELLS)[title]
+    if c.startswith("NN"):  # "PL Р." -> NN:Inanim:Neut:PL:R
+        num, _, lab = title.partition(" ")
+        return f"{c}:{num}:{next(k for k, x, *_ in CASES if x == lab)}"
     return vtag(title, mid) if c == "V" else None
 
 

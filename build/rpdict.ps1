@@ -36,8 +36,8 @@ function Run($img, [string[]]$step, [int[]]$ok = @(0)) {
 }
 $imgf = Join-Path $work 'image'
 if (-not (Test-Path $imgf) -or (Get-Content $imgf) -ne $lt) { $b = $true }   # другой образ (git pull с новым тегом): дампы устарели
-if ($b) { Remove-Item -ErrorAction SilentlyContinue (Join-Path $work 'aot.raw'), (Join-Path $work 'tags.raw'), (Join-Path $work 'para.pkl'), (Join-Path $work 'merged.txt') }   # merged.txt: пересобирается ниже, до проверок слов
-Run $lt @('prep')
+if ($b) { Remove-Item -ErrorAction SilentlyContinue (Join-Path $work 'aot.raw'), (Join-Path $work 'tags.raw'), (Join-Path $work 'para.pkl'), (Join-Path $work 'merged.txt'), (Join-Path $work 'java.stamp'), (Join-Path $work 'prep.ok') }   # merged.txt: пересобирается ниже, до проверок слов
+if (-not (Test-Path (Join-Path $work 'prep.ok'))) { Run $lt @('prep') }   # тот же образ и prep уже прошёл: его файлы на месте, контейнер не нужен (~1 с)
 Set-Content $imgf $lt
 if (-not (Test-Path (Join-Path $work 'merged.txt'))) { Run $py @('merge') }   # его читают проверки слов и индекс парадигм
 $f = if ($i) { 'ignore' } elseif ($p) { 'prohibited' } else { 'spelling' }
@@ -51,12 +51,16 @@ if (-not (Test-Path $dictf) -or (Get-Item $dictf).LastWriteTime -le (Get-Item (J
 elseif ($same -and ($Words -or $m)) { Write-Host 'без изменений: перезапуск не нужен'; exit 0 }   # без слов не пропускать: так применяют и правки rules.py
 $grammar = Join-Path $root 'dict\grammar.xml'
 $stamp = Join-Path $work 'grammar.checked'
+Run $lt @('java')   # Java-правки (build/java/): сразу выходит, если исходники не менялись (java.stamp)
 Run $py @('rules')
 if ($n) { exit 0 }
 Set-Location $root
+Write-Host 'перезапускаю LanguageTool и прокси...'
+$wordsf = Join-Path $root 'proxy\data\words.raw'
+if (-not (Test-Path $wordsf) -or (Get-Item $dictf).LastWriteTime -gt (Get-Item $wordsf).LastWriteTime) { Write-Host '  словарь новый: прокси стартует после распаковки его слов (~30 с)' }
 & $rt compose up -d --force-recreate
 if ($LASTEXITCODE) { exit $LASTEXITCODE }
-$sum = ((Get-FileHash $grammar).Hash + (Get-FileHash (Join-Path $root 'dict\segment.srx')).Hash + (Get-FileHash (Join-Path $root 'dict\replace.txt')).Hash).ToLower()   # изменился любой из них: проверить снова
+$sum = ((Get-FileHash $grammar).Hash + (Get-FileHash (Join-Path $root 'dict\segment.srx')).Hash + (Get-FileHash (Join-Path $root 'dict\replace.txt')).Hash + (Get-FileHash (Join-Path $root 'dict\disambiguation.xml')).Hash + ((Get-ChildItem -ErrorAction SilentlyContinue (Join-Path $root 'build\java\*.java') | Get-FileHash).Hash -join '')).ToLower()   # изменился любой из них или Java-правка: проверить снова
 if ($q) { Set-Content $stamp $sum; exit 0 }   # -q: исправления считаются проверенными автором, иначе проверка всплывёт при следующем добавлении слова
 if ($b -or -not (Test-Path $stamp) -or $sum -ne (Get-Content $stamp)) {   # исправления ещё не проверены: убедиться, что они ничего не портят
   $id = & $rt compose ps -q languagetool

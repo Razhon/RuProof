@@ -255,7 +255,20 @@ def edit(c: str, fl: list[forms.Form]) -> tuple[str, list[forms.Form]]:
     mid = ""  # середина тега инфинитива (TRANS:PFV): ею заполняются пустые ячейки глагола
     if c in ("V", "PT"):  # у причастия без глагола вид тоже взят у образца
         fl, mid = verb_kind(fl)
-    for title, test in forms.cells(c):
+    cells = forms.cells(c)
+    if c.startswith("NN"):
+        # полминуты (только ед.ч.), ножницы (только мн.ч.): ячейки недостающего числа — только по согласию
+        have = {t.split(":")[3] for _, t in fl if t.count(":") > 3}
+        add = {
+            n
+            for n, lab in (("Sin", "ед.ч."), ("PL", "мн.ч."))
+            if have
+            and n not in have
+            and (n == "PL" or c.split(":")[2])  # ед.ч. без рода не записать
+            and confirm(f"   добавить {lab}? (у слова его нет)", False)
+        }
+        cells = [x for x in cells if x[0].split()[0] in have | add]
+    for title, test in cells:
         fl = edit_cell(c, title, test, fl, mid)
     return c, both(fl)
 
@@ -344,16 +357,6 @@ def bare_kind(fl: list[forms.Form], asp: str) -> tuple[list[forms.Form], str]:
 def edit_cell(c: str, title: str, test, fl: list[forms.Form], mid: str) -> list[forms.Form]:
     """Один вопрос edit: формы ячейки title (test — проверка тега) -> новые формы слова."""
     tags = {t for _, t in fl if test(t)}
-    # ячейку, которую образец оставил пустой, можно заполнить (шкерящийся, неубиваем)
-    if not tags:
-        tag = forms.blank(c, title, mid)
-        # у непереходного страд. причастий нет: ячейку не предлагаем
-        if not tag or ":STR:" in tag and "INTR" in mid.split(":"):
-            return fl
-        new = ask(f"   {title.replace('|', ' ').strip()} []: ")
-        parts = new.split("/") if new and new != "-" else []
-        # новый список: показанный вариант не должен сохранить эти формы
-        return fl + (decline(parts[0], tag, fl) if parts and tag.startswith("PT") else [(n, tag) for n in parts])
     if c.startswith("NN"):
         # заголовок ячейки существительного: "Sin Р."
         num, _, case = title.partition(" ")
@@ -361,6 +364,16 @@ def edit_cell(c: str, title: str, test, fl: list[forms.Form], mid: str) -> list[
         hint = f"{case} {'ед.' if num == 'Sin' else 'мн.'} ({q})"
     else:
         hint = title.replace("|", " ").strip()
+    # ячейку, которую образец оставил пустой, можно заполнить (шкерящийся, неубиваем, мн.ч. у полминуты)
+    if not tags:
+        tag = forms.blank(c, title, mid)
+        # у непереходного страд. причастий нет: ячейку не предлагаем
+        if not tag or ":STR:" in tag and "INTR" in mid.split(":"):
+            return fl
+        new = ask(f"   {hint} []: ")
+        parts = new.split("/") if new and new != "-" else []
+        # новый список: показанный вариант не должен сохранить эти формы
+        return fl + (decline(parts[0], tag, fl) if parts and tag.startswith("PT") else [(n, tag) for n in parts])
     old = sorted({f for f, t in fl if t in tags})
     part = title.startswith("прич.")
     # исправленная основа переходит на формы того же склонения: причастия — на все PT, полная форма прилагательного —
@@ -753,10 +766,17 @@ if __name__ == "__main__":
 
     assert cased("ФСБшника", "фсбшников") == "ФСБшников" and cased("Брум", "брум") == "Брум"
     # род оставлен, И. оставлен, Р. задан, Д. убран
-    it = iter(["", "", "Брума", "-"] + [""] * 9)
+    it = iter(["", "", "", "Брума", "-"] + [""] * 9)  # род, «добавить мн.ч.?», И., Р., Д.
     with replies(lambda p="": next(it)):
         got = edit(*forms.indeclinable("Брум", "Fem", "Name"))[1]
     assert ("Брума", "NN:Name:Fem:Sin:R") in got and not any(t.endswith(":D") for _, t in got), got
+    # слово только с ед.ч. (полминуты): по согласию спрашиваются и ячейки мн.ч.
+    sg = [("полбрумзы", "NN:Inanim:Neut:Sin:Nom"), ("полубрумзы", "NN:Inanim:Neut:Sin:R")]
+    with replies(answer(("добавить мн.ч.", "д"), ("И. мн.", "полбрумзы"))), contextlib.redirect_stdout(io.StringIO()):
+        got = edit("NN:Inanim:Neut", sg)[1]
+    assert ("полбрумзы", "NN:Inanim:Neut:PL:Nom") in got and len(got) == 3, got
+    with replies(answer(("И. мн.", "полбрумзы"))), contextlib.redirect_stdout(io.StringIO()):
+        assert edit("NN:Inanim:Neut", sg)[1] == sorted(sg)  # без согласия ячеек мн.ч. нет
     # неодушевлённый образец сделан именем: В. становится как Р. (вижу Лавкрафта, Лавкрафтов)
     lv = [
         ("Лавкрафт", "NN:Inanim:Masc:Sin:Nom"),

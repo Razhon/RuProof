@@ -11,6 +11,7 @@ import sys
 import time
 import urllib.parse
 import urllib.request
+from concurrent.futures import ThreadPoolExecutor
 
 # константы правил берутся из самого прокси, чтобы идентификаторы не разошлись
 _spec = importlib.util.spec_from_file_location(
@@ -305,10 +306,13 @@ def regress(url):
     bad = total = 0
     sets = [("prose", [("prose", *c) for c in CASES])]
     sets += [("neutral", [("neutral", *c) for c in NEUTRAL]), ("ключи", KEYS)]
-    for name, cases in sets:
+    # случаи независимы (без textSessionId: память имён не трогается), прокси и LT отвечают параллельно; map отправляет
+    # все запросы сразу, а результаты отдаёт по порядку
+    pool = ThreadPoolExecutor(8)
+    replies = [pool.map(lambda c: run(url, c[1], c[0]), cases) for _, cases in sets]
+    for (name, cases), got in zip(sets, replies):
         print(f"--- {name}")
-        for mode, text, want in cases:
-            ms = run(url, text, mode)
+        for (mode, text, want), ms in zip(cases, got):
             good = bool(want(ms))
             bad += not good
             total += 1

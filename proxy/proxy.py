@@ -21,6 +21,7 @@ import json
 import mmap
 import os
 import re
+import signal
 import socket
 import sys
 import tempfile
@@ -1550,4 +1551,6 @@ if __name__ == "__main__":
     )
     threading.Thread(target=watch_lt, daemon=True).start()
     log(f"прокси на :{PORT} -> {LT_URL}")
+    # PID 1 в контейнере без обработчика игнорирует SIGTERM: stop ждал 10 с до SIGKILL при каждом compose up --force-recreate
+    signal.signal(signal.SIGTERM, lambda *_: sys.exit(0))
     ThreadingHTTPServer(("", PORT), Proxy).serve_forever()

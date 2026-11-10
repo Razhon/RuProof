@@ -167,6 +167,7 @@ def main(work):
     st, stamp_file = stamp(), work / "merged.stamp"
     if (work / "merged.txt").exists() and stamp_file.exists() and stamp_file.read_text() == st:
         return
+    print("собираю список слов словаря (merged.txt, ~1 мин)...", flush=True)
     base, jb = read_gz("io.txt.gz"), read_gz("jb.txt.gz")
     jb -= bogus_short(jb, base)
     aot = read_aot(work)

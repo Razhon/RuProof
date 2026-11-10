@@ -29,6 +29,14 @@ services:
       - ./dict/segment.srx:/LanguageTool/org/languagetool/resource/segment.srx:ro
       # список RU_SIMPLE_REPLACE без записей, которые не просторечие (build/py/rules.py, REPLACE_DROP)
       - ./dict/replace.txt:/LanguageTool/org/languagetool/rules/ru/replace.txt:ro
+      # снятие омонимии из образа с блоками <unification> из grammar.xml (build/py/rules.py): без них antipattern
+      # с <unify> роняет LT (docs/rules/Unify-PADJ-Propuski.md)
+      - ./dict/disambiguation.xml:/LanguageTool/org/languagetool/resource/ru/disambiguation.xml:ro
+      # Java-правки LT (build/java/, build/build.sh java): строка на каждый класс из dict/java/ ("./" первым в Class-Path,
+      # файл важнее класса в jar), например
+      # - ./dict/java/org/languagetool/rules/ru/X.class:/LanguageTool/org/languagetool/rules/ru/X.class:ro
+      # замены с несинтезированным {suggestion} убираются (docs/rules/Unify_PADJ_NN_number.md)
+      - ./dict/java/org/languagetool/rules/ru/AdvancedSynthesizerFilter.class:/LanguageTool/org/languagetool/rules/ru/AdvancedSynthesizerFilter.class:ro
   words:
     # разовый запуск при каждом `compose up`: слова speller (строки «слово+частота», отсортированные побайтно) для
     # оборванных слов в прокси вроде «подум…»; ~12 с, повторяется только при изменении ru_RU.dict. extends оставляет одну строку `image:` (её читает rpdict)

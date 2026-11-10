@@ -34,8 +34,8 @@ run() { img=$1; shift
   "$RT" run --rm $it --user root --security-opt label=disable -e HOST_UID="$(id -u)" -e HOST_GID="$(id -g)" $ae $le $ue \
     -v "$P:/p" -w /p --entrypoint sh "$img" /p/build/build.sh "$@"; }
 [ "$(tr -d '\r' 2>/dev/null < $W/image)" = "$LT" ] || full=1   # другой образ (git pull с новым тегом): дампы устарели
-[ $full = 0 ] || rm -f $W/aot.raw $W/tags.raw $W/para.pkl $W/merged.txt   # merged.txt: пересобирается ниже, до проверок слов
-run "$LT" prep
+[ $full = 0 ] || rm -f $W/aot.raw $W/tags.raw $W/para.pkl $W/merged.txt $W/java.stamp $W/prep.ok   # merged.txt: пересобирается ниже, до проверок слов
+[ -f $W/prep.ok ] || run "$LT" prep   # тот же образ и prep уже прошёл: его файлы на месте, контейнер не нужен (~1 с)
 echo "$LT" > $W/image
 [ -s $W/merged.txt ] || run "$PY" merge   # его читают проверки слов и индекс парадигм
 rc=0
@@ -49,10 +49,13 @@ run "$PY" merge   # сразу выходит, если prohibited.txt обои�
 if [ ! dict/ru_RU.dict -nt $W/merged.txt ]; then run "$LT" dict
 elif [ $rc = 3 ] && { [ $# -gt 0 ] || [ $cmd = migrate ]; }; then echo 'без изменений: перезапуск не нужен'; exit 0   # без слов не пропускать: так применяют и правки rules.py
 fi
+run "$LT" java   # Java-правки (build/java/): сразу выходит, если исходники не менялись (java.stamp)
 run "$PY" rules
 [ $restart = 1 ] || exit 0
+echo "перезапускаю LanguageTool и прокси..."
+if [ dict/ru_RU.dict -nt proxy/data/words.raw ]; then echo "  словарь новый: прокси стартует после распаковки его слов (~30 с)"; fi
 "$RT" compose up -d --force-recreate
-sum=$(cat dict/grammar.xml dict/segment.srx dict/replace.txt | sha256sum | cut -c1-64)
+sum=$(cat dict/grammar.xml dict/segment.srx dict/replace.txt dict/disambiguation.xml $(ls build/java/*.java 2>/dev/null) | sha256sum | cut -c1-64)
 [ $quick = 0 ] || { echo "$sum" > $W/grammar.checked; exit 0; }   # -q: исправления считаются проверенными автором, иначе проверка всплывёт при следующем добавлении слова
 if [ $full = 1 ] || [ "$sum" != "$(tr -d '\r' < $W/grammar.checked 2>/dev/null)" ]; then   # исправления ещё не проверены: убедиться, что они ничего не портят
   "$RT" run --rm --network "container:$("$RT" compose ps -q languagetool)" -v "$P:/p" -w /p -e PYTHONDONTWRITEBYTECODE=1 "$PY" python3 build/py/rules.py check http://localhost:8010

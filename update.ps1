@@ -48,7 +48,7 @@ if (Test-Path (Join-Path $words '.git')) {
     if ($LASTEXITCODE) { exit $LASTEXITCODE }
   }
 }
-git diff --quiet HEAD -- build/py/rules.py
-$q = $LASTEXITCODE -eq 0   # rules.py правили здесь: исправления не проверены, -q не давать
+git diff --quiet HEAD -- build/py/rules.py build/java
+$q = $LASTEXITCODE -eq 0   # rules.py или Java-правки правили здесь: исправления не проверены, -q не давать
 & (Join-Path $PSScriptRoot 'build\rpdict.ps1') -q:$q   # без слов: собирает dict/ на этой машине и заканчивает compose up; -q: без проверки правил (это дело автора, он зовёт rpdict сам)
 exit $LASTEXITCODE

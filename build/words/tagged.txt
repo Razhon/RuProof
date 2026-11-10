@@ -4487,6 +4487,35 @@
 испиздятся	испиздеться	VB:Fut:INTR:PFV:PL:P3
 испизжусь	испиздеться	VB:Fut:INTR:PFV:Sin:P1
 
+# иссохшийся: как «приевшийся» — прил.
+иссохшаяся	иссохшийся	ADJ:Posit:Fem:Nom
+иссохшегося	иссохшийся	ADJ:Posit:Masc:R
+иссохшегося	иссохшийся	ADJ:Posit:Masc:V
+иссохшегося	иссохшийся	ADJ:Posit:Neut:R
+иссохшееся	иссохшийся	ADJ:Posit:Neut:Nom
+иссохшееся	иссохшийся	ADJ:Posit:Neut:V
+иссохшейся	иссохшийся	ADJ:Posit:Fem:D
+иссохшейся	иссохшийся	ADJ:Posit:Fem:P
+иссохшейся	иссохшийся	ADJ:Posit:Fem:R
+иссохшейся	иссохшийся	ADJ:Posit:Fem:T
+иссохшемся	иссохшийся	ADJ:Posit:Masc:P
+иссохшемся	иссохшийся	ADJ:Posit:Neut:P
+иссохшемуся	иссохшийся	ADJ:Posit:Masc:D
+иссохшемуся	иссохшийся	ADJ:Posit:Neut:D
+иссохшеюся	иссохшийся	ADJ:Posit:Fem:T
+иссохшиеся	иссохшийся	ADJ:Posit:PL:Nom
+иссохшиеся	иссохшийся	ADJ:Posit:PL:V
+иссохшийся	иссохшийся	ADJ:Posit:Masc:Nom
+иссохшийся	иссохшийся	ADJ:Posit:Masc:V
+иссохшимися	иссохшийся	ADJ:Posit:PL:T
+иссохшимся	иссохшийся	ADJ:Posit:Masc:T
+иссохшимся	иссохшийся	ADJ:Posit:Neut:T
+иссохшимся	иссохшийся	ADJ:Posit:PL:D
+иссохшихся	иссохшийся	ADJ:Posit:PL:P
+иссохшихся	иссохшийся	ADJ:Posit:PL:R
+иссохшихся	иссохшийся	ADJ:Posit:PL:V
+иссохшуюся	иссохшийся	ADJ:Posit:Fem:V
+
 # касочка: восстановлено, сущ. неодуш. ж.р.
 касочек	касочка	NN:Inanim:Fem:PL:R
 касочка	касочка	NN:Inanim:Fem:Sin:Nom
@@ -6579,6 +6608,37 @@
 низкодисперсных	низкодисперсный	ADJ:Posit:PL:P
 низкодисперсных	низкодисперсный	ADJ:Posit:PL:R
 низкодисперсных	низкодисперсный	ADJ:Posit:PL:V
+
+# никакущий: поправлено, прил.
+никакущая	никакущий	ADJ:Posit:Fem:Nom
+никакущего	никакущий	ADJ:Posit:Masc:R
+никакущего	никакущий	ADJ:Posit:Masc:V
+никакущего	никакущий	ADJ:Posit:Neut:R
+никакущее	никакущий	ADJ:Comp
+никакущее	никакущий	ADJ:Posit:Neut:Nom
+никакущее	никакущий	ADJ:Posit:Neut:V
+никакущей	никакущий	ADJ:Comp
+никакущей	никакущий	ADJ:Posit:Fem:D
+никакущей	никакущий	ADJ:Posit:Fem:P
+никакущей	никакущий	ADJ:Posit:Fem:R
+никакущей	никакущий	ADJ:Posit:Fem:T
+никакущем	никакущий	ADJ:Posit:Masc:P
+никакущем	никакущий	ADJ:Posit:Neut:P
+никакущему	никакущий	ADJ:Posit:Masc:D
+никакущему	никакущий	ADJ:Posit:Neut:D
+никакущею	никакущий	ADJ:Posit:Fem:T
+никакущие	никакущий	ADJ:Posit:PL:Nom
+никакущие	никакущий	ADJ:Posit:PL:V
+никакущий	никакущий	ADJ:Posit:Masc:Nom
+никакущий	никакущий	ADJ:Posit:Masc:V
+никакущим	никакущий	ADJ:Posit:Masc:T
+никакущим	никакущий	ADJ:Posit:Neut:T
+никакущим	никакущий	ADJ:Posit:PL:D
+никакущими	никакущий	ADJ:Posit:PL:T
+никакущих	никакущий	ADJ:Posit:PL:P
+никакущих	никакущий	ADJ:Posit:PL:R
+никакущих	никакущий	ADJ:Posit:PL:V
+никакущую	никакущий	ADJ:Posit:Fem:V
 
 # объебать: как «заебать» — глаг. сов. перех. (ignore)
 объебав	объебать	DPT:Past:TRANS:PFV
@@ -9082,6 +9142,14 @@
 полароиды	полароид	NN:Inanim:Masc:PL:Nom
 полароиды	полароид	NN:Inanim:Masc:PL:V
 
+# полдня: поправлено, сущ. неодуш. ср.р.
+полдня	полдня	NN:Inanim:Neut:Sin:Nom
+полдня	полдня	NN:Inanim:Neut:Sin:V
+полудне	полдня	NN:Inanim:Neut:Sin:P
+полудню	полдня	NN:Inanim:Neut:Sin:D
+полудня	полдня	NN:Inanim:Neut:Sin:R
+полуднём	полдня	NN:Inanim:Neut:Sin:T
+
 # полугорящий: только причастие, без глагола: полугорящий, полугорящая, полугорящего…
 полугорящая	полугореть	PT:Real:INTR:IMPFV:DST:Fem:Nom
 полугорящего	полугореть	PT:Real:INTR:IMPFV:DST:Masc:R
@@ -10534,6 +10602,84 @@
 разку-другому	разок-другой	NN:Inanim:Masc:Sin:D
 разок-другой	разок-другой	NN:Inanim:Masc:Sin:Nom
 разок-другой	разок-другой	NN:Inanim:Masc:Sin:V
+
+# разрулить: поправлено, глаг. сов. перех.
+разрулен	разрулить	PT_Short:Past:TRANS:PFV:STR:Masc
+разрулена	разрулить	PT_Short:Past:TRANS:PFV:STR:Fem
+разруленная	разрулить	PT:Past:TRANS:PFV:STR:Fem:Nom
+разруленного	разрулить	PT:Past:TRANS:PFV:STR:Masc:R
+разруленного	разрулить	PT:Past:TRANS:PFV:STR:Masc:V
+разруленного	разрулить	PT:Past:TRANS:PFV:STR:Neut:R
+разруленное	разрулить	PT:Past:TRANS:PFV:STR:Neut:Nom
+разруленное	разрулить	PT:Past:TRANS:PFV:STR:Neut:V
+разруленной	разрулить	PT:Past:TRANS:PFV:STR:Fem:D
+разруленной	разрулить	PT:Past:TRANS:PFV:STR:Fem:P
+разруленной	разрулить	PT:Past:TRANS:PFV:STR:Fem:R
+разруленной	разрулить	PT:Past:TRANS:PFV:STR:Fem:T
+разруленном	разрулить	PT:Past:TRANS:PFV:STR:Masc:P
+разруленном	разрулить	PT:Past:TRANS:PFV:STR:Neut:P
+разруленному	разрулить	PT:Past:TRANS:PFV:STR:Masc:D
+разруленному	разрулить	PT:Past:TRANS:PFV:STR:Neut:D
+разруленною	разрулить	PT:Past:TRANS:PFV:STR:Fem:T
+разруленную	разрулить	PT:Past:TRANS:PFV:STR:Fem:V
+разруленные	разрулить	PT:Past:TRANS:PFV:STR:PL:Nom
+разруленные	разрулить	PT:Past:TRANS:PFV:STR:PL:V
+разруленный	разрулить	PT:Past:TRANS:PFV:STR:Masc:Nom
+разруленный	разрулить	PT:Past:TRANS:PFV:STR:Masc:V
+разруленным	разрулить	PT:Past:TRANS:PFV:STR:Masc:T
+разруленным	разрулить	PT:Past:TRANS:PFV:STR:Neut:T
+разруленным	разрулить	PT:Past:TRANS:PFV:STR:PL:D
+разруленными	разрулить	PT:Past:TRANS:PFV:STR:PL:T
+разруленных	разрулить	PT:Past:TRANS:PFV:STR:PL:P
+разруленных	разрулить	PT:Past:TRANS:PFV:STR:PL:R
+разруленных	разрулить	PT:Past:TRANS:PFV:STR:PL:V
+разрулено	разрулить	PT_Short:Past:TRANS:PFV:STR:Neut
+разрулены	разрулить	PT_Short:Past:TRANS:PFV:STR:PL
+разрули	разрулить	VB:IMP:TRANS:PFV:Sin:P2
+разрулив	разрулить	DPT:Past:TRANS:PFV
+разрулившая	разрулить	PT:Past:TRANS:PFV:DST:Fem:Nom
+разрулившего	разрулить	PT:Past:TRANS:PFV:DST:Masc:R
+разрулившего	разрулить	PT:Past:TRANS:PFV:DST:Masc:V
+разрулившего	разрулить	PT:Past:TRANS:PFV:DST:Neut:R
+разрулившее	разрулить	PT:Past:TRANS:PFV:DST:Neut:Nom
+разрулившее	разрулить	PT:Past:TRANS:PFV:DST:Neut:V
+разрулившей	разрулить	PT:Past:TRANS:PFV:DST:Fem:D
+разрулившей	разрулить	PT:Past:TRANS:PFV:DST:Fem:P
+разрулившей	разрулить	PT:Past:TRANS:PFV:DST:Fem:R
+разрулившей	разрулить	PT:Past:TRANS:PFV:DST:Fem:T
+разрулившем	разрулить	PT:Past:TRANS:PFV:DST:Masc:P
+разрулившем	разрулить	PT:Past:TRANS:PFV:DST:Neut:P
+разрулившему	разрулить	PT:Past:TRANS:PFV:DST:Masc:D
+разрулившему	разрулить	PT:Past:TRANS:PFV:DST:Neut:D
+разрулившею	разрулить	PT:Past:TRANS:PFV:DST:Fem:T
+разруливши	разрулить	DPT:Past:TRANS:PFV
+разрулившие	разрулить	PT:Past:TRANS:PFV:DST:PL:Nom
+разрулившие	разрулить	PT:Past:TRANS:PFV:DST:PL:V
+разруливший	разрулить	PT:Past:TRANS:PFV:DST:Masc:Nom
+разруливший	разрулить	PT:Past:TRANS:PFV:DST:Masc:V
+разрулившим	разрулить	PT:Past:TRANS:PFV:DST:Masc:T
+разрулившим	разрулить	PT:Past:TRANS:PFV:DST:Neut:T
+разрулившим	разрулить	PT:Past:TRANS:PFV:DST:PL:D
+разрулившими	разрулить	PT:Past:TRANS:PFV:DST:PL:T
+разруливших	разрулить	PT:Past:TRANS:PFV:DST:PL:P
+разруливших	разрулить	PT:Past:TRANS:PFV:DST:PL:R
+разруливших	разрулить	PT:Past:TRANS:PFV:DST:PL:V
+разрулившую	разрулить	PT:Past:TRANS:PFV:DST:Fem:V
+разрулил	разрулить	VB:Past:TRANS:PFV:Masc
+разрулила	разрулить	VB:Past:TRANS:PFV:Fem
+разрулили	разрулить	VB:Past:TRANS:PFV:PL
+разрулило	разрулить	VB:Past:TRANS:PFV:Neut
+разрулим	разрулить	VB:Fut:TRANS:PFV:PL:P1
+разрулим	разрулить	VB:IMP:TRANS:PFV:PL:P1
+разрулимте	разрулить	VB:IMP:TRANS:PFV:PL:P1
+разрулит	разрулить	VB:Fut:TRANS:PFV:Sin:P3
+разрулите	разрулить	VB:Fut:TRANS:PFV:PL:P2
+разрулите	разрулить	VB:IMP:TRANS:PFV:PL:P2
+разрулить	разрулить	VB:INF:TRANS:PFV
+разрулишь	разрулить	VB:Fut:TRANS:PFV:Sin:P2
+разрулю	разрулить	VB:Fut:TRANS:PFV:Sin:P1
+разруля	разрулить	DPT:Past:TRANS:PFV
+разрулят	разрулить	VB:Fut:TRANS:PFV:PL:P3
 
 # рандомный: восстановлено, прил.
 рандомен	рандомный	ADJ:Short:Masc
@@ -14371,6 +14517,41 @@
 чёрно-красных	чёрно-красный	ADJ:Posit:PL:P
 чёрно-красных	чёрно-красный	ADJ:Posit:PL:R
 чёрно-красных	чёрно-красный	ADJ:Posit:PL:V
+
+# чёртовый: как «аортовый» — прил.
+чёртов	чёртовый	ADJ:Short:Masc
+чёртова	чёртовый	ADJ:Short:Fem
+чёртовая	чёртовый	ADJ:Posit:Fem:Nom
+чёртовее	чёртовый	ADJ:Comp
+чёртовей	чёртовый	ADJ:Comp
+чёртово	чёртовый	ADJ:Short:Neut
+чёртового	чёртовый	ADJ:Posit:Masc:R
+чёртового	чёртовый	ADJ:Posit:Masc:V
+чёртового	чёртовый	ADJ:Posit:Neut:R
+чёртовое	чёртовый	ADJ:Posit:Neut:Nom
+чёртовое	чёртовый	ADJ:Posit:Neut:V
+чёртовой	чёртовый	ADJ:Posit:Fem:D
+чёртовой	чёртовый	ADJ:Posit:Fem:P
+чёртовой	чёртовый	ADJ:Posit:Fem:R
+чёртовой	чёртовый	ADJ:Posit:Fem:T
+чёртовом	чёртовый	ADJ:Posit:Masc:P
+чёртовом	чёртовый	ADJ:Posit:Neut:P
+чёртовому	чёртовый	ADJ:Posit:Masc:D
+чёртовому	чёртовый	ADJ:Posit:Neut:D
+чёртовою	чёртовый	ADJ:Posit:Fem:T
+чёртовую	чёртовый	ADJ:Posit:Fem:V
+чёртовы	чёртовый	ADJ:Short:PL
+чёртовые	чёртовый	ADJ:Posit:PL:Nom
+чёртовые	чёртовый	ADJ:Posit:PL:V
+чёртовый	чёртовый	ADJ:Posit:Masc:Nom
+чёртовый	чёртовый	ADJ:Posit:Masc:V
+чёртовым	чёртовый	ADJ:Posit:Masc:T
+чёртовым	чёртовый	ADJ:Posit:Neut:T
+чёртовым	чёртовый	ADJ:Posit:PL:D
+чёртовыми	чёртовый	ADJ:Posit:PL:T
+чёртовых	чёртовый	ADJ:Posit:PL:P
+чёртовых	чёртовый	ADJ:Posit:PL:R
+чёртовых	чёртовый	ADJ:Posit:PL:V
 
 # шароёбиться: поправлено, глаг. несов. неперех. (ignore)
 шароёбившаяся	шароёбиться	PT:Past:INTR:IMPFV:DST:Fem:Nom
