@@ -274,6 +274,7 @@ KEYS = [
     ("prose nonstandard=no", "Ну и чё ты стоишь?", styled("RU_SIMPLE_REPLACE")),
     ("prose caps=no", "Он был ОЧЕНЬ зол.", styled("AllCaps")),
     ("prose fillers=no", "Он тебе как бы нравится?", rule("kak_bi")),
+    ("prose euphony=yes", "Она явно хочет, чтобы Кейт сплотилась.", styled("BLAGOZVUCHNOST")),
     (
         "prose dialogue=no",
         (

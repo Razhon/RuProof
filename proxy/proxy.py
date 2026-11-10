@@ -210,11 +210,13 @@ RULES = (
     "nonstandard",  # слова вне нормы (rpdict -u), talk и просторечие RU_SIMPLE_REPLACE: не замечание (иначе стиль)
     "caps",  # слово ЗАГЛАВНЫМИ (AllCaps): не замечание (иначе стиль)
     "fillers",  # слова-паразиты (как бы, так сказать): не замечание (иначе как у LT)
+    "euphony",  # включить BLAGOZVUCHNOST (пять согласных подряд), в grammar.xml выключенное; ни в одном пресете
 )
 FILLERS = {"kak_bi", "tak_skazat", "vozmojno_oshibayas"}  # правила «Слова-паразиты» из grammar.xml
+OPT_IN = {"euphony": "BLAGOZVUCHNOST"}  # ключ -> правило LT с default="off", которое ключ включает в запросе
 PRESETS = {
     "neutral": frozenset(RULES[:8]),  # годится для любого текста
-    "prose": frozenset(RULES),  # художественный текст: речь, имена, заикания
+    "prose": frozenset(RULES) - set(OPT_IN),  # художественный текст: речь, имена, заикания
 }
 CONFIG = os.environ.get(
     "PROXY_CONFIG",
@@ -1224,6 +1226,18 @@ class Proxy(BaseHTTPRequestHandler):
             parsed = parse_check(body)
         except ValueError:
             parsed = None
+        forced = self.headers.get("X-Proxy-Mode")  # для regress.py: режим без правки config.ini
+        try:
+            preset, on = header_mode(forced) if forced else config()
+        except (
+            ValueError,
+            configparser.Error,
+        ) as e:  # тест с опечаткой в заголовке должен упасть, а не пройти молча
+            return self.reply(400, [], f"proxy: X-Proxy-Mode не принят: {e}".encode())
+        extra = [r for k, r in OPT_IN.items() if k in on]
+        if parsed and extra:
+            old = [v for k, v in parsed[0] if k == "enabledRules" and v]
+            parsed[0][:] = [p for p in parsed[0] if p[0] != "enabledRules"] + [("enabledRules", ",".join(old + extra))]
         form = dict(parsed[0]) if parsed else {}
         fwd = urllib.parse.urlencode(parsed[0]).encode() if parsed else body
         ck = hashlib.sha1(
@@ -1240,14 +1254,6 @@ class Proxy(BaseHTTPRequestHandler):
         if status == 200 and not hit:
             CACHE.put(ck, (status, headers, data))
         out, note = data, ""
-        forced = self.headers.get("X-Proxy-Mode")  # для regress.py: режим без правки config.ini
-        try:
-            preset, on = header_mode(forced) if forced else config()
-        except (
-            ValueError,
-            configparser.Error,
-        ) as e:  # тест с опечаткой в заголовке должен упасть, а не пройти молча
-            return self.reply(400, [], f"proxy: X-Proxy-Mode не принят: {e}".encode())
         if status == 200 and parsed:
             try:
                 resp = json.loads(data)
